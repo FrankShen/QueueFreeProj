@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "CustomTabBarView.h"
 @interface QFViewController : UIViewController
-
+@property (weak, nonatomic) IBOutlet CustomTabBarView *TabBar;
+@property (weak, nonatomic) UIView *QFHomeView;
+@property (weak, nonatomic) UIView *QFStarView;
+@property (weak, nonatomic) UIView *QFQsnsView;
 @end
