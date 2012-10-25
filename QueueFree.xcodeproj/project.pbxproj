@@ -133,13 +133,10 @@
 		9BFB1C451637EE110053200A /* QueueFree */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
 				9BFB1CA916380F720053200A /* nib */,
 				9BFB1C731637FC3D0053200A /* Classes */,
 				9BFB1C661637FB160053200A /* Resources */,
-=======
 				3FE68AE016380D170051A267 /* RestaurantInfo.xcdatamodeld */,
->>>>>>> 创建了初步的Data Model
 				9BFB1C4E1637EE110053200A /* QFAppDelegate.h */,
 				9BFB1C4F1637EE110053200A /* QFAppDelegate.m */,
 				9BFB1C571637EE110053200A /* MainStoryboard.storyboard */,
@@ -301,12 +298,9 @@
 				9BFB1C4C1637EE110053200A /* main.m in Sources */,
 				9BFB1C501637EE110053200A /* QFAppDelegate.m in Sources */,
 				9BFB1C5C1637EE110053200A /* QFViewController.m in Sources */,
-<<<<<<< HEAD
 				9BFB1C761637FC5D0053200A /* QFNavigationBar.m in Sources */,
 				9BFB1C84163805F20053200A /* CustomTabBarView.m in Sources */,
-=======
 				3FE68AE216380D170051A267 /* RestaurantInfo.xcdatamodeld in Sources */,
->>>>>>> 创建了初步的Data Model
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
