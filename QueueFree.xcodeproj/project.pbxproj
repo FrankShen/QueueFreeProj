@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FE68AE216380D170051A267 /* RestaurantInfo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FE68AE016380D170051A267 /* RestaurantInfo.xcdatamodeld */; };
 		9BFB1C401637EE110053200A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BFB1C3F1637EE110053200A /* UIKit.framework */; };
 		9BFB1C421637EE110053200A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BFB1C411637EE110053200A /* Foundation.framework */; };
 		9BFB1C441637EE110053200A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BFB1C431637EE110053200A /* CoreGraphics.framework */; };
@@ -44,6 +45,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3FE68AE116380D170051A267 /* RestaurantInfo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RestaurantInfo.xcdatamodel; sourceTree = "<group>"; };
 		9BFB1C3B1637EE110053200A /* QueueFree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QueueFree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BFB1C3F1637EE110053200A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9BFB1C411637EE110053200A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -131,9 +133,13 @@
 		9BFB1C451637EE110053200A /* QueueFree */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				9BFB1CA916380F720053200A /* nib */,
 				9BFB1C731637FC3D0053200A /* Classes */,
 				9BFB1C661637FB160053200A /* Resources */,
+=======
+				3FE68AE016380D170051A267 /* RestaurantInfo.xcdatamodeld */,
+>>>>>>> 创建了初步的Data Model
 				9BFB1C4E1637EE110053200A /* QFAppDelegate.h */,
 				9BFB1C4F1637EE110053200A /* QFAppDelegate.m */,
 				9BFB1C571637EE110053200A /* MainStoryboard.storyboard */,
@@ -295,8 +301,12 @@
 				9BFB1C4C1637EE110053200A /* main.m in Sources */,
 				9BFB1C501637EE110053200A /* QFAppDelegate.m in Sources */,
 				9BFB1C5C1637EE110053200A /* QFViewController.m in Sources */,
+<<<<<<< HEAD
 				9BFB1C761637FC5D0053200A /* QFNavigationBar.m in Sources */,
 				9BFB1C84163805F20053200A /* CustomTabBarView.m in Sources */,
+=======
+				3FE68AE216380D170051A267 /* RestaurantInfo.xcdatamodeld in Sources */,
+>>>>>>> 创建了初步的Data Model
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,8 +425,22 @@
 				9BFB1C611637EE110053200A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3FE68AE016380D170051A267 /* RestaurantInfo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3FE68AE116380D170051A267 /* RestaurantInfo.xcdatamodel */,
+			);
+			currentVersion = 3FE68AE116380D170051A267 /* RestaurantInfo.xcdatamodel */;
+			path = RestaurantInfo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 9BFB1C321637EE110053200A /* Project object */;
 }
