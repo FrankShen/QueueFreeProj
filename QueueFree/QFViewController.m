@@ -21,16 +21,19 @@
         self.QFStarView.hidden = NO;
         self.QFHomeView.hidden = YES;
         self.QFQsnsView.hidden = YES;
+        self.navigationItem.title = @"今日精选";
     }
     if (self.TabBar.homeButton.selected){
         self.QFStarView.hidden = YES;
         self.QFHomeView.hidden = NO;
         self.QFQsnsView.hidden = YES;
+        self.navigationItem.title = @"主页";
     }
     if (self.TabBar.qsnsButton.selected){
         self.QFStarView.hidden = YES;
         self.QFHomeView.hidden = YES;
         self.QFQsnsView.hidden = NO;
+        self.navigationItem.title = @"Q社区";
     }
 }
 
