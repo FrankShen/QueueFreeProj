@@ -26,6 +26,12 @@
 		9B7D1B9F1639795F0011916A /* home_bill_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B7D1B9B1639795F0011916A /* home_bill_button@2x.png */; };
 		9B7D1BA01639795F0011916A /* home_favour_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B7D1B9C1639795F0011916A /* home_favour_button.png */; };
 		9B7D1BA11639795F0011916A /* home_favour_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B7D1B9D1639795F0011916A /* home_favour_button@2x.png */; };
+		9B922EFE163AA3EE001692F2 /* search_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B922EFA163AA3EE001692F2 /* search_button.png */; };
+		9B922EFF163AA3EE001692F2 /* search_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B922EFB163AA3EE001692F2 /* search_button@2x.png */; };
+		9B922F00163AA3EE001692F2 /* search_textfield.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B922EFC163AA3EE001692F2 /* search_textfield.png */; };
+		9B922F01163AA3EE001692F2 /* search_textfield@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B922EFD163AA3EE001692F2 /* search_textfield@2x.png */; };
+		9B922F05163AA56A001692F2 /* GlobalSearchListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B922F04163AA56A001692F2 /* GlobalSearchListViewController.m */; };
+		9B922F0F163AB3EA001692F2 /* NearSearchListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B922F0E163AB3EA001692F2 /* NearSearchListViewController.m */; };
 		9BFB1C401637EE110053200A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BFB1C3F1637EE110053200A /* UIKit.framework */; };
 		9BFB1C421637EE110053200A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BFB1C411637EE110053200A /* Foundation.framework */; };
 		9BFB1C441637EE110053200A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BFB1C431637EE110053200A /* CoreGraphics.framework */; };
@@ -82,6 +88,14 @@
 		9B7D1B9B1639795F0011916A /* home_bill_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_bill_button@2x.png"; sourceTree = "<group>"; };
 		9B7D1B9C1639795F0011916A /* home_favour_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_favour_button.png; sourceTree = "<group>"; };
 		9B7D1B9D1639795F0011916A /* home_favour_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_favour_button@2x.png"; sourceTree = "<group>"; };
+		9B922EFA163AA3EE001692F2 /* search_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search_button.png; sourceTree = "<group>"; };
+		9B922EFB163AA3EE001692F2 /* search_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search_button@2x.png"; sourceTree = "<group>"; };
+		9B922EFC163AA3EE001692F2 /* search_textfield.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search_textfield.png; sourceTree = "<group>"; };
+		9B922EFD163AA3EE001692F2 /* search_textfield@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search_textfield@2x.png"; sourceTree = "<group>"; };
+		9B922F03163AA56A001692F2 /* GlobalSearchListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalSearchListViewController.h; sourceTree = "<group>"; };
+		9B922F04163AA56A001692F2 /* GlobalSearchListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalSearchListViewController.m; sourceTree = "<group>"; };
+		9B922F0D163AB3EA001692F2 /* NearSearchListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearSearchListViewController.h; sourceTree = "<group>"; };
+		9B922F0E163AB3EA001692F2 /* NearSearchListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearSearchListViewController.m; sourceTree = "<group>"; };
 		9BFB1C3B1637EE110053200A /* QueueFree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QueueFree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BFB1C3F1637EE110053200A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9BFB1C411637EE110053200A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -222,6 +236,10 @@
 				9B7D1B9D1639795F0011916A /* home_favour_button@2x.png */,
 				9BFB1C6F1637FBF10053200A /* navigation_bar_background.png */,
 				9BFB1C701637FBF10053200A /* navigation_bar_background@2x.png */,
+				9B922EFA163AA3EE001692F2 /* search_button.png */,
+				9B922EFB163AA3EE001692F2 /* search_button@2x.png */,
+				9B922EFC163AA3EE001692F2 /* search_textfield.png */,
+				9B922EFD163AA3EE001692F2 /* search_textfield@2x.png */,
 				9BFB1C7E1637FFB50053200A /* tab_bar_background.png */,
 				9BFB1C7F1637FFB50053200A /* tab_bar_background@2x.png */,
 				9BFB1C8D16380AB40053200A /* tab_bar_home_selected.png */,
@@ -245,6 +263,10 @@
 			children = (
 				9BFB1C82163805F20053200A /* CustomTabBarView.h */,
 				9BFB1C83163805F20053200A /* CustomTabBarView.m */,
+				9B922F03163AA56A001692F2 /* GlobalSearchListViewController.h */,
+				9B922F04163AA56A001692F2 /* GlobalSearchListViewController.m */,
+				9B922F0D163AB3EA001692F2 /* NearSearchListViewController.h */,
+				9B922F0E163AB3EA001692F2 /* NearSearchListViewController.m */,
 				9BFB1C741637FC5D0053200A /* QFNavigationBar.h */,
 				9BFB1C751637FC5D0053200A /* QFNavigationBar.m */,
 			);
@@ -357,6 +379,10 @@
 				9B7D1B9F1639795F0011916A /* home_bill_button@2x.png in Resources */,
 				9B7D1BA01639795F0011916A /* home_favour_button.png in Resources */,
 				9B7D1BA11639795F0011916A /* home_favour_button@2x.png in Resources */,
+				9B922EFE163AA3EE001692F2 /* search_button.png in Resources */,
+				9B922EFF163AA3EE001692F2 /* search_button@2x.png in Resources */,
+				9B922F00163AA3EE001692F2 /* search_textfield.png in Resources */,
+				9B922F01163AA3EE001692F2 /* search_textfield@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +399,8 @@
 				9BFB1C761637FC5D0053200A /* QFNavigationBar.m in Sources */,
 				9BFB1C84163805F20053200A /* CustomTabBarView.m in Sources */,
 				3FE68AE216380D170051A267 /* RestaurantInfo.xcdatamodeld in Sources */,
+				9B922F05163AA56A001692F2 /* GlobalSearchListViewController.m in Sources */,
+				9B922F0F163AB3EA001692F2 /* NearSearchListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

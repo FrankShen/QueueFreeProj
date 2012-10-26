@@ -96,14 +96,176 @@
                     <connections>
                         <outlet property="CustomTabBar" destination="sW6-CX-M3k" id="iDB-Zr-eIP"/>
                         <outlet property="TabBar" destination="sW6-CX-M3k" id="9FV-LW-Aag"/>
+                        <segue destination="LuH-Dv-rCO" kind="push" identifier="NearSearch" id="jiq-Jw-vYf"/>
+                        <segue destination="3kd-sP-aTa" kind="push" identifier="GlobalSearch" id="iDV-k0-yLL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ry-Dv-ZnA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="507" y="95"/>
         </scene>
+        <!--Global Search List View Controller - 搜索全城-->
+        <scene sceneID="TFJ-BW-9aC">
+            <objects>
+                <viewController id="3kd-sP-aTa" customClass="GlobalSearchListViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IXO-Su-MVg">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="e1x-ZR-xLZ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="MapKit Here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Rnu-ao-HNL">
+                                        <rect key="frame" x="95.5" y="198" width="129" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="F6G-tN-bqP">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="search_textfield.png" id="DqK-XA-8y5">
+                                        <rect key="frame" x="0.0" y="0.0" width="274" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0Qo-J1-3Cu">
+                                        <rect key="frame" x="274" y="0.0" width="46" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" image="search_button.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="searchButtonPressed:" destination="3kd-sP-aTa" eventType="touchUpInside" id="fve-hR-Xph"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入关键词" adjustsFontSizeToFit="NO" minimumFontSize="17" id="NVH-V9-Y9s">
+                                        <rect key="frame" x="9" y="7" width="257" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="hvN-QB-ncT">
+                                        <rect key="frame" x="0.0" y="45" width="320" height="371"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="bMd-Ty-X6L">
+                                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="搜索全城" id="t8K-Oc-Kb9">
+                        <barButtonItem key="rightBarButtonItem" title="地图" id="azK-ZH-P6i">
+                            <connections>
+                                <action selector="viewChangeButtonPressed:" destination="3kd-sP-aTa" id="2DB-2A-ykd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="keyword" destination="NVH-V9-Y9s" id="9q2-lx-pj1"/>
+                        <outlet property="listView" destination="F6G-tN-bqP" id="Fze-bh-5pz"/>
+                        <outlet property="mapView" destination="e1x-ZR-xLZ" id="fui-4D-qTP"/>
+                        <outlet property="viewChangeButton" destination="azK-ZH-P6i" id="iqu-Co-x5X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D3J-xF-Y0g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="991" y="445"/>
+        </scene>
+        <!--Near Search List View Controller - 搜索附近-->
+        <scene sceneID="gTx-Ue-6Ax">
+            <objects>
+                <viewController id="LuH-Dv-rCO" customClass="NearSearchListViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Bh-Wt-Z5T">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="yOB-NO-Ke0">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="AcF-7v-PtC">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Wyw-YI-8x0">
+                                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="jRb-cy-zf7">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Mapkit Here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iNT-Vv-20o">
+                                        <rect key="frame" x="101" y="197" width="118" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="搜索附近" id="ruR-qq-OXz">
+                        <barButtonItem key="rightBarButtonItem" title="列表" id="IvK-WS-ymK">
+                            <connections>
+                                <action selector="viewChangeButtonPressed:" destination="LuH-Dv-rCO" id="4vh-p2-SNl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="listView" destination="yOB-NO-Ke0" id="RMl-xt-rFh"/>
+                        <outlet property="mapView" destination="jRb-cy-zf7" id="gRa-VT-dhF"/>
+                        <outlet property="viewChangeButton" destination="IvK-WS-ymK" id="x9s-uh-hhw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PyK-RB-KeE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="991" y="-227"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="search_button.png" width="46" height="44"/>
+        <image name="search_textfield.png" width="274" height="44"/>
         <image name="tab_bar_background.png" width="320" height="49"/>
         <image name="tab_bar_home_selected.png" width="100" height="49"/>
         <image name="tab_bar_home_unselected.png" width="100" height="49"/>
@@ -112,6 +274,43 @@
         <image name="tab_bar_star_selected.png" width="100" height="49"/>
         <image name="tab_bar_star_unselected.png" width="100" height="49"/>
     </resources>
+    <classes>
+        <class className="CustomTabBarView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomTabBarView.h"/>
+            <relationships>
+                <relationship kind="outlet" name="homeButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="qsnsButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="starButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="GlobalSearchListViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GlobalSearchListViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="keyword" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="listView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="mapView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="viewChangeButton" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="NearSearchListViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NearSearchListViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="listView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="mapView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="viewChangeButton" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="QFNavigationBar" superclassName="UINavigationBar">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/QFNavigationBar.h"/>
+        </class>
+        <class className="QFViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/QFViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="CustomTabBar" candidateClass="UIView"/>
+                <relationship kind="outlet" name="TabBar" candidateClass="CustomTabBarView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

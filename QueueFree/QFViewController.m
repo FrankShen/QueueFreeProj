@@ -99,5 +99,13 @@
         [self changeSubView];
     }
 }
+- (IBAction)globalSearchPressed:(id)sender
+{
+    [self performSegueWithIdentifier:@"GlobalSearch" sender:self.parentViewController];
+}
+- (IBAction)nearSearchPressed:(id)sender
+{
+    [self performSegueWithIdentifier:@"NearSearch" sender:self.parentViewController];
+}
 
 @end
