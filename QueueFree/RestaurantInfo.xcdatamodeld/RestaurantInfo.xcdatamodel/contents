@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="12C60" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Dish" syncable="YES">
-        <attribute name="image" optional="YES" attributeType="Transformable" syncable="YES"/>
+    <entity name="Dish" representedClassName="Dish" syncable="YES">
+        <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="restaurantInfo" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Restaurant" inverseName="dishInfo" inverseEntity="Restaurant" syncable="YES"/>
     </entity>
-    <entity name="Restaurant" syncable="YES">
+    <entity name="Restaurant" representedClassName="Restaurant" syncable="YES">
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="characteristic" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="closingTime" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="image" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="identity" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="latitude" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="longitude" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
@@ -21,19 +22,19 @@
         <relationship name="telephoneInfo" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Telephone" inverseName="restaurantInfo" inverseEntity="Telephone" syncable="YES"/>
         <relationship name="trafficInfo" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Traffic" inverseName="restaurantInfo" inverseEntity="Traffic" syncable="YES"/>
     </entity>
-    <entity name="Telephone" syncable="YES">
+    <entity name="Telephone" representedClassName="Telephone" syncable="YES">
         <attribute name="number" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="restaurantInfo" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Restaurant" inverseName="telephoneInfo" inverseEntity="Restaurant" syncable="YES"/>
     </entity>
-    <entity name="Traffic" syncable="YES">
+    <entity name="Traffic" representedClassName="Traffic" syncable="YES">
         <attribute name="introduction" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="Boolean" syncable="YES"/>
         <relationship name="restaurantInfo" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Restaurant" inverseName="trafficInfo" inverseEntity="Restaurant" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Restaurant" positionX="-5483" positionY="9" width="128" height="253"/>
-        <element name="Telephone" positionX="-5726" positionY="125" width="128" height="73"/>
-        <element name="Traffic" positionX="-5220" positionY="126" width="128" height="88"/>
-        <element name="Dish" positionX="-5490" positionY="344" width="128" height="88"/>
+        <element name="Dish" positionX="-5490" positionY="344" width="128" height="90"/>
+        <element name="Restaurant" positionX="-5483" positionY="9" width="128" height="270"/>
+        <element name="Telephone" positionX="-5726" positionY="125" width="128" height="75"/>
+        <element name="Traffic" positionX="-5220" positionY="126" width="128" height="90"/>
     </elements>
 </model>
