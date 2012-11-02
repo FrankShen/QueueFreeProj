@@ -118,14 +118,14 @@
 		9BFB1C491637EE110053200A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9BFB1C4B1637EE110053200A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9BFB1C4D1637EE110053200A /* QueueFree-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QueueFree-Prefix.pch"; sourceTree = "<group>"; };
-		9BFB1C4E1637EE110053200A /* QFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QFAppDelegate.h; sourceTree = "<group>"; };
-		9BFB1C4F1637EE110053200A /* QFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QFAppDelegate.m; sourceTree = "<group>"; };
+		9BFB1C4E1637EE110053200A /* QFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = QFAppDelegate.h; path = ../QFAppDelegate.h; sourceTree = "<group>"; };
+		9BFB1C4F1637EE110053200A /* QFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = QFAppDelegate.m; path = ../QFAppDelegate.m; sourceTree = "<group>"; };
 		9BFB1C511637EE110053200A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		9BFB1C531637EE110053200A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		9BFB1C551637EE110053200A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		9BFB1C581637EE110053200A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		9BFB1C5A1637EE110053200A /* QFViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QFViewController.h; sourceTree = "<group>"; };
-		9BFB1C5B1637EE110053200A /* QFViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QFViewController.m; sourceTree = "<group>"; };
+		9BFB1C5A1637EE110053200A /* QFViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = QFViewController.h; path = ../QFViewController.h; sourceTree = "<group>"; };
+		9BFB1C5B1637EE110053200A /* QFViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = QFViewController.m; path = ../QFViewController.m; sourceTree = "<group>"; };
 		9BFB1C6B1637FB290053200A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../../Default.png; sourceTree = "<group>"; };
 		9BFB1C6D1637FB2F0053200A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../../Default@2x.png"; sourceTree = "<group>"; };
 		9BFB1C6F1637FBF10053200A /* navigation_bar_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigation_bar_background.png; sourceTree = "<group>"; };
@@ -171,15 +171,15 @@
 		3FB68578163D5FA3005116A2 /* TheCoreData */ = {
 			isa = PBXGroup;
 			children = (
-				3FE68AE016380D170051A267 /* RestaurantInfo.xcdatamodeld */,
+				3F8628B2163D62F7001DCA11 /* Dish.h */,
+				3F8628B3163D62F7001DCA11 /* Dish.m */,
 				3F8628A9163D62F6001DCA11 /* Telephone.h */,
 				3F8628AA163D62F6001DCA11 /* Telephone.m */,
 				3F8628AC163D62F6001DCA11 /* Traffic.h */,
 				3F8628AD163D62F6001DCA11 /* Traffic.m */,
 				3F8628AF163D62F7001DCA11 /* Restaurant.h */,
 				3F8628B0163D62F7001DCA11 /* Restaurant.m */,
-				3F8628B2163D62F7001DCA11 /* Dish.h */,
-				3F8628B3163D62F7001DCA11 /* Dish.m */,
+				3FE68AE016380D170051A267 /* RestaurantInfo.xcdatamodeld */,
 			);
 			name = TheCoreData;
 			sourceTree = "<group>";
@@ -215,15 +215,11 @@
 		9BFB1C451637EE110053200A /* QueueFree */ = {
 			isa = PBXGroup;
 			children = (
+				9BFB1C571637EE110053200A /* MainStoryboard.storyboard */,
 				3FB68578163D5FA3005116A2 /* TheCoreData */,
 				9BFB1CA916380F720053200A /* nib */,
 				9BFB1C731637FC3D0053200A /* Classes */,
 				9BFB1C661637FB160053200A /* Resources */,
-				9BFB1C4E1637EE110053200A /* QFAppDelegate.h */,
-				9BFB1C4F1637EE110053200A /* QFAppDelegate.m */,
-				9BFB1C571637EE110053200A /* MainStoryboard.storyboard */,
-				9BFB1C5A1637EE110053200A /* QFViewController.h */,
-				9BFB1C5B1637EE110053200A /* QFViewController.m */,
 				9BFB1C461637EE110053200A /* Supporting Files */,
 			);
 			path = QueueFree;
@@ -299,8 +295,12 @@
 				9B922F04163AA56A001692F2 /* GlobalSearchListViewController.m */,
 				9B922F0D163AB3EA001692F2 /* NearSearchListViewController.h */,
 				9B922F0E163AB3EA001692F2 /* NearSearchListViewController.m */,
+				9BFB1C4E1637EE110053200A /* QFAppDelegate.h */,
+				9BFB1C4F1637EE110053200A /* QFAppDelegate.m */,
 				9BFB1C741637FC5D0053200A /* QFNavigationBar.h */,
 				9BFB1C751637FC5D0053200A /* QFNavigationBar.m */,
+				9BFB1C5A1637EE110053200A /* QFViewController.h */,
+				9BFB1C5B1637EE110053200A /* QFViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
