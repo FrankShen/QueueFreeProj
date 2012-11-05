@@ -12,6 +12,7 @@
 		3F8628B1163D62F7001DCA11 /* Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8628B0163D62F7001DCA11 /* Restaurant.m */; };
 		3F8628B4163D62F7001DCA11 /* Dish.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8628B3163D62F7001DCA11 /* Dish.m */; };
 		3F8628BA163D63B0001DCA11 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F8628B9163D63B0001DCA11 /* CoreData.framework */; };
+		3FA604FE1648146A00BF98AF /* QueueFree.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FA604FD1648146A00BF98AF /* QueueFree.plist */; };
 		3FBBBD30163D61400064CA61 /* RestaurantInfo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FE68AE016380D170051A267 /* RestaurantInfo.xcdatamodeld */; };
 		9B7D1B7F163966380011916A /* home_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B7D1B7D163966380011916A /* home_background.png */; };
 		9B7D1B80163966380011916A /* home_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B7D1B7E163966380011916A /* home_background@2x.png */; };
@@ -83,6 +84,7 @@
 		3F8628B2163D62F7001DCA11 /* Dish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Dish.h; path = CoreData/Dish.h; sourceTree = "<group>"; };
 		3F8628B3163D62F7001DCA11 /* Dish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Dish.m; path = CoreData/Dish.m; sourceTree = "<group>"; };
 		3F8628B9163D63B0001DCA11 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		3FA604FD1648146A00BF98AF /* QueueFree.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = QueueFree.plist; sourceTree = "<group>"; };
 		3FE68AE116380D170051A267 /* RestaurantInfo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RestaurantInfo.xcdatamodel; sourceTree = "<group>"; };
 		9B7D1B7D163966380011916A /* home_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_background.png; sourceTree = "<group>"; };
 		9B7D1B7E163966380011916A /* home_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_background@2x.png"; sourceTree = "<group>"; };
@@ -168,7 +170,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3FB68578163D5FA3005116A2 /* TheCoreData */ = {
+		3FB68578163D5FA3005116A2 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
 				3F8628B2163D62F7001DCA11 /* Dish.h */,
@@ -179,9 +181,10 @@
 				3F8628AD163D62F6001DCA11 /* Traffic.m */,
 				3F8628AF163D62F7001DCA11 /* Restaurant.h */,
 				3F8628B0163D62F7001DCA11 /* Restaurant.m */,
+				3FA604FD1648146A00BF98AF /* QueueFree.plist */,
 				3FE68AE016380D170051A267 /* RestaurantInfo.xcdatamodeld */,
 			);
-			name = TheCoreData;
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 		9BFB1C301637EE110053200A = {
@@ -216,7 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				9BFB1C571637EE110053200A /* MainStoryboard.storyboard */,
-				3FB68578163D5FA3005116A2 /* TheCoreData */,
+				3FB68578163D5FA3005116A2 /* CoreData */,
 				9BFB1CA916380F720053200A /* nib */,
 				9BFB1C731637FC3D0053200A /* Classes */,
 				9BFB1C661637FB160053200A /* Resources */,
@@ -415,6 +418,7 @@
 				9B922EFF163AA3EE001692F2 /* search_button@2x.png in Resources */,
 				9B922F00163AA3EE001692F2 /* search_textfield.png in Resources */,
 				9B922F01163AA3EE001692F2 /* search_textfield@2x.png in Resources */,
+				3FA604FE1648146A00BF98AF /* QueueFree.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
