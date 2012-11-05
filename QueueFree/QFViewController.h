@@ -15,7 +15,7 @@
 @property (weak, nonatomic) UIView *QFHomeView;
 @property (weak, nonatomic) UIView *QFStarView;
 @property (weak, nonatomic) UIView *QFQsnsView;
-
+@property (weak, nonatomic) IBOutlet UITableView *StarTableView;
 //Add by Cui Hao for testing, when it's done, it will be deleted:
 @property (nonatomic, strong) NSManagedObjectContext* managedObjectContext;
 @property (nonatomic, strong) UIManagedDocument *restaurantDatabase;

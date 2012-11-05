@@ -7,13 +7,13 @@
 //
 
 #import "QFViewController.h"
-
+#import "StarTableViewCell.h"
 #import "CoreData/Restaurant+Plist.h"
 #import <CoreData/CoreData.h>
 
-@interface QFViewController ()
+@interface QFViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *CustomTabBar;
-
+@property (strong, nonatomic) NSArray *StarData;
 @end
 
 @implementation QFViewController
@@ -128,6 +128,30 @@
     
     //the end of this adding.
     
+    self.StarData = @[
+    @{@"old":@"15",@"now":@"12",@"shop":@"Salabim意式餐厅",@"name":@"焦糖奶油布丁"},
+    @{@"old":@"38",@"now":@"30",@"shop":@"川杭人家",@"name":@"干锅千叶豆腐"},
+    @{@"old":@"16",@"now":@"13",@"shop":@"宫の寿司",@"name":@"宫卷"},
+    @{@"old":@"48",@"now":@"38",@"shop":@"虹林阁",@"name":@"松子鲈鱼"},
+    @{@"old":@"23",@"now":@"18",@"shop":@"尖东茶楼",@"name":@"烧鹅"},
+    @{@"old":@"38",@"now":@"30",@"shop":@"锦江大厨",@"name":@"XO酱爆元宝虾"},
+    @{@"old":@"42",@"now":@"34",@"shop":@"聚点时尚烧烤主题餐厅(彰武路店)",@"name":@"上等牛舌"},
+    @{@"old":@"58",@"now":@"46",@"shop":@"迈玛瑞",@"name":@"有机鱼头汤"},
+    @{@"old":@"30",@"now":@"24",@"shop":@"权金城",@"name":@"烤五花肉"},
+    @{@"old":@"38",@"now":@"30",@"shop":@"染山",@"name":@"三文鱼"},
+    @{@"old":@"58",@"now":@"46",@"shop":@"沈家花园",@"name":@"蟹粉豆腐"},
+    @{@"old":@"42",@"now":@"32",@"shop":@"菽心阁",@"name":@"酸汤肥牛"},
+    @{@"old":@"88",@"now":@"69",@"shop":@"谭氏私房菜",@"name":@"谭氏老鸭汤"},
+    @{@"old":@"46",@"now":@"36",@"shop":@"夏朵小厨",@"name":@"郁金香海鲜焗饭"},
+    @{@"old":@"18",@"now":@"14",@"shop":@"夏月小厨",@"name":@"醋溜鱼片"},
+    @{@"old":@"88",@"now":@"70",@"shop":@"新南华",@"name":@"水晶鸡"},
+    @{@"old":@"42",@"now":@"34",@"shop":@"新雨",@"name":@"卡夫牛排"},
+    @{@"old":@"48",@"now":@"38",@"shop":@"兴华川菜馆",@"name":@"烤鱼"},
+    @{@"old":@"38",@"now":@"30",@"shop":@"愚慧阁",@"name":@"牛油虾"},
+    ];
+
+    
+    
     self.QFHomeView = [[[NSBundle mainBundle] loadNibNamed:@"QFHomeView" owner:self options:nil] lastObject];
     self.QFStarView = [[[NSBundle mainBundle] loadNibNamed:@"QFStarView" owner:self options:nil] lastObject];
     self.QFQsnsView = [[[NSBundle mainBundle] loadNibNamed:@"QFQsnsView" owner:self options:nil] lastObject];
@@ -141,6 +165,8 @@
     self.TabBar.qsnsButton.selected = NO;
     
     [self changeSubView];
+    
+    [self.StarTableView registerNib:[UINib nibWithNibName:@"StarTableViewCell" bundle:nil] forCellReuseIdentifier:@"StarTableViewCell"];
     
 }
 
@@ -192,6 +218,30 @@
 - (IBAction)nearSearchPressed:(id)sender
 {
     [self performSegueWithIdentifier:@"NearSearch" sender:self.parentViewController];
+}
+
+#pragma mark delegate
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    if (tableView == self.StarTableView){
+        return self.StarData.count;
+    }
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (tableView == self.StarTableView) {
+        StarTableViewCell *cell = [self.StarTableView dequeueReusableCellWithIdentifier:@"StarTableViewCell"];
+        NSDictionary *tempDic = [self.StarData objectAtIndex:indexPath.row];
+        cell.dishImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"%d",indexPath.row]];
+        NSLog(@"%d",cell.dishImage.image.size.height);
+        cell.shopName.text = [tempDic objectForKey:@"shop"];
+        cell.dishName.text = [tempDic objectForKey:@"name"];
+        cell.oldPrice.text = [tempDic objectForKey:@"old"];
+        cell.nowPrice.text = [tempDic objectForKey:@"now"];
+        return cell;
+    }
 }
 
 @end
