@@ -63,6 +63,8 @@
 		9BF5DEDA16484322008B189A /* StarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF5DEAD16484196008B189A /* StarTableViewCell.m */; };
 		9BF5DEDD164846E9008B189A /* star_dish_image_boarder.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BF5DEDB164846E9008B189A /* star_dish_image_boarder.png */; };
 		9BF5DEDE164846E9008B189A /* star_dish_image_boarder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BF5DEDC164846E9008B189A /* star_dish_image_boarder@2x.png */; };
+		9BF5DEE0164854D3008B189A /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BF5DEDF164854D3008B189A /* icon.png */; };
+		9BF5DEE2164854D9008B189A /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BF5DEE1164854D9008B189A /* icon@2x.png */; };
 		9BFB1C401637EE110053200A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BFB1C3F1637EE110053200A /* UIKit.framework */; };
 		9BFB1C421637EE110053200A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BFB1C411637EE110053200A /* Foundation.framework */; };
 		9BFB1C441637EE110053200A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BFB1C431637EE110053200A /* CoreGraphics.framework */; };
@@ -163,6 +165,8 @@
 		9BF5DED8164841DA008B189A /* QFStarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QFStarView.xib; sourceTree = "<group>"; };
 		9BF5DEDB164846E9008B189A /* star_dish_image_boarder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_dish_image_boarder.png; sourceTree = "<group>"; };
 		9BF5DEDC164846E9008B189A /* star_dish_image_boarder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star_dish_image_boarder@2x.png"; sourceTree = "<group>"; };
+		9BF5DEDF164854D3008B189A /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../icon.png; sourceTree = "<group>"; };
+		9BF5DEE1164854D9008B189A /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "../../icon@2x.png"; sourceTree = "<group>"; };
 		9BFB1C3B1637EE110053200A /* QueueFree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QueueFree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BFB1C3F1637EE110053200A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9BFB1C411637EE110053200A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -297,6 +301,8 @@
 		9BFB1C661637FB160053200A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9BF5DEE1164854D9008B189A /* icon@2x.png */,
+				9BF5DEDF164854D3008B189A /* icon.png */,
 				9BF5DEDB164846E9008B189A /* star_dish_image_boarder.png */,
 				9BF5DEDC164846E9008B189A /* star_dish_image_boarder@2x.png */,
 				9BF5DEB0164841B2008B189A /* 0.jpg */,
@@ -517,6 +523,8 @@
 				9BF5DED9164841DA008B189A /* QFStarView.xib in Resources */,
 				9BF5DEDD164846E9008B189A /* star_dish_image_boarder.png in Resources */,
 				9BF5DEDE164846E9008B189A /* star_dish_image_boarder@2x.png in Resources */,
+				9BF5DEE0164854D3008B189A /* icon.png in Resources */,
+				9BF5DEE2164854D9008B189A /* icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
