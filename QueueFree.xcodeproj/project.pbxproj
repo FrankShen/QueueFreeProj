@@ -13,6 +13,7 @@
 		3F8628B4163D62F7001DCA11 /* Dish.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8628B3163D62F7001DCA11 /* Dish.m */; };
 		3F8628BA163D63B0001DCA11 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F8628B9163D63B0001DCA11 /* CoreData.framework */; };
 		3FA604FE1648146A00BF98AF /* QueueFree.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FA604FD1648146A00BF98AF /* QueueFree.plist */; };
+		3FA605111648314100BF98AF /* Restaurant+Plist.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA605101648314100BF98AF /* Restaurant+Plist.m */; };
 		3FBBBD30163D61400064CA61 /* RestaurantInfo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FE68AE016380D170051A267 /* RestaurantInfo.xcdatamodeld */; };
 		9B7D1B7F163966380011916A /* home_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B7D1B7D163966380011916A /* home_background.png */; };
 		9B7D1B80163966380011916A /* home_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B7D1B7E163966380011916A /* home_background@2x.png */; };
@@ -85,6 +86,8 @@
 		3F8628B3163D62F7001DCA11 /* Dish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Dish.m; path = CoreData/Dish.m; sourceTree = "<group>"; };
 		3F8628B9163D63B0001DCA11 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		3FA604FD1648146A00BF98AF /* QueueFree.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = QueueFree.plist; sourceTree = "<group>"; };
+		3FA6050F1648314000BF98AF /* Restaurant+Plist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Restaurant+Plist.h"; path = "CoreData/Restaurant+Plist.h"; sourceTree = "<group>"; };
+		3FA605101648314100BF98AF /* Restaurant+Plist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Restaurant+Plist.m"; path = "CoreData/Restaurant+Plist.m"; sourceTree = "<group>"; };
 		3FE68AE116380D170051A267 /* RestaurantInfo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RestaurantInfo.xcdatamodel; sourceTree = "<group>"; };
 		9B7D1B7D163966380011916A /* home_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_background.png; sourceTree = "<group>"; };
 		9B7D1B7E163966380011916A /* home_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_background@2x.png"; sourceTree = "<group>"; };
@@ -183,6 +186,8 @@
 				3F8628B0163D62F7001DCA11 /* Restaurant.m */,
 				3FA604FD1648146A00BF98AF /* QueueFree.plist */,
 				3FE68AE016380D170051A267 /* RestaurantInfo.xcdatamodeld */,
+				3FA6050F1648314000BF98AF /* Restaurant+Plist.h */,
+				3FA605101648314100BF98AF /* Restaurant+Plist.m */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -441,6 +446,7 @@
 				3F8628AE163D62F6001DCA11 /* Traffic.m in Sources */,
 				3F8628B1163D62F7001DCA11 /* Restaurant.m in Sources */,
 				3F8628B4163D62F7001DCA11 /* Dish.m in Sources */,
+				3FA605111648314100BF98AF /* Restaurant+Plist.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

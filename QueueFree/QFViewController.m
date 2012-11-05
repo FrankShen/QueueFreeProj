@@ -8,12 +8,18 @@
 
 #import "QFViewController.h"
 
+#import "CoreData/Restaurant+Plist.h"
+#import <CoreData/CoreData.h>
+
 @interface QFViewController ()
 @property (weak, nonatomic) IBOutlet UIView *CustomTabBar;
 
 @end
 
 @implementation QFViewController
+@synthesize managedObjectContext = _managedObjectContext;
+@synthesize restaurantDatabase = _restaurantDatabase;
+@synthesize fetchedResultsController = _fetchedResultsController;
 
 - (void)changeSubView
 {
@@ -37,10 +43,90 @@
     }
 }
 
+//Add by Cui Hao for testing, when it's done, it will be deleted:
+
+- (void)setupFetchedResultsController
+{
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Restaurant"];
+    request.sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES]];
+    
+    self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request
+                                                                        managedObjectContext:self.restaurantDatabase.managedObjectContext
+                                                                          sectionNameKeyPath:nil
+                                                                                   cacheName:nil];
+    
+    
+}
+
+- (void)FetchPlistDataInDocument:(UIManagedDocument *)document
+{
+    dispatch_queue_t fetchQ = dispatch_queue_create("PlistInfo fetcher", NULL);
+    dispatch_async(fetchQ, ^{
+        
+        
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"QueueFree" ofType:@"plist"];        
+        NSArray *root = [[NSArray alloc] initWithContentsOfFile:filePath];
+        
+        [document.managedObjectContext performBlock:^{
+            for (NSDictionary *theRestaurant in root) {
+                //the Restaurant Category
+                [Restaurant infoWithPlistInfo:theRestaurant inManagedObjectContext:document.managedObjectContext];
+                
+            }
+        }];
+        
+    });
+    //dispatch_release(fetchQ);
+}
+
+- (void)UseDocument
+{
+    if (![[NSFileManager defaultManager] fileExistsAtPath:[self.restaurantDatabase.fileURL path]]) {
+        [self.restaurantDatabase saveToURL:self.restaurantDatabase.fileURL forSaveOperation:UIDocumentSaveForCreating completionHandler:^(BOOL success) {
+            [self setupFetchedResultsController];
+            [self FetchPlistDataInDocument:self.restaurantDatabase];
+            
+        }];
+    } else if (self.restaurantDatabase.documentState == UIDocumentStateClosed) {
+        [self.restaurantDatabase openWithCompletionHandler:^(BOOL success) {
+            [self setupFetchedResultsController];
+        }];
+    } else if (self.restaurantDatabase.documentState == UIDocumentStateNormal) {
+        [self setupFetchedResultsController];
+    }
+}
+
+- (void)setRestaurantDatabase:(UIManagedDocument *)restaurantDatabase
+{
+    if (_restaurantDatabase != restaurantDatabase) {
+        _restaurantDatabase = restaurantDatabase;
+        [self UseDocument];
+    }
+}
+
+//the end of this adding.
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    //Add by Cui Hao for testing, when it's done, it will be deleted:
+    
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"QueueFree" ofType:@"plist"];
+    NSLog(@"The plist Path is :%@", filePath);
+    
+    NSArray *root = [[NSArray alloc] initWithContentsOfFile:filePath];
+    NSLog(@"the restaurant count is %d", [root count]);
+    
+    if (!self.restaurantDatabase) {
+        NSURL *url = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+        url = [url URLByAppendingPathComponent:@"Default Restaurant Database"];
+        self.restaurantDatabase = [[UIManagedDocument alloc] initWithFileURL:url];
+    }
+    
+    
+    //the end of this adding.
     
     self.QFHomeView = [[[NSBundle mainBundle] loadNibNamed:@"QFHomeView" owner:self options:nil] lastObject];
     self.QFStarView = [[[NSBundle mainBundle] loadNibNamed:@"QFStarView" owner:self options:nil] lastObject];
