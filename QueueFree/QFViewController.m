@@ -234,8 +234,7 @@
     if (tableView == self.StarTableView) {
         StarTableViewCell *cell = [self.StarTableView dequeueReusableCellWithIdentifier:@"StarTableViewCell"];
         NSDictionary *tempDic = [self.StarData objectAtIndex:indexPath.row];
-        cell.dishImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"%d",indexPath.row]];
-        NSLog(@"%d",cell.dishImage.image.size.height);
+        cell.dishImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"%d.jpg",indexPath.row]];
         cell.shopName.text = [tempDic objectForKey:@"shop"];
         cell.dishName.text = [tempDic objectForKey:@"name"];
         cell.oldPrice.text = [tempDic objectForKey:@"old"];
@@ -244,4 +243,11 @@
     }
 }
 
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (tableView == self.StarTableView){
+        
+    }
+}
 @end
