@@ -15,6 +15,7 @@
 		3FA605201648D0FD00BF98AF /* Traffic.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA6051F1648D0FD00BF98AF /* Traffic.m */; };
 		3FA605231648D0FE00BF98AF /* Dish.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA605221648D0FE00BF98AF /* Dish.m */; };
 		3FBBBD30163D61400064CA61 /* RestaurantInfo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FE68AE016380D170051A267 /* RestaurantInfo.xcdatamodeld */; };
+		9B36861016496AF000ED0054 /* SHUFE.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 9B36860F16496AF000ED0054 /* SHUFE.gpx */; };
 		9B7148DE16494A9200721CD4 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B7148DD16494A9200721CD4 /* MainStoryboard.storyboard */; };
 		9B7148DF16494AC300721CD4 /* Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7148D1164949AA00721CD4 /* Annotation.m */; };
 		9B7148E016494AC300721CD4 /* AnnotationCreate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7148D3164949AA00721CD4 /* AnnotationCreate.m */; };
@@ -139,6 +140,7 @@
 		3FA605211648D0FE00BF98AF /* Dish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Dish.h; path = CoreData/Dish.h; sourceTree = "<group>"; };
 		3FA605221648D0FE00BF98AF /* Dish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Dish.m; path = CoreData/Dish.m; sourceTree = "<group>"; };
 		3FE68AE116380D170051A267 /* RestaurantInfo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RestaurantInfo.xcdatamodel; sourceTree = "<group>"; };
+		9B36860F16496AF000ED0054 /* SHUFE.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = SHUFE.gpx; path = ../SHUFE.gpx; sourceTree = "<group>"; };
 		9B7148D0164949AA00721CD4 /* Annotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Annotation.h; sourceTree = "<group>"; };
 		9B7148D1164949AA00721CD4 /* Annotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Annotation.m; sourceTree = "<group>"; };
 		9B7148D2164949AA00721CD4 /* AnnotationCreate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnnotationCreate.h; sourceTree = "<group>"; };
@@ -460,6 +462,7 @@
 		9BFB1C461637EE110053200A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9B36860F16496AF000ED0054 /* SHUFE.gpx */,
 				9BFB1C471637EE110053200A /* QueueFree-Info.plist */,
 				9BFB1C481637EE110053200A /* InfoPlist.strings */,
 				9BFB1C4B1637EE110053200A /* main.m */,
@@ -697,6 +700,7 @@
 				9BF5DEE0164854D3008B189A /* icon.png in Resources */,
 				9BF5DEE2164854D9008B189A /* icon@2x.png in Resources */,
 				9B7148DE16494A9200721CD4 /* MainStoryboard.storyboard in Resources */,
+				9B36861016496AF000ED0054 /* SHUFE.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
