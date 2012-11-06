@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3F8628AB163D62F6001DCA11 /* Telephone.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8628AA163D62F6001DCA11 /* Telephone.m */; };
-		3F8628AE163D62F6001DCA11 /* Traffic.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8628AD163D62F6001DCA11 /* Traffic.m */; };
-		3F8628B1163D62F7001DCA11 /* Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8628B0163D62F7001DCA11 /* Restaurant.m */; };
-		3F8628B4163D62F7001DCA11 /* Dish.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8628B3163D62F7001DCA11 /* Dish.m */; };
 		3F8628BA163D63B0001DCA11 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F8628B9163D63B0001DCA11 /* CoreData.framework */; };
 		3FA604FE1648146A00BF98AF /* QueueFree.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FA604FD1648146A00BF98AF /* QueueFree.plist */; };
 		3FA605111648314100BF98AF /* Restaurant+Plist.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA605101648314100BF98AF /* Restaurant+Plist.m */; };
+		3FA605191648D0F800BF98AF /* Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA605181648D0F800BF98AF /* Restaurant.m */; };
+		3FA6051D1648D0FC00BF98AF /* Telephone.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA6051C1648D0F900BF98AF /* Telephone.m */; };
+		3FA605201648D0FD00BF98AF /* Traffic.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA6051F1648D0FD00BF98AF /* Traffic.m */; };
+		3FA605231648D0FE00BF98AF /* Dish.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA605221648D0FE00BF98AF /* Dish.m */; };
 		3FBBBD30163D61400064CA61 /* RestaurantInfo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FE68AE016380D170051A267 /* RestaurantInfo.xcdatamodeld */; };
 		9B7D1B7F163966380011916A /* home_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B7D1B7D163966380011916A /* home_background.png */; };
 		9B7D1B80163966380011916A /* home_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B7D1B7E163966380011916A /* home_background@2x.png */; };
@@ -101,18 +101,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3F8628A9163D62F6001DCA11 /* Telephone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Telephone.h; path = CoreData/Telephone.h; sourceTree = "<group>"; };
-		3F8628AA163D62F6001DCA11 /* Telephone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Telephone.m; path = CoreData/Telephone.m; sourceTree = "<group>"; };
-		3F8628AC163D62F6001DCA11 /* Traffic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Traffic.h; path = CoreData/Traffic.h; sourceTree = "<group>"; };
-		3F8628AD163D62F6001DCA11 /* Traffic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Traffic.m; path = CoreData/Traffic.m; sourceTree = "<group>"; };
-		3F8628AF163D62F7001DCA11 /* Restaurant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Restaurant.h; path = CoreData/Restaurant.h; sourceTree = "<group>"; };
-		3F8628B0163D62F7001DCA11 /* Restaurant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Restaurant.m; path = CoreData/Restaurant.m; sourceTree = "<group>"; };
-		3F8628B2163D62F7001DCA11 /* Dish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Dish.h; path = CoreData/Dish.h; sourceTree = "<group>"; };
-		3F8628B3163D62F7001DCA11 /* Dish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Dish.m; path = CoreData/Dish.m; sourceTree = "<group>"; };
 		3F8628B9163D63B0001DCA11 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		3FA604FD1648146A00BF98AF /* QueueFree.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = QueueFree.plist; sourceTree = "<group>"; };
 		3FA6050F1648314000BF98AF /* Restaurant+Plist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Restaurant+Plist.h"; path = "CoreData/Restaurant+Plist.h"; sourceTree = "<group>"; };
 		3FA605101648314100BF98AF /* Restaurant+Plist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Restaurant+Plist.m"; path = "CoreData/Restaurant+Plist.m"; sourceTree = "<group>"; };
+		3FA605171648D0F700BF98AF /* Restaurant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Restaurant.h; path = CoreData/Restaurant.h; sourceTree = "<group>"; };
+		3FA605181648D0F800BF98AF /* Restaurant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Restaurant.m; path = CoreData/Restaurant.m; sourceTree = "<group>"; };
+		3FA6051B1648D0F900BF98AF /* Telephone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Telephone.h; path = CoreData/Telephone.h; sourceTree = "<group>"; };
+		3FA6051C1648D0F900BF98AF /* Telephone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Telephone.m; path = CoreData/Telephone.m; sourceTree = "<group>"; };
+		3FA6051E1648D0FC00BF98AF /* Traffic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Traffic.h; path = CoreData/Traffic.h; sourceTree = "<group>"; };
+		3FA6051F1648D0FD00BF98AF /* Traffic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Traffic.m; path = CoreData/Traffic.m; sourceTree = "<group>"; };
+		3FA605211648D0FE00BF98AF /* Dish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Dish.h; path = CoreData/Dish.h; sourceTree = "<group>"; };
+		3FA605221648D0FE00BF98AF /* Dish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Dish.m; path = CoreData/Dish.m; sourceTree = "<group>"; };
 		3FE68AE116380D170051A267 /* RestaurantInfo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RestaurantInfo.xcdatamodel; sourceTree = "<group>"; };
 		9B7D1B7D163966380011916A /* home_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_background.png; sourceTree = "<group>"; };
 		9B7D1B7E163966380011916A /* home_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_background@2x.png"; sourceTree = "<group>"; };
@@ -227,16 +227,16 @@
 		3FB68578163D5FA3005116A2 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				3F8628B2163D62F7001DCA11 /* Dish.h */,
-				3F8628B3163D62F7001DCA11 /* Dish.m */,
-				3F8628A9163D62F6001DCA11 /* Telephone.h */,
-				3F8628AA163D62F6001DCA11 /* Telephone.m */,
-				3F8628AC163D62F6001DCA11 /* Traffic.h */,
-				3F8628AD163D62F6001DCA11 /* Traffic.m */,
-				3F8628AF163D62F7001DCA11 /* Restaurant.h */,
-				3F8628B0163D62F7001DCA11 /* Restaurant.m */,
 				3FA604FD1648146A00BF98AF /* QueueFree.plist */,
 				3FE68AE016380D170051A267 /* RestaurantInfo.xcdatamodeld */,
+				3FA605171648D0F700BF98AF /* Restaurant.h */,
+				3FA605181648D0F800BF98AF /* Restaurant.m */,
+				3FA6051B1648D0F900BF98AF /* Telephone.h */,
+				3FA6051C1648D0F900BF98AF /* Telephone.m */,
+				3FA6051E1648D0FC00BF98AF /* Traffic.h */,
+				3FA6051F1648D0FD00BF98AF /* Traffic.m */,
+				3FA605211648D0FE00BF98AF /* Dish.h */,
+				3FA605221648D0FE00BF98AF /* Dish.m */,
 				3FA6050F1648314000BF98AF /* Restaurant+Plist.h */,
 				3FA605101648314100BF98AF /* Restaurant+Plist.m */,
 			);
@@ -544,11 +544,11 @@
 				9BFB1C84163805F20053200A /* CustomTabBarView.m in Sources */,
 				9B922F05163AA56A001692F2 /* GlobalSearchListViewController.m in Sources */,
 				9B922F0F163AB3EA001692F2 /* NearSearchListViewController.m in Sources */,
-				3F8628AB163D62F6001DCA11 /* Telephone.m in Sources */,
-				3F8628AE163D62F6001DCA11 /* Traffic.m in Sources */,
-				3F8628B1163D62F7001DCA11 /* Restaurant.m in Sources */,
-				3F8628B4163D62F7001DCA11 /* Dish.m in Sources */,
 				3FA605111648314100BF98AF /* Restaurant+Plist.m in Sources */,
+				3FA605191648D0F800BF98AF /* Restaurant.m in Sources */,
+				3FA6051D1648D0FC00BF98AF /* Telephone.m in Sources */,
+				3FA605201648D0FD00BF98AF /* Traffic.m in Sources */,
+				3FA605231648D0FE00BF98AF /* Dish.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

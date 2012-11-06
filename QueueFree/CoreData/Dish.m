@@ -2,7 +2,7 @@
 //  Dish.m
 //  QueueFree
 //
-//  Created by Cui Hao on 12-10-28.
+//  Created by Cui Hao on 12-11-6.
 //  Copyright (c) 2012年 BuG.BS. All rights reserved.
 //
 
@@ -14,6 +14,7 @@
 
 @dynamic image;
 @dynamic name;
+@dynamic price;
 @dynamic restaurantInfo;
 
 @end

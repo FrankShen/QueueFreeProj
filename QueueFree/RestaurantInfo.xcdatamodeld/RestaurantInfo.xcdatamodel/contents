@@ -3,6 +3,7 @@
     <entity name="Dish" representedClassName="Dish" syncable="YES">
         <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="restaurantInfo" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Restaurant" inverseName="dishInfo" inverseEntity="Restaurant" syncable="YES"/>
     </entity>
     <entity name="Restaurant" representedClassName="Restaurant" syncable="YES">
@@ -32,7 +33,7 @@
         <relationship name="restaurantInfo" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Restaurant" inverseName="trafficInfo" inverseEntity="Restaurant" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Dish" positionX="-5490" positionY="344" width="128" height="90"/>
+        <element name="Dish" positionX="-5490" positionY="344" width="128" height="103"/>
         <element name="Restaurant" positionX="-5483" positionY="9" width="128" height="270"/>
         <element name="Telephone" positionX="-5726" positionY="125" width="128" height="75"/>
         <element name="Traffic" positionX="-5220" positionY="126" width="128" height="90"/>

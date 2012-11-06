@@ -2,7 +2,7 @@
 //  Dish.h
 //  QueueFree
 //
-//  Created by Cui Hao on 12-10-28.
+//  Created by Cui Hao on 12-11-6.
 //  Copyright (c) 2012年 BuG.BS. All rights reserved.
 //
 
@@ -15,6 +15,7 @@
 
 @property (nonatomic, retain) NSData * image;
 @property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) NSNumber * price;
 @property (nonatomic, retain) Restaurant *restaurantInfo;
 
 @end

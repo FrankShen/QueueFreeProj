@@ -2,7 +2,7 @@
 //  Traffic.h
 //  QueueFree
 //
-//  Created by Cui Hao on 12-10-28.
+//  Created by Cui Hao on 12-11-6.
 //  Copyright (c) 2012年 BuG.BS. All rights reserved.
 //
 
