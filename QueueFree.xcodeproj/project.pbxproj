@@ -15,6 +15,7 @@
 		3FA605201648D0FD00BF98AF /* Traffic.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA6051F1648D0FD00BF98AF /* Traffic.m */; };
 		3FA605231648D0FE00BF98AF /* Dish.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA605221648D0FE00BF98AF /* Dish.m */; };
 		3FBBBD30163D61400064CA61 /* RestaurantInfo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FE68AE016380D170051A267 /* RestaurantInfo.xcdatamodeld */; };
+<<<<<<< HEAD
 		9B77FBC5164915C700C503E2 /* qr_draw_png.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9B77FBC1164915C700C503E2 /* qr_draw_png.mm */; };
 		9B77FBC6164915C700C503E2 /* QR_Encode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9B77FBC3164915C700C503E2 /* QR_Encode.mm */; };
 		9B77FBE0164915D100C503E2 /* png.c in Sources */ = {isa = PBXBuildFile; fileRef = 9B77FBC9164915D100C503E2 /* png.c */; };
@@ -34,6 +35,16 @@
 		9B77FBEE164915D100C503E2 /* pngwutil.c in Sources */ = {isa = PBXBuildFile; fileRef = 9B77FBDE164915D100C503E2 /* pngwutil.c */; };
 		9B77FBF01649160100C503E2 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B77FBEF1649160100C503E2 /* libz.dylib */; };
 		9B77FBF3164916A100C503E2 /* Barcode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9B77FBF21649167200C503E2 /* Barcode.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+=======
+		4D2E5BD6164850CF00EDFD2F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2E5BD5164850CF00EDFD2F /* MapKit.framework */; };
+		4D2E5BE01648A6E100EDFD2F /* NSMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E5BDE1648A6E000EDFD2F /* NSMapViewController.m */; };
+		4D2E5BEA1648B2BB00EDFD2F /* NSMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D2E5BE91648B2BB00EDFD2F /* NSMapView.xib */; };
+		4D2E5BEC1648C45400EDFD2F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2E5BEB1648C45400EDFD2F /* CoreLocation.framework */; };
+		4D2E5BEF1648E14600EDFD2F /* Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E5BEE1648E14600EDFD2F /* Annotation.m */; };
+		4D2E5BF21648E37200EDFD2F /* AnnotationCreate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E5BF11648E37200EDFD2F /* AnnotationCreate.m */; };
+		4D2E5BF51648EAC000EDFD2F /* NSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E5BF41648EAC000EDFD2F /* NSTableViewController.m */; };
+		4D2E5BF71648EADB00EDFD2F /* NSTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D2E5BF61648EADB00EDFD2F /* NSTableView.xib */; };
+>>>>>>> NearSearch 重构，表示Git的Merge把我恶心到了
 		9B7D1B7F163966380011916A /* home_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B7D1B7D163966380011916A /* home_background.png */; };
 		9B7D1B80163966380011916A /* home_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B7D1B7E163966380011916A /* home_background@2x.png */; };
 		9B7D1B89163968710011916A /* home_frame_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B7D1B82163968710011916A /* home_frame_down.png */; };
@@ -133,6 +144,7 @@
 		3FA605211648D0FE00BF98AF /* Dish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Dish.h; path = CoreData/Dish.h; sourceTree = "<group>"; };
 		3FA605221648D0FE00BF98AF /* Dish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Dish.m; path = CoreData/Dish.m; sourceTree = "<group>"; };
 		3FE68AE116380D170051A267 /* RestaurantInfo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RestaurantInfo.xcdatamodel; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		9B77FBBF164915C700C503E2 /* qr_draw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = qr_draw.h; sourceTree = "<group>"; };
 		9B77FBC0164915C700C503E2 /* qr_draw_png.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = qr_draw_png.h; sourceTree = "<group>"; };
 		9B77FBC1164915C700C503E2 /* qr_draw_png.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = qr_draw_png.mm; sourceTree = "<group>"; };
@@ -165,6 +177,20 @@
 		9B77FBEF1649160100C503E2 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		9B77FBF11649167200C503E2 /* Barcode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Barcode.h; sourceTree = "<group>"; };
 		9B77FBF21649167200C503E2 /* Barcode.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Barcode.mm; sourceTree = "<group>"; };
+=======
+		4D2E5BD5164850CF00EDFD2F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4D2E5BDD1648A6E000EDFD2F /* NSMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMapViewController.h; sourceTree = "<group>"; };
+		4D2E5BDE1648A6E000EDFD2F /* NSMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMapViewController.m; sourceTree = "<group>"; };
+		4D2E5BE91648B2BB00EDFD2F /* NSMapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NSMapView.xib; sourceTree = "<group>"; };
+		4D2E5BEB1648C45400EDFD2F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		4D2E5BED1648E14600EDFD2F /* Annotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Annotation.h; sourceTree = "<group>"; };
+		4D2E5BEE1648E14600EDFD2F /* Annotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Annotation.m; sourceTree = "<group>"; };
+		4D2E5BF01648E37200EDFD2F /* AnnotationCreate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnnotationCreate.h; sourceTree = "<group>"; };
+		4D2E5BF11648E37200EDFD2F /* AnnotationCreate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnnotationCreate.m; sourceTree = "<group>"; };
+		4D2E5BF31648EAC000EDFD2F /* NSTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSTableViewController.h; sourceTree = "<group>"; };
+		4D2E5BF41648EAC000EDFD2F /* NSTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSTableViewController.m; sourceTree = "<group>"; };
+		4D2E5BF61648EADB00EDFD2F /* NSTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NSTableView.xib; sourceTree = "<group>"; };
+>>>>>>> NearSearch 重构，表示Git的Merge把我恶心到了
 		9B7D1B7D163966380011916A /* home_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_background.png; sourceTree = "<group>"; };
 		9B7D1B7E163966380011916A /* home_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_background@2x.png"; sourceTree = "<group>"; };
 		9B7D1B82163968710011916A /* home_frame_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_frame_down.png; sourceTree = "<group>"; };
@@ -265,7 +291,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
 				9B77FBF01649160100C503E2 /* libz.dylib in Frameworks */,
+=======
+				4D2E5BEC1648C45400EDFD2F /* CoreLocation.framework in Frameworks */,
+				4D2E5BD6164850CF00EDFD2F /* MapKit.framework in Frameworks */,
+>>>>>>> NearSearch 重构，表示Git的Merge把我恶心到了
 				3F8628BA163D63B0001DCA11 /* CoreData.framework in Frameworks */,
 				9BFB1C401637EE110053200A /* UIKit.framework in Frameworks */,
 				9BFB1C421637EE110053200A /* Foundation.framework in Frameworks */,
@@ -295,6 +326,7 @@
 			name = CoreData;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
 		9B77FBBE164915C700C503E2 /* QRDraw */ = {
 			isa = PBXGroup;
 			children = (
@@ -336,11 +368,66 @@
 				9B77FBDF164915D100C503E2 /* zlib.h */,
 			);
 			path = libpng;
+=======
+		4D2E5BE21648A7AF00EDFD2F /* NearSearch */ = {
+			isa = PBXGroup;
+			children = (
+				4D2E5BE31648A7D000EDFD2F /* SubViews */,
+				9B922F0D163AB3EA001692F2 /* NearSearchListViewController.h */,
+				9B922F0E163AB3EA001692F2 /* NearSearchListViewController.m */,
+			);
+			name = NearSearch;
+			sourceTree = "<group>";
+		};
+		4D2E5BE31648A7D000EDFD2F /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				4D2E5BDD1648A6E000EDFD2F /* NSMapViewController.h */,
+				4D2E5BDE1648A6E000EDFD2F /* NSMapViewController.m */,
+				4D2E5BE91648B2BB00EDFD2F /* NSMapView.xib */,
+				4D2E5BF31648EAC000EDFD2F /* NSTableViewController.h */,
+				4D2E5BF41648EAC000EDFD2F /* NSTableViewController.m */,
+				4D2E5BF61648EADB00EDFD2F /* NSTableView.xib */,
+			);
+			name = SubViews;
+			sourceTree = "<group>";
+		};
+		4D2E5BE41648A7E300EDFD2F /* GlobalSearch */ = {
+			isa = PBXGroup;
+			children = (
+				4D2E5BE51648A7F600EDFD2F /* SubViews */,
+				9B922F03163AA56A001692F2 /* GlobalSearchListViewController.h */,
+				9B922F04163AA56A001692F2 /* GlobalSearchListViewController.m */,
+			);
+			name = GlobalSearch;
+			sourceTree = "<group>";
+		};
+		4D2E5BE51648A7F600EDFD2F /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SubViews;
+			sourceTree = "<group>";
+		};
+		4D2E5BE61648ACDE00EDFD2F /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				4D2E5BED1648E14600EDFD2F /* Annotation.h */,
+				4D2E5BEE1648E14600EDFD2F /* Annotation.m */,
+				4D2E5BF01648E37200EDFD2F /* AnnotationCreate.h */,
+				4D2E5BF11648E37200EDFD2F /* AnnotationCreate.m */,
+				4D2E5BE21648A7AF00EDFD2F /* NearSearch */,
+				4D2E5BE41648A7E300EDFD2F /* GlobalSearch */,
+			);
+			name = Search;
+>>>>>>> NearSearch 重构，表示Git的Merge把我恶心到了
 			sourceTree = "<group>";
 		};
 		9BFB1C301637EE110053200A = {
 			isa = PBXGroup;
 			children = (
+				4D2E5BEB1648C45400EDFD2F /* CoreLocation.framework */,
+				4D2E5BD5164850CF00EDFD2F /* MapKit.framework */,
 				3F8628B9163D63B0001DCA11 /* CoreData.framework */,
 				9BFB1C451637EE110053200A /* QueueFree */,
 				9BFB1C3E1637EE110053200A /* Frameworks */,
@@ -469,14 +556,14 @@
 		9BFB1C731637FC3D0053200A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				9B77FBF11649167200C503E2 /* Barcode.h */,
 				9B77FBF21649167200C503E2 /* Barcode.mm */,
+=======
+				4D2E5BE61648ACDE00EDFD2F /* Search */,
+>>>>>>> NearSearch 重构，表示Git的Merge把我恶心到了
 				9BFB1C82163805F20053200A /* CustomTabBarView.h */,
 				9BFB1C83163805F20053200A /* CustomTabBarView.m */,
-				9B922F03163AA56A001692F2 /* GlobalSearchListViewController.h */,
-				9B922F04163AA56A001692F2 /* GlobalSearchListViewController.m */,
-				9B922F0D163AB3EA001692F2 /* NearSearchListViewController.h */,
-				9B922F0E163AB3EA001692F2 /* NearSearchListViewController.m */,
 				9BFB1C4E1637EE110053200A /* QFAppDelegate.h */,
 				9BFB1C4F1637EE110053200A /* QFAppDelegate.m */,
 				9BFB1C741637FC5D0053200A /* QFNavigationBar.h */,
@@ -623,8 +710,13 @@
 				9BF5DED9164841DA008B189A /* QFStarView.xib in Resources */,
 				9BF5DEDD164846E9008B189A /* star_dish_image_boarder.png in Resources */,
 				9BF5DEDE164846E9008B189A /* star_dish_image_boarder@2x.png in Resources */,
+<<<<<<< HEAD
 				9BF5DEE0164854D3008B189A /* icon.png in Resources */,
 				9BF5DEE2164854D9008B189A /* icon@2x.png in Resources */,
+=======
+				4D2E5BEA1648B2BB00EDFD2F /* NSMapView.xib in Resources */,
+				4D2E5BF71648EADB00EDFD2F /* NSTableView.xib in Resources */,
+>>>>>>> NearSearch 重构，表示Git的Merge把我恶心到了
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -646,10 +738,12 @@
 				9B922F05163AA56A001692F2 /* GlobalSearchListViewController.m in Sources */,
 				9B922F0F163AB3EA001692F2 /* NearSearchListViewController.m in Sources */,
 				3FA605111648314100BF98AF /* Restaurant+Plist.m in Sources */,
+<<<<<<< HEAD
 				3FA605191648D0F800BF98AF /* Restaurant.m in Sources */,
 				3FA6051D1648D0FC00BF98AF /* Telephone.m in Sources */,
 				3FA605201648D0FD00BF98AF /* Traffic.m in Sources */,
 				3FA605231648D0FE00BF98AF /* Dish.m in Sources */,
+<<<<<<< HEAD
 				9B77FBC5164915C700C503E2 /* qr_draw_png.mm in Sources */,
 				9B77FBC6164915C700C503E2 /* QR_Encode.mm in Sources */,
 				9B77FBE0164915D100C503E2 /* png.c in Sources */,
@@ -667,6 +761,14 @@
 				9B77FBEC164915D100C503E2 /* pngwrite.c in Sources */,
 				9B77FBED164915D100C503E2 /* pngwtran.c in Sources */,
 				9B77FBEE164915D100C503E2 /* pngwutil.c in Sources */,
+=======
+=======
+				4D2E5BE01648A6E100EDFD2F /* NSMapViewController.m in Sources */,
+				4D2E5BEF1648E14600EDFD2F /* Annotation.m in Sources */,
+				4D2E5BF21648E37200EDFD2F /* AnnotationCreate.m in Sources */,
+				4D2E5BF51648EAC000EDFD2F /* NSTableViewController.m in Sources */,
+>>>>>>> NearSearch 重构，表示Git的Merge把我恶心到了
+>>>>>>> NearSearch 重构，表示Git的Merge把我恶心到了
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
