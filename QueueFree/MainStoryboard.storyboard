@@ -228,17 +228,8 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" id="jRb-cy-zf7">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <rect key="frame" x="0.0" y="66" width="320" height="416"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Mapkit Here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iNT-Vv-20o">
-                                        <rect key="frame" x="101" y="197" width="118" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -254,7 +245,6 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="listView" destination="yOB-NO-Ke0" id="RMl-xt-rFh"/>
-                        <outlet property="mapView" destination="jRb-cy-zf7" id="gRa-VT-dhF"/>
                         <outlet property="viewChangeButton" destination="IvK-WS-ymK" id="x9s-uh-hhw"/>
                     </connections>
                 </viewController>
@@ -297,8 +287,7 @@
         <class className="NearSearchListViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NearSearchListViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="listView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="mapView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="listView" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="viewChangeButton" candidateClass="UIBarButtonItem"/>
             </relationships>
         </class>
@@ -309,6 +298,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/QFViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="CustomTabBar" candidateClass="UIView"/>
+                <relationship kind="outlet" name="StarTableView" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="TabBar" candidateClass="CustomTabBarView"/>
             </relationships>
         </class>
