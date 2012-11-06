@@ -710,13 +710,10 @@
 				9BF5DED9164841DA008B189A /* QFStarView.xib in Resources */,
 				9BF5DEDD164846E9008B189A /* star_dish_image_boarder.png in Resources */,
 				9BF5DEDE164846E9008B189A /* star_dish_image_boarder@2x.png in Resources */,
-<<<<<<< HEAD
 				9BF5DEE0164854D3008B189A /* icon.png in Resources */,
 				9BF5DEE2164854D9008B189A /* icon@2x.png in Resources */,
-=======
 				4D2E5BEA1648B2BB00EDFD2F /* NSMapView.xib in Resources */,
 				4D2E5BF71648EADB00EDFD2F /* NSTableView.xib in Resources */,
->>>>>>> NearSearch 重构，表示Git的Merge把我恶心到了
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -738,11 +735,11 @@
 				9B922F05163AA56A001692F2 /* GlobalSearchListViewController.m in Sources */,
 				9B922F0F163AB3EA001692F2 /* NearSearchListViewController.m in Sources */,
 				3FA605111648314100BF98AF /* Restaurant+Plist.m in Sources */,
-<<<<<<< HEAD
 				3FA605191648D0F800BF98AF /* Restaurant.m in Sources */,
 				3FA6051D1648D0FC00BF98AF /* Telephone.m in Sources */,
 				3FA605201648D0FD00BF98AF /* Traffic.m in Sources */,
 				3FA605231648D0FE00BF98AF /* Dish.m in Sources */,
+<<<<<<< HEAD
 <<<<<<< HEAD
 				9B77FBC5164915C700C503E2 /* qr_draw_png.mm in Sources */,
 				9B77FBC6164915C700C503E2 /* QR_Encode.mm in Sources */,
@@ -763,12 +760,17 @@
 				9B77FBEE164915D100C503E2 /* pngwutil.c in Sources */,
 =======
 =======
+=======
+>>>>>>> 解决了PROJ无法打开的问题
 				4D2E5BE01648A6E100EDFD2F /* NSMapViewController.m in Sources */,
 				4D2E5BEF1648E14600EDFD2F /* Annotation.m in Sources */,
 				4D2E5BF21648E37200EDFD2F /* AnnotationCreate.m in Sources */,
 				4D2E5BF51648EAC000EDFD2F /* NSTableViewController.m in Sources */,
+<<<<<<< HEAD
 >>>>>>> NearSearch 重构，表示Git的Merge把我恶心到了
 >>>>>>> NearSearch 重构，表示Git的Merge把我恶心到了
+=======
+>>>>>>> 解决了PROJ无法打开的问题
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
