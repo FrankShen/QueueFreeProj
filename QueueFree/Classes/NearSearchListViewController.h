@@ -7,14 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <MapKit/MapKit.h>
-
 
 @interface NearSearchListViewController : UIViewController
-
-@property (weak, nonatomic) IBOutlet UITableView *listView;
+@property (weak, nonatomic) IBOutlet UIView *mapView;
+@property (weak, nonatomic) IBOutlet UIView *listView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *viewChangeButton;
-
-//- (void)addPin;
 
 @end

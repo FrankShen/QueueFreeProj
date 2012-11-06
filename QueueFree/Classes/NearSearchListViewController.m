@@ -7,9 +7,6 @@
 //
 
 #import "NearSearchListViewController.h"
-#import "NSMapViewController.h"
-#import "Restaurant+Plist.h"
-
 
 @interface NearSearchListViewController ()
 @property (nonatomic) BOOL isList;
@@ -22,7 +19,6 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-    
     }
     return self;
 }
@@ -32,19 +28,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    
-    NSMapViewController *nearSearchMVC = [[NSMapViewController alloc]init];
-    
-    //[self addChildViewController:nearSearchMVC];
-    
-    //nearSearchMVC.mapView = [[[NSBundle mainBundle] loadNibNamed:@"NSMapView" owner:self options:nil] lastObject];
-    
-    [self.view addSubview:nearSearchMVC.mapView];
-    
-    
     self.isList = NO;
     self.viewChangeButton.title = @"列表";
-    //[self addPin];
 }
 
 - (void)didReceiveMemoryWarning
@@ -54,6 +39,7 @@
 }
 
 - (void)viewDidUnload {
+    [self setMapView:nil];
     [self setListView:nil];
     [self setViewChangeButton:nil];
     [super viewDidUnload];
@@ -65,14 +51,12 @@
     [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
     [UIView setAnimationDuration:1];
     [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.view cache:YES];
-    
-    [self.view exchangeSubviewAtIndex:0 withSubviewAtIndex:1];
+    [self.view exchangeSubviewAtIndex:1 withSubviewAtIndex:0];
     [UIView setAnimationDelegate:self];
     [UIView commitAnimations];
     
     self.isList = !self.isList;
     self.viewChangeButton.title = self.isList ? @"地图" : @"列表";
 }
-
 
 @end
