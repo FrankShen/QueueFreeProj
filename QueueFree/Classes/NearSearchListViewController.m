@@ -72,7 +72,27 @@
     
     self.isList = !self.isList;
     self.viewChangeButton.title = self.isList ? @"地图" : @"列表";
+    
 }
 
+#pragma mark segue
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    //segue.sourceViewController;
+    //segue.destinationViewController;
+    //sender;
+    //调用segue的方法[self performSegueWithIdentifier:<#(NSString *)#> sender:<#(id)#>];
+
+    if ([segue.identifier isEqualToString:@"GoToRestaurant"]){
+        RestaurantViewController *newViewController = segue.destinationViewController;
+        //sourceViewController是当前的vc，destinationViewController是下一个vc，sender是可传递的数据，只要将数据信息存在NSDictionary中，然后作为sender，在这个函数里抓取sender里的数据放到下一个vc里就可以了。
+        
+        
+        // .....
+        
+        
+    }
+}
 
 @end

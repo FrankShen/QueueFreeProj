@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
-
+#import "RestaurantViewController.h"
 
 @interface NearSearchListViewController : UIViewController
 
