@@ -60,4 +60,10 @@
     UITableViewCell *cell = [[UITableViewCell alloc] init];
     return cell;
 }
+
++ (void)initWithShop:(NSString *)shopName
+{
+    
+}
+
 @end
