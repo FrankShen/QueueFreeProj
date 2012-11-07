@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NSTableViewController : UITableViewController
+@interface NSTableViewController : UITableViewController<UITableViewDataSource,UITableViewDelegate>
+
+
+@property (nonatomic)NSArray *dataList;
+@property (nonatomic)NSArray *imageList;
 
 @end
