@@ -9,10 +9,12 @@
 #import "NSMapViewController.h"
 
 @interface NSMapViewController ()
+@property (nonatomic, strong) NSMutableArray *annotations;
 
 @end
 
 @implementation NSMapViewController
+@synthesize annotations = _annotations;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -43,12 +45,34 @@
         theRegin.span.longitudeDelta = 0.005f;
         
     //Wait for core data...
-        Annotation *test = [AnnotationCreate createMapPointWithcoordinateX:31.2830017791500 coordinateY:121.50064302406390 Title:@"同济大学" Subtitle:@"四平路校区"];
-        Annotation *test2 = [AnnotationCreate createMapPointWithcoordinateX:31.2807017791500 coordinateY:121.50064302406390 Title:@"同济大学体育馆" Subtitle:@"四平路校区"];
-        Annotation *test3 = [AnnotationCreate createMapPointWithcoordinateX:31.2834017791500 coordinateY:121.50364302406390 Title:@"同济大学图书馆" Subtitle:@"四平路校区"];
         
-        [self.mapView addAnnotations:[NSArray arrayWithObjects:test,test2,
-                                                            test3,nil]];
+        _annotations = [[NSMutableArray alloc] init];
+        
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"QueueFree" ofType:@"plist"];
+        NSArray *root = [[NSArray alloc] initWithContentsOfFile:filePath];
+        
+        for (NSDictionary *theRestaurant in root) {
+            
+            NSString *name = [theRestaurant valueForKey:@"名称"];
+            NSString *address = [theRestaurant valueForKey:@"地址"];
+            double latitude = [[theRestaurant valueForKey:@"东经"] doubleValue];
+            double longitude = [[theRestaurant valueForKey:@"北纬"] doubleValue];
+            
+//            NSLog(@"%@", name);
+//            NSLog(@"%@", address);
+//            NSLog(@"%f", latitude);
+//            NSLog(@"%f", longitude);
+            
+            Annotation *anno = [AnnotationCreate createMapPointWithcoordinateX:longitude coordinateY:latitude Title:name Subtitle:address];
+            
+            [_annotations addObject:anno];
+        }        
+        
+
+//        Annotation *test2 = [AnnotationCreate createMapPointWithcoordinateX:31.2807017791500 coordinateY:121.50064302406390 Title:@"同济大学体育馆" Subtitle:@"四平路校区"];
+//        Annotation *test3 = [AnnotationCreate createMapPointWithcoordinateX:31.2834017791500 coordinateY:121.50364302406390 Title:@"同济大学图书馆" Subtitle:@"四平路校区"];
+        
+        [self.mapView addAnnotations:_annotations];
         [self.mapView setRegion:theRegin];
         
     //This Bug cannot solve.   Just add a annotation.
