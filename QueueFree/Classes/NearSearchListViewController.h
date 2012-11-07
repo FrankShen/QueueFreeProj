@@ -9,11 +9,15 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import "RestaurantViewController.h"
+#import "NSMapViewController.h"
 
-@interface NearSearchListViewController : UIViewController
+@interface NearSearchListViewController : UIViewController{
+    NSMapViewController *nearSearchMVC;
+}
 
-@property (weak, nonatomic) IBOutlet UITableView *listView;
+
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *viewChangeButton;
+//@property (strong, nonatomic) UIButton *ShowRegionOfTheUserLocation;
 
 //- (void)addPin;
 

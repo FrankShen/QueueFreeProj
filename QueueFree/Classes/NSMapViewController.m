@@ -18,10 +18,10 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        _mapView = [[[NSBundle mainBundle] loadNibNamed:@"NSMapView" owner:self options:nil] lastObject];
+        self.mapView = [[[NSBundle mainBundle] loadNibNamed:@"NSMapView" owner:self options:nil] lastObject];
         
-        _mapView.userLocation.title = @"你的位置";
-        _mapView.showsUserLocation = YES;
+        self.mapView.userLocation.title = @"你的位置";
+        self.mapView.showsUserLocation = YES;
         
         locationManager = [[CLLocationManager alloc]init];
         locationManager.delegate = self;
@@ -47,18 +47,35 @@
         Annotation *test2 = [AnnotationCreate createMapPointWithcoordinateX:31.2807017791500 coordinateY:121.50064302406390 Title:@"同济大学体育馆" Subtitle:@"四平路校区"];
         Annotation *test3 = [AnnotationCreate createMapPointWithcoordinateX:31.2834017791500 coordinateY:121.50364302406390 Title:@"同济大学图书馆" Subtitle:@"四平路校区"];
         
-        [_mapView addAnnotations:[NSArray arrayWithObjects:test,test2,
+        [self.mapView addAnnotations:[NSArray arrayWithObjects:test,test2,
                                                             test3,nil]];
-        [_mapView setRegion:theRegin];
+        [self.mapView setRegion:theRegin];
         
     //This Bug cannot solve.   Just add a annotation.
         //_mapView.delegate = self;
         
         
-        [_mapView regionThatFits:theRegin];
+        [self.mapView regionThatFits:theRegin];
         
-    }
-    return self;
+        }
+        return self;
+}
+
+
+
+- (void)ShowRegionOfTheUserLocationPressed{
+   
+    MKCoordinateRegion theRegion;
+    
+    theRegion.center = self.mapView.userLocation.coordinate;
+    
+    theRegion.span.latitudeDelta = 0.005f;
+    theRegion.span.longitudeDelta = 0.005f;
+
+    
+    [self.mapView setRegion:theRegion];
+    
+    [self.mapView regionThatFits:theRegion];
 }
 
 - (void)didReceiveMemoryWarning
@@ -113,4 +130,8 @@
 }
 
 
+- (void)viewDidUnload {
+    [self setShowRegionOfTheUserLocation:nil];
+    [super viewDidUnload];
+}
 @end

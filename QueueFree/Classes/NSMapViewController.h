@@ -15,7 +15,9 @@
 {
     CLLocationManager *locationManager;
 }
+@property (strong, nonatomic) UIButton *ShowRegionOfTheUserLocation;
 @property(weak,nonatomic) MKMapView *mapView;
 
+- (void)ShowRegionOfTheUserLocationPressed;
 
 @end

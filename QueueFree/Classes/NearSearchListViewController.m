@@ -7,7 +7,6 @@
 //
 
 #import "NearSearchListViewController.h"
-#import "NSMapViewController.h"
 #import "Restaurant+Plist.h"
 
 
@@ -30,22 +29,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
     
+    nearSearchMVC = [[NSMapViewController alloc]init];
     
-    NSMapViewController *nearSearchMVC = [[NSMapViewController alloc]init];
-    
-    //[self addChildViewController:nearSearchMVC];
-    
-    //nearSearchMVC.mapView = [[[NSBundle mainBundle] loadNibNamed:@"NSMapView" owner:self options:nil] lastObject];
-    
-    [self.view addSubview:nearSearchMVC.mapView];
-    
+    [self.view insertSubview:nearSearchMVC.mapView atIndex:0];
     
     self.isList = NO;
     self.viewChangeButton.title = @"列表";
-    //[self addPin];
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -54,7 +46,6 @@
 }
 
 - (void)viewDidUnload {
-    [self setListView:nil];
     [self setViewChangeButton:nil];
     [super viewDidUnload];
 }
@@ -66,13 +57,20 @@
     [UIView setAnimationDuration:1];
     [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.view cache:YES];
     
-    [self.view exchangeSubviewAtIndex:0 withSubviewAtIndex:1];
+    [self.view exchangeSubviewAtIndex:1 withSubviewAtIndex:0];
     [UIView setAnimationDelegate:self];
     [UIView commitAnimations];
     
     self.isList = !self.isList;
     self.viewChangeButton.title = self.isList ? @"地图" : @"列表";
     
+}
+
+#pragma mark mapButton
+
+- (IBAction)mapButtonPressed:(id)sender
+{
+    [nearSearchMVC ShowRegionOfTheUserLocationPressed];
 }
 
 #pragma mark segue
