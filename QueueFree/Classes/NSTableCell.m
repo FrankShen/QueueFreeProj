@@ -26,35 +26,5 @@
     // Configure the view for the selected state
 }
 
--(void) setShopImage:(UIImageView *)shopImage:(UIImageView *)image
-{
-    if(![image isEqual:_shopImage])
-    {
-        self.shopImage = image;
-    }
-}
 
--(void)setShopName:(UILabel *)aShopName
-{
-    if(![aShopName.text isEqual:_shopName.text])
-    {
-        self.shopName.text = aShopName.text;
-    }
-}
-
--(void)setQueuePeopleNumber:(UILabel *)aQueuePeopleNumber
-{
-    if(![aQueuePeopleNumber.text isEqual:_queuePeopleNumber.text])
-    {
-        self.queuePeopleNumber.text =aQueuePeopleNumber.text;
-    }
-}
-
--(void)setDistanceToUserLocation:(UILabel *)aDistanceToUserLocation
-{
-    if (![aDistanceToUserLocation.text isEqual:_distanceToUserLocation.text])
-    {
-        self.distanceToUserLocation.text = aDistanceToUserLocation.text;
-    }
-}
 @end

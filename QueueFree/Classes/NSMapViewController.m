@@ -40,9 +40,7 @@
         theCoordinate.latitude = 31.2830017791500;
         theCoordinate.longitude = 121.50064302406390;
         
-        theRegin.center = theCoordinate;
-        theRegin.span.latitudeDelta = 0.005f;
-        theRegin.span.longitudeDelta = 0.005f;
+        theRegin.center = self.mapView.userLocation.coordinate;
         
     //Wait for core data...
         
@@ -58,19 +56,10 @@
             double latitude = [[theRestaurant valueForKey:@"东经"] doubleValue];
             double longitude = [[theRestaurant valueForKey:@"北纬"] doubleValue];
             
-//            NSLog(@"%@", name);
-//            NSLog(@"%@", address);
-//            NSLog(@"%f", latitude);
-//            NSLog(@"%f", longitude);
-            
             Annotation *anno = [AnnotationCreate createMapPointWithcoordinateX:longitude coordinateY:latitude Title:name Subtitle:address];
             
             [_annotations addObject:anno];
         }        
-        
-
-//        Annotation *test2 = [AnnotationCreate createMapPointWithcoordinateX:31.2807017791500 coordinateY:121.50064302406390 Title:@"同济大学体育馆" Subtitle:@"四平路校区"];
-//        Annotation *test3 = [AnnotationCreate createMapPointWithcoordinateX:31.2834017791500 coordinateY:121.50364302406390 Title:@"同济大学图书馆" Subtitle:@"四平路校区"];
         
         [self.mapView addAnnotations:_annotations];
         [self.mapView setRegion:theRegin];
@@ -93,8 +82,8 @@
     
     theRegion.center = self.mapView.userLocation.coordinate;
     
-    theRegion.span.latitudeDelta = 0.005f;
-    theRegion.span.longitudeDelta = 0.005f;
+    theRegion.span.latitudeDelta = 0.009f;
+    theRegion.span.longitudeDelta = 0.009f;
 
     
     [self.mapView setRegion:theRegion];
@@ -155,7 +144,6 @@
 
 
 - (void)viewDidUnload {
-    [self setShowRegionOfTheUserLocation:nil];
     [super viewDidUnload];
 }
 @end

@@ -15,11 +15,12 @@
 		3FA605201648D0FD00BF98AF /* Traffic.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA6051F1648D0FD00BF98AF /* Traffic.m */; };
 		3FA605231648D0FE00BF98AF /* Dish.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA605221648D0FE00BF98AF /* Dish.m */; };
 		3FBBBD30163D61400064CA61 /* RestaurantInfo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FE68AE016380D170051A267 /* RestaurantInfo.xcdatamodeld */; };
+		4D302AC3164B199E0095FE13 /* NSTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D302AC2164B199D0095FE13 /* NSTableCell.xib */; };
 		4DA2BC87164A8B1900345F08 /* NSTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DA2BC86164A8B1900345F08 /* NSTableView.xib */; };
 		4DA2BC8A164A8B2D00345F08 /* NSTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA2BC89164A8B2D00345F08 /* NSTableCell.m */; };
-		4DA2BC8C164A8B4D00345F08 /* NSTableCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DA2BC8B164A8B4D00345F08 /* NSTableCellView.xib */; };
 		4DA2BC8E164A926100345F08 /* location_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DA2BC8D164A926100345F08 /* location_button@2x.png */; };
 		4DA2BC90164A92BC00345F08 /* location_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DA2BC8F164A92BC00345F08 /* location_button.png */; };
+		4DA2BCA4164AC22400345F08 /* NSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA2BCA3164AC22400345F08 /* NSTableViewController.m */; };
 		9B36861016496AF000ED0054 /* SHUFE.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 9B36860F16496AF000ED0054 /* SHUFE.gpx */; };
 		9B368630164A2B8300ED0054 /* AdminViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B36862F164A2B8300ED0054 /* AdminViewController.m */; };
 		9B368633164A2DA700ED0054 /* RestaurantView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B368632164A2DA700ED0054 /* RestaurantView.xib */; };
@@ -39,7 +40,6 @@
 		9B7148E016494AC300721CD4 /* AnnotationCreate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7148D3164949AA00721CD4 /* AnnotationCreate.m */; };
 		9B7148E116494AC300721CD4 /* NearSearchListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7148D5164949EF00721CD4 /* NearSearchListViewController.m */; };
 		9B7148E216494AC300721CD4 /* NSMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7148D8164949F900721CD4 /* NSMapViewController.m */; };
-		9B7148E316494AC300721CD4 /* NSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7148DB164949F900721CD4 /* NSTableViewController.m */; };
 		9B7148E516494AD400721CD4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B7148E416494AD400721CD4 /* CoreLocation.framework */; };
 		9B7148E716494AD800721CD4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B7148E616494AD800721CD4 /* MapKit.framework */; };
 		9B77FBC5164915C700C503E2 /* qr_draw_png.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9B77FBC1164915C700C503E2 /* qr_draw_png.mm */; };
@@ -158,12 +158,14 @@
 		3FA605211648D0FE00BF98AF /* Dish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Dish.h; path = CoreData/Dish.h; sourceTree = "<group>"; };
 		3FA605221648D0FE00BF98AF /* Dish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Dish.m; path = CoreData/Dish.m; sourceTree = "<group>"; };
 		3FE68AE116380D170051A267 /* RestaurantInfo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RestaurantInfo.xcdatamodel; sourceTree = "<group>"; };
+		4D302AC2164B199D0095FE13 /* NSTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NSTableCell.xib; sourceTree = "<group>"; };
 		4DA2BC86164A8B1900345F08 /* NSTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NSTableView.xib; sourceTree = "<group>"; };
 		4DA2BC88164A8B2D00345F08 /* NSTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSTableCell.h; sourceTree = "<group>"; };
 		4DA2BC89164A8B2D00345F08 /* NSTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSTableCell.m; sourceTree = "<group>"; };
-		4DA2BC8B164A8B4D00345F08 /* NSTableCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NSTableCellView.xib; sourceTree = "<group>"; };
 		4DA2BC8D164A926100345F08 /* location_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location_button@2x.png"; sourceTree = "<group>"; };
 		4DA2BC8F164A92BC00345F08 /* location_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location_button.png; sourceTree = "<group>"; };
+		4DA2BCA2164AC22300345F08 /* NSTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSTableViewController.h; sourceTree = "<group>"; };
+		4DA2BCA3164AC22400345F08 /* NSTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSTableViewController.m; sourceTree = "<group>"; };
 		9B36860F16496AF000ED0054 /* SHUFE.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = SHUFE.gpx; path = ../SHUFE.gpx; sourceTree = "<group>"; };
 		9B36862E164A2B8300ED0054 /* AdminViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminViewController.h; sourceTree = "<group>"; };
 		9B36862F164A2B8300ED0054 /* AdminViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminViewController.m; sourceTree = "<group>"; };
@@ -189,8 +191,6 @@
 		9B7148D6164949F900721CD4 /* NSMapView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NSMapView.xib; sourceTree = "<group>"; };
 		9B7148D7164949F900721CD4 /* NSMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSMapViewController.h; sourceTree = "<group>"; };
 		9B7148D8164949F900721CD4 /* NSMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSMapViewController.m; sourceTree = "<group>"; };
-		9B7148DA164949F900721CD4 /* NSTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSTableViewController.h; sourceTree = "<group>"; };
-		9B7148DB164949F900721CD4 /* NSTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSTableViewController.m; sourceTree = "<group>"; };
 		9B7148DD16494A9200721CD4 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		9B7148E416494AD400721CD4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		9B7148E616494AD800721CD4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -368,12 +368,12 @@
 		4DA2BC85164A8AF900345F08 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
-				9B7148DB164949F900721CD4 /* NSTableViewController.m */,
-				9B7148DA164949F900721CD4 /* NSTableViewController.h */,
+				4DA2BCA3164AC22400345F08 /* NSTableViewController.m */,
+				4DA2BCA2164AC22300345F08 /* NSTableViewController.h */,
 				4DA2BC86164A8B1900345F08 /* NSTableView.xib */,
+				4D302AC2164B199D0095FE13 /* NSTableCell.xib */,
 				4DA2BC88164A8B2D00345F08 /* NSTableCell.h */,
 				4DA2BC89164A8B2D00345F08 /* NSTableCell.m */,
-				4DA2BC8B164A8B4D00345F08 /* NSTableCellView.xib */,
 			);
 			name = TableView;
 			sourceTree = "<group>";
@@ -787,9 +787,9 @@
 				9B368649164A339B00ED0054 /* restaurant_info_background.png in Resources */,
 				9B36864A164A339B00ED0054 /* restaurant_info_background@2x.png in Resources */,
 				4DA2BC87164A8B1900345F08 /* NSTableView.xib in Resources */,
-				4DA2BC8C164A8B4D00345F08 /* NSTableCellView.xib in Resources */,
 				4DA2BC8E164A926100345F08 /* location_button@2x.png in Resources */,
 				4DA2BC90164A92BC00345F08 /* location_button.png in Resources */,
+				4D302AC3164B199E0095FE13 /* NSTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -804,7 +804,6 @@
 				9B7148E016494AC300721CD4 /* AnnotationCreate.m in Sources */,
 				9B7148E116494AC300721CD4 /* NearSearchListViewController.m in Sources */,
 				9B7148E216494AC300721CD4 /* NSMapViewController.m in Sources */,
-				9B7148E316494AC300721CD4 /* NSTableViewController.m in Sources */,
 				9B77FBF3164916A100C503E2 /* Barcode.mm in Sources */,
 				9BF5DEDA16484322008B189A /* StarTableViewCell.m in Sources */,
 				3FBBBD30163D61400064CA61 /* RestaurantInfo.xcdatamodeld in Sources */,
@@ -839,6 +838,7 @@
 				9B368630164A2B8300ED0054 /* AdminViewController.m in Sources */,
 				9B368636164A2DC700ED0054 /* RestaurantViewController.m in Sources */,
 				4DA2BC8A164A8B2D00345F08 /* NSTableCell.m in Sources */,
+				4DA2BCA4164AC22400345F08 /* NSTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

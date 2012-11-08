@@ -427,8 +427,6 @@
         <class className="GlobalSearchListViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GlobalSearchListViewController.h"/>
             <relationships>
-                <relationship kind="action" name="searchButtonPressed:"/>
-                <relationship kind="action" name="viewChangeButtonPressed:"/>
                 <relationship kind="outlet" name="keyword" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="listView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="mapView" candidateClass="UIView"/>
@@ -438,9 +436,6 @@
         <class className="NearSearchListViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NearSearchListViewController.h"/>
             <relationships>
-                <relationship kind="action" name="mapButtonPressed:"/>
-                <relationship kind="action" name="viewChangeButtonPressed:"/>
-                <relationship kind="outlet" name="listView" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="viewChangeButton" candidateClass="UIBarButtonItem"/>
             </relationships>
         </class>
@@ -450,6 +445,11 @@
         <class className="QFViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/QFViewController.h"/>
             <relationships>
+                <relationship kind="action" name="globalSearchPressed:"/>
+                <relationship kind="action" name="homeButtonPressed:"/>
+                <relationship kind="action" name="nearSearchPressed:"/>
+                <relationship kind="action" name="qsnsButtonPressed:"/>
+                <relationship kind="action" name="starButtonPressed:"/>
                 <relationship kind="outlet" name="CustomTabBar" candidateClass="UIView"/>
                 <relationship kind="outlet" name="StarTableView" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="TabBar" candidateClass="CustomTabBarView"/>

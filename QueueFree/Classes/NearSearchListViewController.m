@@ -31,8 +31,10 @@
     [super viewDidLoad];
     
     nearSearchMVC = [[NSMapViewController alloc]init];
+    nearSearchTVC = [[NSTableViewController alloc]init];
     
     [self.view insertSubview:nearSearchMVC.mapView atIndex:0];
+    
     
     self.isList = NO;
     self.viewChangeButton.title = @"列表";
@@ -56,8 +58,17 @@
     [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
     [UIView setAnimationDuration:1];
     [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.view cache:YES];
+    if(!self.isList)
+    {
+        [self.view insertSubview:nearSearchTVC.view atIndex:2];
+    }
+    else
+    {
+        [self.view exchangeSubviewAtIndex:2 withSubviewAtIndex:0];
+
+        [self.view exchangeSubviewAtIndex:2 withSubviewAtIndex:1];
+    }
     
-    [self.view exchangeSubviewAtIndex:1 withSubviewAtIndex:0];
     [UIView setAnimationDelegate:self];
     [UIView commitAnimations];
     

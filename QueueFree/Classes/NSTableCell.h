@@ -10,9 +10,11 @@
 
 @interface NSTableCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *shopImage;
-@property (weak, nonatomic) IBOutlet UILabel *shopName;
-@property (weak, nonatomic) IBOutlet UILabel *queuePeopleNumber;
-@property (weak, nonatomic) IBOutlet UILabel *distanceToUserLocation;
+@property (weak, nonatomic) IBOutlet UIImageView *shopImageView;
+@property (weak, nonatomic) IBOutlet UILabel *shopNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *queuePeopleNumberLabel;
+@property (weak, nonatomic) IBOutlet UILabel *distanceToUserLocationLabel;
+
+
 
 @end
