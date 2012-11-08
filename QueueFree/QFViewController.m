@@ -9,6 +9,7 @@
 #import "QFViewController.h"
 #import "StarTableViewCell.h"
 #import "CoreData/Restaurant+Plist.h"
+#import "RestaurantViewController.h"
 #import <CoreData/CoreData.h>
 
 @interface QFViewController ()<UITableViewDataSource, UITableViewDelegate>
@@ -265,7 +266,17 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (tableView == self.StarTableView){
-        
+        StarTableViewCell *cell = [self.StarTableView cellForRowAtIndexPath:indexPath];
+        [self performSegueWithIdentifier:@"StarToRestaurant" sender:cell.shopName.text];
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"StarToRestaurant"]){
+        NSString *name = sender;
+        RestaurantViewController *newVC = segue.destinationViewController;
+        [newVC initWithShop:name];
     }
 }
 @end
