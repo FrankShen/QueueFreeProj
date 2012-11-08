@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NSMapViewController.h"
 
 @interface NSTableViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 {
@@ -15,5 +16,7 @@
 
 @property (weak,nonatomic)IBOutlet UITableView *nsTableView;
 @property (strong,nonatomic)NSArray *dataList;
+
+- (int)dictanceFromTheUserLocationWithDictionaryData:(NSDictionary *)dictionary;
 
 @end

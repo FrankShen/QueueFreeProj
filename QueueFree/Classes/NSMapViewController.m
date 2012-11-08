@@ -141,8 +141,9 @@
     return placeMarkLocation;
 }
 
-
 - (void)viewDidUnload {
+    [self setMapView:nil];
     [super viewDidUnload];
+    
 }
 @end

@@ -8,6 +8,7 @@
 
 #import "NSTableViewController.h"
 #import "NSTableCell.h"
+#import "math.h"
 
 @interface NSTableViewController ()
 @property (strong, nonatomic) NSMutableArray *tableviewdataarray;
@@ -15,6 +16,13 @@
 @end
 
 @implementation NSTableViewController
+
+#define EARTH_RADIUS 6378.137
+double rad(double d)
+{
+    return d * M_PI / 180.0;
+}
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -47,26 +55,7 @@
     }
     self.dataList = [tmpDataArray copy];
     //self.imageList = [tmpImageArray copy];
-    /*NSString *filePath = [[NSBundle mainBundle] pathForResource:@"QueueFree" ofType:@"plist"];
     
-    
-    
-    NSMutableArray *tmpDataArray = [[NSMutableArray alloc] init];
-    //int i = 0;
-    //NSMutableArray *tmpImageArray = [[NSMutableArray alloc] init];
-    for (NSDictionary *dictionary in root) {
-        
-        NSString *tmp = [dictionary valueForKey:@"名称"];
-        [tmpDataArray addObject:tmp];
-        //i++;
-        //NSString *imageUrl = [[NSString alloc] initWithFormat:@"%i.png", i+1];
-        //UIImage *image = [UIImage imageNamed:imageUrl];
-        //[tmpImageArray addObject:image];
-    }
-    self.dataList = [tmpDataArray copy];
-    //self.imageList = [tmpImageArray copy];
-     */    
-
 }
 
 -(void)viewDidUnload
@@ -79,6 +68,31 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (int)dictanceFromTheUserLocationWithDictionaryData:(NSDictionary *)dictionary
+{
+    NSMapViewController *tempMapViewController = [[NSMapViewController alloc]init];
+    
+    if(tempMapViewController.mapView.userLocation.coordinate.latitude == 0 && tempMapViewController.mapView.userLocation.coordinate.longitude == 0)
+    {
+        return 0;
+    }
+    
+    double radLatitude = rad([[dictionary objectForKey:@"北纬"]doubleValue]);
+    double radLongtitude =rad([[dictionary objectForKey:@"东经"]doubleValue]);
+    double radUserLatitude = rad(tempMapViewController.mapView.userLocation.coordinate.latitude);
+    double radUserLongtitude = rad(tempMapViewController.mapView.userLocation.coordinate.longitude);
+    double diffRadLati = (radLatitude - radUserLatitude)/2;
+    double diffRadLongti = (radLongtitude - radUserLongtitude)/2;
+    
+    double distance = 2 * asin(sqrt(pow(sin(diffRadLati), 2) + cos(radLatitude) * cos(radUserLatitude) * pow(sin(diffRadLongti), 2)));
+    
+    distance *= EARTH_RADIUS;
+    distance = round(distance * 10000) / 10000;
+    int intDistance = distance * 1000;
+    return intDistance;
+    
 }
 
 #pragma mark TableView Methods
@@ -100,6 +114,9 @@
         cell.shopNameLabel.text = [dicTmp objectForKey:@"名称"];
         int queueNum = arc4random() % 21;
         cell.queuePeopleNumberLabel.text = [NSString stringWithFormat:@"%d",queueNum];
+        cell.distanceToUserLocationLabel.text = [NSString stringWithFormat:@"%d",[self dictanceFromTheUserLocationWithDictionaryData:dicTmp]];
+        
+        
         //NSArray * dishes = [dicTmp objectForKey:@"菜品信息"];
         //UIImage *dish = [UIImage imageNamed:@"T骨牛排.jpg"];//[[NSBundle mainBundle] pathForResource:[dishes objectAtIndex:0] ofType:@"jpg"]];
         //cell.imageView.image = dish;
