@@ -35,7 +35,9 @@
         
         MKCoordinateRegion theRegin;
         
-        theRegin.center = self.mapView.userLocation.coordinate;
+        CLLocationCoordinate2D theCoordinate;
+        
+        //Wait for core data...
         
         _annotations = [[NSMutableArray alloc] init];
         
@@ -45,13 +47,22 @@
             
             NSString *name = [theRestaurant valueForKey:@"名称"];
             NSString *address = [theRestaurant valueForKey:@"地址"];
-            double latitude = [[theRestaurant valueForKey:@"东经"] doubleValue];
-            double longitude = [[theRestaurant valueForKey:@"北纬"] doubleValue];
+            double longtitude = [[theRestaurant valueForKey:@"东经"] doubleValue];
+            double latitude = [[theRestaurant valueForKey:@"北纬"] doubleValue];
             
-            Annotation *anno = [AnnotationCreate createMapPointWithcoordinateX:longitude coordinateY:latitude Title:name Subtitle:address];
+            Annotation *anno = [AnnotationCreate createMapPointWithcoordinateX:latitude coordinateY:longtitude Title:name Subtitle:address];
             
             [_annotations addObject:anno];
-        }        
+        }
+        
+        theCoordinate.latitude = [[root[0] valueForKey:@"北纬"]doubleValue];
+        theCoordinate.longitude =[[root[0] valueForKey:@"东经"]doubleValue];
+        
+        
+        theRegin.center = theCoordinate;
+        
+        theRegin.span.latitudeDelta = 0.009f;
+        theRegin.span.longitudeDelta = 0.009f;
         
         [self.mapView addAnnotations:_annotations];
         [self.mapView setRegion:theRegin];
@@ -111,27 +122,6 @@
         [mapView.userLocation setSubtitle:annotation.subtitle];
     }
     return pinView;
-}
-
-//current location.Use for excute the distance.
-- (void)locationManager:(CLLocationManager *)manager
-    didUpdateToLocation:(CLLocation *)newLocation
-           fromLocation:(CLLocation *)oldLocation
-{
-    CLLocationCoordinate2D loc = [newLocation coordinate];
-    NSLog(@"loc.lat=%f,loc.log=%f",loc.latitude,loc.longitude);
-}
-
--(CLLocationCoordinate2D)CurrentCLLocation
-{
-    CLLocation *location=[[CLLocation alloc] init];
-    CLLocationCoordinate2D placeMarkLocation=[location coordinate];
-    CLLocationManager *locmanager = [[CLLocationManager alloc] init];
-    placeMarkLocation.latitude = [[locmanager location] coordinate].latitude;
-    placeMarkLocation.longitude =[[locmanager location] coordinate].longitude;
-    NSLog(@"1 得到当前的经纬度 placeMarkLocation=%f,%f",placeMarkLocation.latitude,placeMarkLocation.longitude);
-    locmanager=nil;
-    return placeMarkLocation;
 }
 
 - (void)viewDidUnload {
