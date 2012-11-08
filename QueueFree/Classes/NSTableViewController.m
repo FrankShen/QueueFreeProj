@@ -28,7 +28,7 @@
 {
     [super viewDidLoad];
     
-    [self.nsTableView registerNib:[UINib nibWithNibName:@"NSTableViewCell" bundle:nil] forCellReuseIdentifier:@"NSTableViewCell"];
+    [self.nsTableView registerNib:[UINib nibWithNibName:@"NSTableCell" bundle:nil] forCellReuseIdentifier:@"NSTableCell"];
     
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"QueueFree" ofType:@"plist"];
     
