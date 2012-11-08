@@ -35,14 +35,7 @@
         
         MKCoordinateRegion theRegin;
         
-        CLLocationCoordinate2D theCoordinate;
-        
-        theCoordinate.latitude = 31.2830017791500;
-        theCoordinate.longitude = 121.50064302406390;
-        
         theRegin.center = self.mapView.userLocation.coordinate;
-        
-    //Wait for core data...
         
         _annotations = [[NSMutableArray alloc] init];
         
