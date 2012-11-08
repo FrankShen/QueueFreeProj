@@ -43,6 +43,7 @@
     for (int idx = 0; idx < self.shopStar.count; ++idx){
         self.starLabel.text = [self.starLabel.text stringByAppendingFormat:@"%@ ", [self.shopStar objectAtIndex:idx]];
     }
+    self.navigationItem.title = self.shopName;
 }
 
 - (void)didReceiveMemoryWarning

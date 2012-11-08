@@ -249,8 +249,6 @@
 		9BF5DED1164841B2008B189A /* 14.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9BF5DEBE164841B2008B189A /* 14.jpg */; };
 		9BF5DED2164841B2008B189A /* 15.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9BF5DEBF164841B2008B189A /* 15.jpg */; };
 		9BF5DED3164841B2008B189A /* 16.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9BF5DEC0164841B2008B189A /* 16.jpg */; };
-		9BF5DED4164841B2008B189A /* 17.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9BF5DEC1164841B2008B189A /* 17.jpg */; };
-		9BF5DED5164841B2008B189A /* 18.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9BF5DEC2164841B2008B189A /* 18.jpg */; };
 		9BF5DED7164841C3008B189A /* StarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BF5DED6164841C3008B189A /* StarTableViewCell.xib */; };
 		9BF5DED9164841DA008B189A /* QFStarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BF5DED8164841DA008B189A /* QFStarView.xib */; };
 		9BF5DEDA16484322008B189A /* StarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF5DEAD16484196008B189A /* StarTableViewCell.m */; };
@@ -567,8 +565,6 @@
 		9BF5DEBE164841B2008B189A /* 14.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 14.jpg; sourceTree = "<group>"; };
 		9BF5DEBF164841B2008B189A /* 15.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 15.jpg; sourceTree = "<group>"; };
 		9BF5DEC0164841B2008B189A /* 16.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 16.jpg; sourceTree = "<group>"; };
-		9BF5DEC1164841B2008B189A /* 17.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 17.jpg; sourceTree = "<group>"; };
-		9BF5DEC2164841B2008B189A /* 18.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 18.jpg; sourceTree = "<group>"; };
 		9BF5DED6164841C3008B189A /* StarTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StarTableViewCell.xib; sourceTree = "<group>"; };
 		9BF5DED8164841DA008B189A /* QFStarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QFStarView.xib; sourceTree = "<group>"; };
 		9BF5DEDB164846E9008B189A /* star_dish_image_boarder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_dish_image_boarder.png; sourceTree = "<group>"; };
@@ -1025,8 +1021,6 @@
 				9BF5DEBE164841B2008B189A /* 14.jpg */,
 				9BF5DEBF164841B2008B189A /* 15.jpg */,
 				9BF5DEC0164841B2008B189A /* 16.jpg */,
-				9BF5DEC1164841B2008B189A /* 17.jpg */,
-				9BF5DEC2164841B2008B189A /* 18.jpg */,
 				9BFB1C6D1637FB2F0053200A /* Default@2x.png */,
 				9BFB1C6B1637FB290053200A /* Default.png */,
 				9B7D1B7D163966380011916A /* home_background.png */,
@@ -1222,8 +1216,6 @@
 				9BF5DED1164841B2008B189A /* 14.jpg in Resources */,
 				9BF5DED2164841B2008B189A /* 15.jpg in Resources */,
 				9BF5DED3164841B2008B189A /* 16.jpg in Resources */,
-				9BF5DED4164841B2008B189A /* 17.jpg in Resources */,
-				9BF5DED5164841B2008B189A /* 18.jpg in Resources */,
 				9BF5DED7164841C3008B189A /* StarTableViewCell.xib in Resources */,
 				9BF5DED9164841DA008B189A /* QFStarView.xib in Resources */,
 				9BF5DEDD164846E9008B189A /* star_dish_image_boarder.png in Resources */,
