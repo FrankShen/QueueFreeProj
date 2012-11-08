@@ -219,7 +219,25 @@
 {
     [self performSegueWithIdentifier:@"NearSearch" sender:self.parentViewController];
 }
+- (IBAction)qsnsEatPressed:(id)sender
+{
+    [self performSegueWithIdentifier:@"QSNSEat" sender:nil];
+}
 
+- (IBAction)qsnsTipPressed:(id)sender
+{
+    [self performSegueWithIdentifier:@"QSNSTip" sender:nil];
+}
+
+- (IBAction)qsnsCollectPressed:(id)sender
+{
+    [self performSegueWithIdentifier:@"QSNSCollect" sender:nil];
+}
+
+- (IBAction)qsnsFindPressed:(id)sender
+{
+    [self performSegueWithIdentifier:@"QSNSFind" sender:nil];
+}
 #pragma mark delegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
