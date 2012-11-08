@@ -10,7 +10,7 @@
 #import "NSTableCell.h"
 
 @interface NSTableViewController ()
-@property (strong,nonatomic) NSMutableArray *tableviewdataarray;
+@property (strong, nonatomic) NSMutableArray *tableviewdataarray;
 
 @end
 
@@ -66,7 +66,8 @@
     }
     self.dataList = [tmpDataArray copy];
     //self.imageList = [tmpImageArray copy];
-     */
+     */    
+
 }
 
 -(void)viewDidUnload
@@ -98,6 +99,9 @@
         
         
         cell.shopNameLabel.text = [dicTmp objectForKey:@"名称"];
+        //NSArray * dishes = [dicTmp objectForKey:@"菜品信息"];
+        //UIImage *dish = [UIImage imageNamed:@"T骨牛排.jpg"];//[[NSBundle mainBundle] pathForResource:[dishes objectAtIndex:0] ofType:@"jpg"]];
+        //cell.imageView.image = dish;
         
         return cell;
     }

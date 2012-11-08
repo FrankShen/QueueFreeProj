@@ -30,6 +30,15 @@
 		<string>杨浦区鞍山路88号(近本溪路)</string>
 		<key>电话</key>
 		<string>021-3530647</string>
+		<key>菜品信息</key>
+		<array>
+			<string>馋嘴牛蛙</string>
+			<string>夫妻肺片</string>
+			<string>干锅包菜</string>
+			<string>干锅鸭头</string>
+			<string>咕噜鱼</string>
+			<string>麻糍</string>
+		</array>
 		<key>营业时间</key>
 		<array>
 			<string>9:00</string>
@@ -65,6 +74,15 @@
 		<string>杨浦区控江路2108号(近打虎山路口)</string>
 		<key>电话</key>
 		<string>021-65035708</string>
+		<key>菜品信息</key>
+		<array>
+			<string>炒面</string>
+			<string>粉丝煲</string>
+			<string>海蜇萝卜丝</string>
+			<string>呛虾</string>
+			<string>丝瓜毛豆</string>
+			<string>酸汤鱼片</string>
+		</array>
 		<key>营业时间</key>
 		<array>
 			<string></string>
@@ -98,6 +116,15 @@
 		<string>虹口区保定路325号(唐山路昆明路间)</string>
 		<key>电话</key>
 		<string>021-35109888</string>
+		<key>菜品信息</key>
+		<array>
+			<string>贝类</string>
+			<string>肥牛火锅</string>
+			<string>核桃酥</string>
+			<string>酱鸽</string>
+			<string>冷盘</string>
+			<string>鳝鱼</string>
+		</array>
 		<key>营业时间</key>
 		<array>
 			<string></string>
@@ -137,6 +164,15 @@
 		<string>虹口区大连路1599号骏丰国际财富广场3楼(近四平路)</string>
 		<key>电话</key>
 		<string>021-55152468</string>
+		<key>菜品信息</key>
+		<array>
+			<string>大酱汤</string>
+			<string>调味鸡翅</string>
+			<string>菲力牛排</string>
+			<string>肥牛金针菇卷</string>
+			<string>烤大虾</string>
+			<string>烤鲜牛肉</string>
+		</array>
 		<key>营业时间</key>
 		<array>
 			<string>11:00</string>
@@ -169,6 +205,14 @@
 		<string>杨浦区打虎山路100号(近锦西路)</string>
 		<key>电话</key>
 		<string>021-33776661</string>
+		<key>菜品信息</key>
+		<array>
+			<string>港式虾饺皇</string>
+			<string>黑胡椒牛排</string>
+			<string>尖甲牛排套餐</string>
+			<string>浪沙牛排</string>
+			<string>配餐</string>
+		</array>
 		<key>营业时间</key>
 		<array>
 			<string></string>
@@ -201,6 +245,15 @@
 		<string>虹口区曲阳路158号瑞峰商务楼105;106室(近祥德路)</string>
 		<key>电话</key>
 		<string>021-56389912</string>
+		<key>菜品信息</key>
+		<array>
+			<string>炒河粉</string>
+			<string>蜂蜜烤多士</string>
+			<string>干锅牛蛙</string>
+			<string>杭椒豆豉鱿鱼须</string>
+			<string>黑椒牛肉烩饭</string>
+			<string>金桔柠檬</string>
+		</array>
 		<key>营业时间</key>
 		<array>
 			<string></string>
@@ -238,6 +291,13 @@
 		<string>虹口区曲阳路26号(近四平路)</string>
 		<key>电话</key>
 		<string>021-36336090</string>
+		<key>菜品信息</key>
+		<array>
+			<string>花卷</string>
+			<string>零食</string>
+			<string>普洱</string>
+			<string>水果</string>
+		</array>
 		<key>营业时间</key>
 		<array>
 			<string>10:00</string>
@@ -280,6 +340,15 @@
 		<string>杨浦区四平路1147弄1号近赤峰路()</string>
 		<key>电话</key>
 		<string>021-65979345</string>
+		<key>菜品信息</key>
+		<array>
+			<string>粉丝</string>
+			<string>骨头锅底</string>
+			<string>金针菇</string>
+			<string>山药</string>
+			<string>手工羊肉丸子</string>
+			<string>汤锅</string>
+		</array>
 		<key>营业时间</key>
 		<array>
 			<string>11:00</string>
@@ -320,6 +389,15 @@
 		<string>虹口区四平路591号(近新港路)</string>
 		<key>电话</key>
 		<string>021-65084002</string>
+		<key>菜品信息</key>
+		<array>
+			<string>包子</string>
+			<string>葱油拌面加辣肉</string>
+			<string>锅贴</string>
+			<string>酱肉排</string>
+			<string>焖肉面</string>
+			<string>牛肉汤</string>
+		</array>
 		<key>营业时间</key>
 		<array>
 			<string>5:00</string>
@@ -352,6 +430,14 @@
 		<string>虹口区赤峰路180号(近密云路)</string>
 		<key>电话</key>
 		<string>021-65983664</string>
+		<key>菜品信息</key>
+		<array>
+			<string>脆皮豆腐</string>
+			<string>迷你紫薯</string>
+			<string>清炒豆苗</string>
+			<string>沙律小牛排</string>
+			<string>水果色拉</string>
+		</array>
 		<key>营业时间</key>
 		<array>
 			<string></string>
@@ -384,6 +470,18 @@
 		<string>杨浦区赤峰路66号(近同济大学)</string>
 		<key>电话</key>
 		<string>021-65976898</string>
+		<key>菜品信息</key>
+		<array>
+			<string>T骨牛排</string>
+			<string>冰激凌华夫饼</string>
+			<string>焦糖奶油布丁</string>
+			<string>蓝莓芝士蛋糕</string>
+			<string>奶油鸡肉面</string>
+			<string>牛肉烤多士</string>
+			<string>普罗旺斯烤羊排</string>
+			<string>巧克力蛋糕</string>
+			<string>西冷牛排</string>
+		</array>
 		<key>营业时间</key>
 		<array>
 			<string>11:00</string>
@@ -421,6 +519,15 @@
 		<string>杨浦区控江路2053号(近打虎山路)</string>
 		<key>电话</key>
 		<string>021-65016086</string>
+		<key>菜品信息</key>
+		<array>
+			<string>爱心翡翠</string>
+			<string>八宝菜</string>
+			<string>海鲜三包</string>
+			<string>干锅花菜</string>
+			<string>黑椒小牛排</string>
+			<string>金枪鱼色拉</string>
+		</array>
 		<key>营业时间</key>
 		<array>
 			<string>9:30</string>
@@ -461,6 +568,15 @@
 		<string>虹口区大连路1599号骏丰国际财富广场3楼(近四平路)</string>
 		<key>电话</key>
 		<string>4006605757</string>
+		<key>菜品信息</key>
+		<array>
+			<string>葱蒜虾</string>
+			<string>大煮干丝</string>
+			<string>吊烧花枝片</string>
+			<string>干锅千叶豆腐</string>
+			<string>功夫角螺汤</string>
+			<string>宫保澳洲带</string>
+		</array>
 		<key>营业时间</key>
 		<array>
 			<string>11:00</string>
@@ -496,6 +612,15 @@
 		<string>虹口区赤峰路322号(近同济大学)</string>
 		<key>电话</key>
 		<string>13162483268</string>
+		<key>菜品信息</key>
+		<array>
+			<string>大费城</string>
+			<string>宫卷</string>
+			<string>蝴蝶</string>
+			<string>芥末章鱼</string>
+			<string>李公主</string>
+			<string>摩托罗拉</string>
+		</array>
 		<key>营业时间</key>
 		<array>
 			<string>10:30</string>
@@ -528,6 +653,15 @@
 		<string>杨浦区控江路2102号(近打虎山路)</string>
 		<key>电话</key>
 		<string>021-65797750</string>
+		<key>菜品信息</key>
+		<array>
+			<string>酱鸭</string>
+			<string>南瓜</string>
+			<string>清蒸鱼</string>
+			<string>鳝丝</string>
+			<string>时令刀豆</string>
+			<string>水晶虾仁</string>
+		</array>
 		<key>营业时间</key>
 		<array>
 			<string></string>
@@ -565,6 +699,14 @@
 		<string>杨浦区许昌路1598号(近控江路)</string>
 		<key>电话</key>
 		<string>021-65135044</string>
+		<key>菜品信息</key>
+		<array>
+			<string>叉烧</string>
+			<string>冬瓜薏米煲老鸭</string>
+			<string>黄油黑椒鸡腿菇</string>
+			<string>尖东炒面</string>
+			<string>咖哩鸡套餐</string>
+		</array>
 		<key>营业时间</key>
 		<array>
 			<string></string>
@@ -600,6 +742,14 @@
 		<string>虹口区西江弯路718号(近中山北一路)</string>
 		<key>电话</key>
 		<string>021-65163286</string>
+		<key>菜品信息</key>
+		<array>
+			<string>XO酱爆元宝虾</string>
+			<string>翅汤海参</string>
+			<string>东海鳗鲞</string>
+			<string>海参花菇褒</string>
+			<string>花雕白米虾</string>
+		</array>
 		<key>营业时间</key>
 		<array>
 			<string></string>
@@ -630,6 +780,14 @@
 		<string>杨浦区彰武路20号同济联合广场e楼209号铺</string>
 		<key>电话</key>
 		<string>021-55137936</string>
+		<key>菜品信息</key>
+		<array>
+			<string>海鲜拼盘</string>
+			<string>韩式烤鸡肉</string>
+			<string>牛肉大酱汤</string>
+			<string>牛舌</string>
+			<string>上等肥牛</string>
+		</array>
 		<key>营业时间</key>
 		<array>
 			<string>10:00</string>
@@ -666,6 +824,15 @@
 		<string>杨浦区江浦路1526号(近控江路)</string>
 		<key>电话</key>
 		<string>021-65632516</string>
+		<key>菜品信息</key>
+		<array>
+			<string>红烧肉</string>
+			<string>酱鸭舌</string>
+			<string>菌菇羹</string>
+			<string>龙虾</string>
+			<string>秘制小甲鱼</string>
+			<string>牛排</string>
+		</array>
 		<key>营业时间</key>
 		<array>
 			<string>8:00</string>
@@ -702,6 +869,14 @@
 		<string>杨浦区大连路1548号莱克大厦底楼(近阜新路)</string>
 		<key>电话</key>
 		<string>021-65799989</string>
+		<key>菜品信息</key>
+		<array>
+			<string>宝塔</string>
+			<string>吉祥三宝</string>
+			<string>辣炒米条</string>
+			<string>冷面</string>
+			<string>泡菜饼</string>
+		</array>
 		<key>营业时间</key>
 		<array>
 			<string>11:00</string>
@@ -735,6 +910,15 @@
 		<string>杨浦区本溪路282号(近鞍山路)</string>
 		<key>电话</key>
 		<string>021-55571838</string>
+		<key>菜品信息</key>
+		<array>
+			<string>蛋包饭</string>
+			<string>鲷鱼</string>
+			<string>海胆</string>
+			<string>海鲜火锅</string>
+			<string>煎饺</string>
+			<string>荞麦面</string>
+		</array>
 		<key>营业时间</key>
 		<array>
 			<string></string>
@@ -763,6 +947,15 @@
 		<string>杨浦区大连路1536号(近阜新路)</string>
 		<key>电话</key>
 		<string>021-65020610</string>
+		<key>菜品信息</key>
+		<array>
+			<string>咖哩豆腐</string>
+			<string>口水鸡</string>
+			<string>凉拌海蜇</string>
+			<string>炝桂鱼</string>
+			<string>上汤西兰花</string>
+			<string>四喜烤麸</string>
+		</array>
 		<key>营业时间</key>
 		<array>
 			<string></string>
@@ -796,6 +989,14 @@
 		<string>杨浦区控江路2065号(打虎山路)</string>
 		<key>电话</key>
 		<string>021-65021088</string>
+		<key>菜品信息</key>
+		<array>
+			<string>白切鸡</string>
+			<string>本帮酱鸭</string>
+			<string>钵钵菜</string>
+			<string>番茄排骨汤</string>
+			<string>干锅带皮牛肉</string>
+		</array>
 		<key>营业时间</key>
 		<array>
 			<string>10:30</string>
@@ -832,6 +1033,14 @@
 		<string>杨浦区大连路1278号(近控江路)</string>
 		<key>电话</key>
 		<string>021-33777868</string>
+		<key>菜品信息</key>
+		<array>
+			<string>海鲜焗饭</string>
+			<string>凯撒色拉</string>
+			<string>奶油貝殼面</string>
+			<string>巧克力狂想曲</string>
+			<string>郁金香海鲜局饭</string>
+		</array>
 		<key>营业时间</key>
 		<array>
 			<string>11:00</string>
@@ -862,6 +1071,14 @@
 		<string>杨浦区彰武路38号(近同济大学正门)</string>
 		<key>电话</key>
 		<string>021-33626589</string>
+		<key>菜品信息</key>
+		<array>
+			<string>糟熘鱼片</string>
+			<string>夏月小厨虾仁跑蛋</string>
+			<string>夏月小厨牛腩</string>
+			<string>西湖牛肉羹</string>
+			<string>铁板里脊肉</string>
+		</array>
 		<key>营业时间</key>
 		<array>
 			<string></string>
@@ -895,6 +1112,14 @@
 		<string>虹口区四平路777号(近天宝路)</string>
 		<key>电话</key>
 		<string>021-36358807</string>
+		<key>菜品信息</key>
+		<array>
+			<string>脆皮叉烧</string>
+			<string>剁椒鱼头</string>
+			<string>蓬蒿菜</string>
+			<string>石锅海鲜锅巴</string>
+			<string>糖醋小排</string>
+		</array>
 		<key>营业时间</key>
 		<array>
 			<string></string>
@@ -928,6 +1153,14 @@
 		<string>虹口区四平路851号1-5楼(大连西路口)</string>
 		<key>电话</key>
 		<string>021-65756667</string>
+		<key>菜品信息</key>
+		<array>
+			<string>草虾</string>
+			<string>粉皮</string>
+			<string>金枪鱼</string>
+			<string>卡夫牛排</string>
+			<string>烤墨鱼</string>
+		</array>
 		<key>营业时间</key>
 		<array>
 			<string>11:00</string>
