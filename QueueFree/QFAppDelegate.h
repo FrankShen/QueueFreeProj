@@ -11,5 +11,7 @@
 @interface QFAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) NSArray *Database;
 
+- (NSArray *)getDataArray;
 @end

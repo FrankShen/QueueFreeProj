@@ -46,8 +46,7 @@
         
         _annotations = [[NSMutableArray alloc] init];
         
-        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"QueueFree" ofType:@"plist"];
-        NSArray *root = [[NSArray alloc] initWithContentsOfFile:filePath];
+        NSArray *root = [[[UIApplication sharedApplication] delegate] performSelector:@selector(getDataArray)];
         
         for (NSDictionary *theRestaurant in root) {
             

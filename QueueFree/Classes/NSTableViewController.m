@@ -30,9 +30,8 @@
     
     [self.nsTableView registerNib:[UINib nibWithNibName:@"NSTableCell" bundle:nil] forCellReuseIdentifier:@"NSTableCell"];
     
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"QueueFree" ofType:@"plist"];
     
-    NSArray *root = [[NSArray alloc] initWithContentsOfFile:filePath];
+    NSArray *root = [[[UIApplication sharedApplication] delegate] performSelector:@selector(getDataArray)];
     //NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfFile:filePath];
     
     NSMutableArray *tmpDataArray = [[NSMutableArray alloc] init];
@@ -99,6 +98,8 @@
         
         
         cell.shopNameLabel.text = [dicTmp objectForKey:@"名称"];
+        int queueNum = arc4random() % 21;
+        cell.queuePeopleNumberLabel.text = [NSString stringWithFormat:@"%d",queueNum];
         //NSArray * dishes = [dicTmp objectForKey:@"菜品信息"];
         //UIImage *dish = [UIImage imageNamed:@"T骨牛排.jpg"];//[[NSBundle mainBundle] pathForResource:[dishes objectAtIndex:0] ofType:@"jpg"]];
         //cell.imageView.image = dish;
