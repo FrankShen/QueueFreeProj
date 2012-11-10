@@ -7,6 +7,83 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F2899F1164E4312000DAABE /* Salabim意式餐厅(赤峰路店)_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F2899ED164E4311000DAABE /* Salabim意式餐厅(赤峰路店)_1.jpg */; };
+		3F2899F2164E4312000DAABE /* Salabim意式餐厅(赤峰路店)_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F2899EE164E4312000DAABE /* Salabim意式餐厅(赤峰路店)_2.jpg */; };
+		3F2899F3164E4312000DAABE /* Salabim意式餐厅(赤峰路店)_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F2899EF164E4312000DAABE /* Salabim意式餐厅(赤峰路店)_3.jpg */; };
+		3F2899F4164E4312000DAABE /* Salabim意式餐厅(赤峰路店)_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F2899F0164E4312000DAABE /* Salabim意式餐厅(赤峰路店)_4.jpg */; };
+		3F2899F9164E43C5000DAABE /* 沈家花园(控江店)_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F2899F6164E43C5000DAABE /* 沈家花园(控江店)_1.jpg */; };
+		3F2899FA164E43C5000DAABE /* 沈家花园(控江店)_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F2899F7164E43C5000DAABE /* 沈家花园(控江店)_2.jpg */; };
+		3F2899FB164E43C5000DAABE /* 沈家花园(控江店)_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F2899F8164E43C5000DAABE /* 沈家花园(控江店)_3.jpg */; };
+		3F289A00164E4402000DAABE /* 川杭人家_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F2899FC164E4401000DAABE /* 川杭人家_1.jpg */; };
+		3F289A01164E4402000DAABE /* 川杭人家_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F2899FD164E4402000DAABE /* 川杭人家_2.jpg */; };
+		3F289A02164E4402000DAABE /* 川杭人家_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F2899FE164E4402000DAABE /* 川杭人家_3.jpg */; };
+		3F289A03164E4402000DAABE /* 川杭人家_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F2899FF164E4402000DAABE /* 川杭人家_4.jpg */; };
+		3F289A05164E4482000DAABE /* 宫の寿司_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A04164E4482000DAABE /* 宫の寿司_1.jpg */; };
+		3F289A0A164E46B0000DAABE /* 虹林阁_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A06164E46AF000DAABE /* 虹林阁_1.jpg */; };
+		3F289A0B164E46B0000DAABE /* 虹林阁_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A07164E46AF000DAABE /* 虹林阁_2.jpg */; };
+		3F289A0C164E46B0000DAABE /* 虹林阁_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A08164E46AF000DAABE /* 虹林阁_3.jpg */; };
+		3F289A0D164E46B0000DAABE /* 虹林阁_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A09164E46B0000DAABE /* 虹林阁_4.jpg */; };
+		3F289A12164E46F8000DAABE /* 尖东茶楼_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A0E164E46F7000DAABE /* 尖东茶楼_1.jpg */; };
+		3F289A13164E46F8000DAABE /* 尖东茶楼_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A0F164E46F7000DAABE /* 尖东茶楼_2.jpg */; };
+		3F289A14164E46F8000DAABE /* 尖东茶楼_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A10164E46F8000DAABE /* 尖东茶楼_3.jpg */; };
+		3F289A15164E46F8000DAABE /* 尖东茶楼_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A11164E46F8000DAABE /* 尖东茶楼_4.jpg */; };
+		3F289A1A164E473E000DAABE /* 锦江大厨_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A16164E473D000DAABE /* 锦江大厨_1.jpg */; };
+		3F289A1B164E473E000DAABE /* 锦江大厨_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A17164E473D000DAABE /* 锦江大厨_2.jpg */; };
+		3F289A1C164E473E000DAABE /* 锦江大厨_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A18164E473D000DAABE /* 锦江大厨_3.jpg */; };
+		3F289A1D164E473E000DAABE /* 锦江大厨_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A19164E473D000DAABE /* 锦江大厨_4.jpg */; };
+		3F289A21164E4772000DAABE /* 聚点时尚烧烤主题餐厅(彰武路店)_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A1E164E4771000DAABE /* 聚点时尚烧烤主题餐厅(彰武路店)_1.jpg */; };
+		3F289A22164E4772000DAABE /* 聚点时尚烧烤主题餐厅(彰武路店)_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A1F164E4772000DAABE /* 聚点时尚烧烤主题餐厅(彰武路店)_2.jpg */; };
+		3F289A23164E4772000DAABE /* 聚点时尚烧烤主题餐厅(彰武路店)_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A20164E4772000DAABE /* 聚点时尚烧烤主题餐厅(彰武路店)_3.jpg */; };
+		3F289A28164E4830000DAABE /* 迈玛瑞_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A24164E482F000DAABE /* 迈玛瑞_1.jpg */; };
+		3F289A29164E4830000DAABE /* 迈玛瑞_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A25164E482F000DAABE /* 迈玛瑞_2.jpg */; };
+		3F289A2A164E4830000DAABE /* 迈玛瑞_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A26164E4830000DAABE /* 迈玛瑞_3.jpg */; };
+		3F289A2B164E4830000DAABE /* 迈玛瑞_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A27164E4830000DAABE /* 迈玛瑞_4.jpg */; };
+		3F289A31164E49A8000DAABE /* 权金城(杨浦总店)_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A2C164E49A7000DAABE /* 权金城(杨浦总店)_1.jpg */; };
+		3F289A32164E49A8000DAABE /* 权金城(杨浦总店)_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A2D164E49A7000DAABE /* 权金城(杨浦总店)_2.jpg */; };
+		3F289A33164E49A8000DAABE /* 权金城(杨浦总店)_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A2E164E49A7000DAABE /* 权金城(杨浦总店)_3.jpg */; };
+		3F289A34164E49A8000DAABE /* 权金城(杨浦总店)_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A2F164E49A7000DAABE /* 权金城(杨浦总店)_4.jpg */; };
+		3F289A35164E49A8000DAABE /* 权金城(杨浦总店)_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A30164E49A8000DAABE /* 权金城(杨浦总店)_5.jpg */; };
+		3F289A3E164E4A09000DAABE /* 染山_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A36164E4A08000DAABE /* 染山_1.jpg */; };
+		3F289A3F164E4A09000DAABE /* 染山_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A37164E4A08000DAABE /* 染山_2.jpg */; };
+		3F289A40164E4A09000DAABE /* 染山_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A38164E4A08000DAABE /* 染山_3.jpg */; };
+		3F289A41164E4A09000DAABE /* 染山_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A39164E4A08000DAABE /* 染山_4.jpg */; };
+		3F289A42164E4A09000DAABE /* 染山_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A3A164E4A09000DAABE /* 染山_5.jpg */; };
+		3F289A43164E4A09000DAABE /* 染山_6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A3B164E4A09000DAABE /* 染山_6.jpg */; };
+		3F289A44164E4A09000DAABE /* 染山_7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A3C164E4A09000DAABE /* 染山_7.jpg */; };
+		3F289A45164E4A09000DAABE /* 染山_8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A3D164E4A09000DAABE /* 染山_8.jpg */; };
+		3F289A4D164E4A5A000DAABE /* 菽心阁_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A46164E4A58000DAABE /* 菽心阁_1.jpg */; };
+		3F289A4E164E4A5A000DAABE /* 菽心阁_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A47164E4A58000DAABE /* 菽心阁_2.jpg */; };
+		3F289A4F164E4A5A000DAABE /* 菽心阁_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A48164E4A58000DAABE /* 菽心阁_3.jpg */; };
+		3F289A50164E4A5A000DAABE /* 菽心阁_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A49164E4A59000DAABE /* 菽心阁_4.jpg */; };
+		3F289A51164E4A5A000DAABE /* 菽心阁_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A4A164E4A59000DAABE /* 菽心阁_5.jpg */; };
+		3F289A52164E4A5A000DAABE /* 菽心阁_6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A4B164E4A59000DAABE /* 菽心阁_6.jpg */; };
+		3F289A53164E4A5A000DAABE /* 菽心阁_7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A4C164E4A59000DAABE /* 菽心阁_7.jpg */; };
+		3F289A56164E4A84000DAABE /* 谭氏私房菜_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A54164E4A83000DAABE /* 谭氏私房菜_1.jpg */; };
+		3F289A57164E4A84000DAABE /* 谭氏私房菜_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A55164E4A83000DAABE /* 谭氏私房菜_2.jpg */; };
+		3F289A5A164E4AEE000DAABE /* 卧云茶叙_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A58164E4AEE000DAABE /* 卧云茶叙_1.jpg */; };
+		3F289A5B164E4AEE000DAABE /* 卧云茶叙_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A59164E4AEE000DAABE /* 卧云茶叙_2.jpg */; };
+		3F289A62164E4B36000DAABE /* 夏朵小厨_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A5C164E4B34000DAABE /* 夏朵小厨_1.jpg */; };
+		3F289A63164E4B36000DAABE /* 夏朵小厨_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A5D164E4B34000DAABE /* 夏朵小厨_2.jpg */; };
+		3F289A64164E4B36000DAABE /* 夏朵小厨_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A5E164E4B34000DAABE /* 夏朵小厨_3.jpg */; };
+		3F289A65164E4B36000DAABE /* 夏朵小厨_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A5F164E4B35000DAABE /* 夏朵小厨_4.jpg */; };
+		3F289A66164E4B36000DAABE /* 夏朵小厨_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A60164E4B35000DAABE /* 夏朵小厨_5.jpg */; };
+		3F289A67164E4B36000DAABE /* 夏朵小厨_6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A61164E4B36000DAABE /* 夏朵小厨_6.jpg */; };
+		3F289A6D164E4B71000DAABE /* 夏月小厨_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A68164E4B6F000DAABE /* 夏月小厨_1.jpg */; };
+		3F289A6E164E4B71000DAABE /* 夏月小厨_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A69164E4B6F000DAABE /* 夏月小厨_2.jpg */; };
+		3F289A6F164E4B71000DAABE /* 夏月小厨_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A6A164E4B70000DAABE /* 夏月小厨_3.jpg */; };
+		3F289A70164E4B71000DAABE /* 夏月小厨_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A6B164E4B70000DAABE /* 夏月小厨_4.jpg */; };
+		3F289A71164E4B71000DAABE /* 夏月小厨_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A6C164E4B70000DAABE /* 夏月小厨_5.jpg */; };
+		3F289A76164E4BBE000DAABE /* 新南华(四平店)_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A72164E4BBD000DAABE /* 新南华(四平店)_1.jpg */; };
+		3F289A77164E4BBE000DAABE /* 新南华(四平店)_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A73164E4BBD000DAABE /* 新南华(四平店)_2.jpg */; };
+		3F289A78164E4BBE000DAABE /* 新南华(四平店)_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A74164E4BBE000DAABE /* 新南华(四平店)_3.jpg */; };
+		3F289A79164E4BBE000DAABE /* 新南华(四平店)_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A75164E4BBE000DAABE /* 新南华(四平店)_4.jpg */; };
+		3F289A80164E4BEC000DAABE /* 新雨花大酒店_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A7A164E4BE9000DAABE /* 新雨花大酒店_1.jpg */; };
+		3F289A81164E4BEC000DAABE /* 新雨花大酒店_2.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A7B164E4BEA000DAABE /* 新雨花大酒店_2.JPG */; };
+		3F289A82164E4BEC000DAABE /* 新雨花大酒店_3.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A7C164E4BEA000DAABE /* 新雨花大酒店_3.JPG */; };
+		3F289A83164E4BEC000DAABE /* 新雨花大酒店_4.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A7D164E4BEA000DAABE /* 新雨花大酒店_4.JPG */; };
+		3F289A84164E4BEC000DAABE /* 新雨花大酒店_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A7E164E4BEB000DAABE /* 新雨花大酒店_5.jpg */; };
+		3F289A85164E4BEC000DAABE /* 新雨花大酒店_6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A7F164E4BEB000DAABE /* 新雨花大酒店_6.jpg */; };
+		3F289A8B164E4DD9000DAABE /* QueueFree.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A8A164E4DD9000DAABE /* QueueFree.plist */; };
 		3F8628BA163D63B0001DCA11 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F8628B9163D63B0001DCA11 /* CoreData.framework */; };
 		3FA605111648314100BF98AF /* Restaurant+Plist.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA605101648314100BF98AF /* Restaurant+Plist.m */; };
 		3FA605191648D0F800BF98AF /* Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA605181648D0F800BF98AF /* Restaurant.m */; };
@@ -162,7 +239,6 @@
 		3FC4AE35164B819A00E73F8C /* 蟹钳.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FC4ADA1164B819A00E73F8C /* 蟹钳.jpg */; };
 		3FC4AE36164B819A00E73F8C /* 郁金香海鲜局饭.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FC4ADA2164B819A00E73F8C /* 郁金香海鲜局饭.jpg */; };
 		3FC4AE37164B819A00E73F8C /* 糟熘鱼片.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FC4ADA3164B819A00E73F8C /* 糟熘鱼片.jpg */; };
-		3FC4AE39164B81EE00E73F8C /* QueueFree.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FC4AE38164B81EE00E73F8C /* QueueFree.plist */; };
 		4D302AC3164B199E0095FE13 /* NSTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D302AC2164B199D0095FE13 /* NSTableCell.xib */; };
 		4DA2BC87164A8B1900345F08 /* NSTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DA2BC86164A8B1900345F08 /* NSTableView.xib */; };
 		4DA2BC8A164A8B2D00345F08 /* NSTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA2BC89164A8B2D00345F08 /* NSTableCell.m */; };
@@ -293,6 +369,83 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F2899ED164E4311000DAABE /* Salabim意式餐厅(赤峰路店)_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Salabim意式餐厅(赤峰路店)_1.jpg"; sourceTree = "<group>"; };
+		3F2899EE164E4312000DAABE /* Salabim意式餐厅(赤峰路店)_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Salabim意式餐厅(赤峰路店)_2.jpg"; sourceTree = "<group>"; };
+		3F2899EF164E4312000DAABE /* Salabim意式餐厅(赤峰路店)_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Salabim意式餐厅(赤峰路店)_3.jpg"; sourceTree = "<group>"; };
+		3F2899F0164E4312000DAABE /* Salabim意式餐厅(赤峰路店)_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Salabim意式餐厅(赤峰路店)_4.jpg"; sourceTree = "<group>"; };
+		3F2899F6164E43C5000DAABE /* 沈家花园(控江店)_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "沈家花园(控江店)_1.jpg"; sourceTree = "<group>"; };
+		3F2899F7164E43C5000DAABE /* 沈家花园(控江店)_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "沈家花园(控江店)_2.jpg"; sourceTree = "<group>"; };
+		3F2899F8164E43C5000DAABE /* 沈家花园(控江店)_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "沈家花园(控江店)_3.jpg"; sourceTree = "<group>"; };
+		3F2899FC164E4401000DAABE /* 川杭人家_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "川杭人家_1.jpg"; sourceTree = "<group>"; };
+		3F2899FD164E4402000DAABE /* 川杭人家_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "川杭人家_2.jpg"; sourceTree = "<group>"; };
+		3F2899FE164E4402000DAABE /* 川杭人家_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "川杭人家_3.jpg"; sourceTree = "<group>"; };
+		3F2899FF164E4402000DAABE /* 川杭人家_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "川杭人家_4.jpg"; sourceTree = "<group>"; };
+		3F289A04164E4482000DAABE /* 宫の寿司_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "宫の寿司_1.jpg"; sourceTree = "<group>"; };
+		3F289A06164E46AF000DAABE /* 虹林阁_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "虹林阁_1.jpg"; sourceTree = "<group>"; };
+		3F289A07164E46AF000DAABE /* 虹林阁_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "虹林阁_2.jpg"; sourceTree = "<group>"; };
+		3F289A08164E46AF000DAABE /* 虹林阁_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "虹林阁_3.jpg"; sourceTree = "<group>"; };
+		3F289A09164E46B0000DAABE /* 虹林阁_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "虹林阁_4.jpg"; sourceTree = "<group>"; };
+		3F289A0E164E46F7000DAABE /* 尖东茶楼_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "尖东茶楼_1.jpg"; sourceTree = "<group>"; };
+		3F289A0F164E46F7000DAABE /* 尖东茶楼_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "尖东茶楼_2.jpg"; sourceTree = "<group>"; };
+		3F289A10164E46F8000DAABE /* 尖东茶楼_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "尖东茶楼_3.jpg"; sourceTree = "<group>"; };
+		3F289A11164E46F8000DAABE /* 尖东茶楼_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "尖东茶楼_4.jpg"; sourceTree = "<group>"; };
+		3F289A16164E473D000DAABE /* 锦江大厨_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "锦江大厨_1.jpg"; sourceTree = "<group>"; };
+		3F289A17164E473D000DAABE /* 锦江大厨_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "锦江大厨_2.jpg"; sourceTree = "<group>"; };
+		3F289A18164E473D000DAABE /* 锦江大厨_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "锦江大厨_3.jpg"; sourceTree = "<group>"; };
+		3F289A19164E473D000DAABE /* 锦江大厨_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "锦江大厨_4.jpg"; sourceTree = "<group>"; };
+		3F289A1E164E4771000DAABE /* 聚点时尚烧烤主题餐厅(彰武路店)_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "聚点时尚烧烤主题餐厅(彰武路店)_1.jpg"; sourceTree = "<group>"; };
+		3F289A1F164E4772000DAABE /* 聚点时尚烧烤主题餐厅(彰武路店)_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "聚点时尚烧烤主题餐厅(彰武路店)_2.jpg"; sourceTree = "<group>"; };
+		3F289A20164E4772000DAABE /* 聚点时尚烧烤主题餐厅(彰武路店)_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "聚点时尚烧烤主题餐厅(彰武路店)_3.jpg"; sourceTree = "<group>"; };
+		3F289A24164E482F000DAABE /* 迈玛瑞_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "迈玛瑞_1.jpg"; sourceTree = "<group>"; };
+		3F289A25164E482F000DAABE /* 迈玛瑞_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "迈玛瑞_2.jpg"; sourceTree = "<group>"; };
+		3F289A26164E4830000DAABE /* 迈玛瑞_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "迈玛瑞_3.jpg"; sourceTree = "<group>"; };
+		3F289A27164E4830000DAABE /* 迈玛瑞_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "迈玛瑞_4.jpg"; sourceTree = "<group>"; };
+		3F289A2C164E49A7000DAABE /* 权金城(杨浦总店)_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "权金城(杨浦总店)_1.jpg"; sourceTree = "<group>"; };
+		3F289A2D164E49A7000DAABE /* 权金城(杨浦总店)_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "权金城(杨浦总店)_2.jpg"; sourceTree = "<group>"; };
+		3F289A2E164E49A7000DAABE /* 权金城(杨浦总店)_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "权金城(杨浦总店)_3.jpg"; sourceTree = "<group>"; };
+		3F289A2F164E49A7000DAABE /* 权金城(杨浦总店)_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "权金城(杨浦总店)_4.jpg"; sourceTree = "<group>"; };
+		3F289A30164E49A8000DAABE /* 权金城(杨浦总店)_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "权金城(杨浦总店)_5.jpg"; sourceTree = "<group>"; };
+		3F289A36164E4A08000DAABE /* 染山_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "染山_1.jpg"; sourceTree = "<group>"; };
+		3F289A37164E4A08000DAABE /* 染山_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "染山_2.jpg"; sourceTree = "<group>"; };
+		3F289A38164E4A08000DAABE /* 染山_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "染山_3.jpg"; sourceTree = "<group>"; };
+		3F289A39164E4A08000DAABE /* 染山_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "染山_4.jpg"; sourceTree = "<group>"; };
+		3F289A3A164E4A09000DAABE /* 染山_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "染山_5.jpg"; sourceTree = "<group>"; };
+		3F289A3B164E4A09000DAABE /* 染山_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "染山_6.jpg"; sourceTree = "<group>"; };
+		3F289A3C164E4A09000DAABE /* 染山_7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "染山_7.jpg"; sourceTree = "<group>"; };
+		3F289A3D164E4A09000DAABE /* 染山_8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "染山_8.jpg"; sourceTree = "<group>"; };
+		3F289A46164E4A58000DAABE /* 菽心阁_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "菽心阁_1.jpg"; sourceTree = "<group>"; };
+		3F289A47164E4A58000DAABE /* 菽心阁_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "菽心阁_2.jpg"; sourceTree = "<group>"; };
+		3F289A48164E4A58000DAABE /* 菽心阁_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "菽心阁_3.jpg"; sourceTree = "<group>"; };
+		3F289A49164E4A59000DAABE /* 菽心阁_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "菽心阁_4.jpg"; sourceTree = "<group>"; };
+		3F289A4A164E4A59000DAABE /* 菽心阁_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "菽心阁_5.jpg"; sourceTree = "<group>"; };
+		3F289A4B164E4A59000DAABE /* 菽心阁_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "菽心阁_6.jpg"; sourceTree = "<group>"; };
+		3F289A4C164E4A59000DAABE /* 菽心阁_7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "菽心阁_7.jpg"; sourceTree = "<group>"; };
+		3F289A54164E4A83000DAABE /* 谭氏私房菜_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "谭氏私房菜_1.jpg"; sourceTree = "<group>"; };
+		3F289A55164E4A83000DAABE /* 谭氏私房菜_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "谭氏私房菜_2.jpg"; sourceTree = "<group>"; };
+		3F289A58164E4AEE000DAABE /* 卧云茶叙_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "卧云茶叙_1.jpg"; sourceTree = "<group>"; };
+		3F289A59164E4AEE000DAABE /* 卧云茶叙_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "卧云茶叙_2.jpg"; sourceTree = "<group>"; };
+		3F289A5C164E4B34000DAABE /* 夏朵小厨_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "夏朵小厨_1.jpg"; sourceTree = "<group>"; };
+		3F289A5D164E4B34000DAABE /* 夏朵小厨_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "夏朵小厨_2.jpg"; sourceTree = "<group>"; };
+		3F289A5E164E4B34000DAABE /* 夏朵小厨_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "夏朵小厨_3.jpg"; sourceTree = "<group>"; };
+		3F289A5F164E4B35000DAABE /* 夏朵小厨_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "夏朵小厨_4.jpg"; sourceTree = "<group>"; };
+		3F289A60164E4B35000DAABE /* 夏朵小厨_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "夏朵小厨_5.jpg"; sourceTree = "<group>"; };
+		3F289A61164E4B36000DAABE /* 夏朵小厨_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "夏朵小厨_6.jpg"; sourceTree = "<group>"; };
+		3F289A68164E4B6F000DAABE /* 夏月小厨_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "夏月小厨_1.jpg"; sourceTree = "<group>"; };
+		3F289A69164E4B6F000DAABE /* 夏月小厨_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "夏月小厨_2.jpg"; sourceTree = "<group>"; };
+		3F289A6A164E4B70000DAABE /* 夏月小厨_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "夏月小厨_3.jpg"; sourceTree = "<group>"; };
+		3F289A6B164E4B70000DAABE /* 夏月小厨_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "夏月小厨_4.jpg"; sourceTree = "<group>"; };
+		3F289A6C164E4B70000DAABE /* 夏月小厨_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "夏月小厨_5.jpg"; sourceTree = "<group>"; };
+		3F289A72164E4BBD000DAABE /* 新南华(四平店)_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "新南华(四平店)_1.jpg"; sourceTree = "<group>"; };
+		3F289A73164E4BBD000DAABE /* 新南华(四平店)_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "新南华(四平店)_2.jpg"; sourceTree = "<group>"; };
+		3F289A74164E4BBE000DAABE /* 新南华(四平店)_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "新南华(四平店)_3.jpg"; sourceTree = "<group>"; };
+		3F289A75164E4BBE000DAABE /* 新南华(四平店)_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "新南华(四平店)_4.jpg"; sourceTree = "<group>"; };
+		3F289A7A164E4BE9000DAABE /* 新雨花大酒店_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "新雨花大酒店_1.jpg"; sourceTree = "<group>"; };
+		3F289A7B164E4BEA000DAABE /* 新雨花大酒店_2.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "新雨花大酒店_2.JPG"; sourceTree = "<group>"; };
+		3F289A7C164E4BEA000DAABE /* 新雨花大酒店_3.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "新雨花大酒店_3.JPG"; sourceTree = "<group>"; };
+		3F289A7D164E4BEA000DAABE /* 新雨花大酒店_4.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "新雨花大酒店_4.JPG"; sourceTree = "<group>"; };
+		3F289A7E164E4BEB000DAABE /* 新雨花大酒店_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "新雨花大酒店_5.jpg"; sourceTree = "<group>"; };
+		3F289A7F164E4BEB000DAABE /* 新雨花大酒店_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "新雨花大酒店_6.jpg"; sourceTree = "<group>"; };
+		3F289A8A164E4DD9000DAABE /* QueueFree.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = QueueFree.plist; sourceTree = "<group>"; };
 		3F8628B9163D63B0001DCA11 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		3FA6050F1648314000BF98AF /* Restaurant+Plist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Restaurant+Plist.h"; path = "CoreData/Restaurant+Plist.h"; sourceTree = "<group>"; };
 		3FA605101648314100BF98AF /* Restaurant+Plist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Restaurant+Plist.m"; path = "CoreData/Restaurant+Plist.m"; sourceTree = "<group>"; };
@@ -452,7 +605,6 @@
 		3FC4ADA1164B819A00E73F8C /* 蟹钳.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "蟹钳.jpg"; sourceTree = "<group>"; };
 		3FC4ADA2164B819A00E73F8C /* 郁金香海鲜局饭.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "郁金香海鲜局饭.jpg"; sourceTree = "<group>"; };
 		3FC4ADA3164B819A00E73F8C /* 糟熘鱼片.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "糟熘鱼片.jpg"; sourceTree = "<group>"; };
-		3FC4AE38164B81EE00E73F8C /* QueueFree.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = QueueFree.plist; sourceTree = "<group>"; };
 		3FE68AE116380D170051A267 /* RestaurantInfo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RestaurantInfo.xcdatamodel; sourceTree = "<group>"; };
 		4D302AC2164B199D0095FE13 /* NSTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NSTableCell.xib; sourceTree = "<group>"; };
 		4DA2BC86164A8B1900345F08 /* NSTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NSTableView.xib; sourceTree = "<group>"; };
@@ -636,8 +788,8 @@
 			isa = PBXGroup;
 			children = (
 				3FE68AE016380D170051A267 /* RestaurantInfo.xcdatamodeld */,
+				3F289A8A164E4DD9000DAABE /* QueueFree.plist */,
 				3FA605171648D0F700BF98AF /* Restaurant.h */,
-				3FC4AE38164B81EE00E73F8C /* QueueFree.plist */,
 				3FA605181648D0F800BF98AF /* Restaurant.m */,
 				3FA6051B1648D0F900BF98AF /* Telephone.h */,
 				3FA6051C1648D0F900BF98AF /* Telephone.m */,
@@ -654,6 +806,82 @@
 		3FC4AD0E164B816B00E73F8C /* Pictures */ = {
 			isa = PBXGroup;
 			children = (
+				3F2899ED164E4311000DAABE /* Salabim意式餐厅(赤峰路店)_1.jpg */,
+				3F2899EE164E4312000DAABE /* Salabim意式餐厅(赤峰路店)_2.jpg */,
+				3F2899EF164E4312000DAABE /* Salabim意式餐厅(赤峰路店)_3.jpg */,
+				3F2899F0164E4312000DAABE /* Salabim意式餐厅(赤峰路店)_4.jpg */,
+				3F289A1E164E4771000DAABE /* 聚点时尚烧烤主题餐厅(彰武路店)_1.jpg */,
+				3F289A1F164E4772000DAABE /* 聚点时尚烧烤主题餐厅(彰武路店)_2.jpg */,
+				3F289A20164E4772000DAABE /* 聚点时尚烧烤主题餐厅(彰武路店)_3.jpg */,
+				3F289A7A164E4BE9000DAABE /* 新雨花大酒店_1.jpg */,
+				3F289A7B164E4BEA000DAABE /* 新雨花大酒店_2.JPG */,
+				3F289A7C164E4BEA000DAABE /* 新雨花大酒店_3.JPG */,
+				3F289A7D164E4BEA000DAABE /* 新雨花大酒店_4.JPG */,
+				3F289A7E164E4BEB000DAABE /* 新雨花大酒店_5.jpg */,
+				3F289A7F164E4BEB000DAABE /* 新雨花大酒店_6.jpg */,
+				3F289A72164E4BBD000DAABE /* 新南华(四平店)_1.jpg */,
+				3F289A73164E4BBD000DAABE /* 新南华(四平店)_2.jpg */,
+				3F289A74164E4BBE000DAABE /* 新南华(四平店)_3.jpg */,
+				3F289A75164E4BBE000DAABE /* 新南华(四平店)_4.jpg */,
+				3F289A68164E4B6F000DAABE /* 夏月小厨_1.jpg */,
+				3F289A69164E4B6F000DAABE /* 夏月小厨_2.jpg */,
+				3F289A6A164E4B70000DAABE /* 夏月小厨_3.jpg */,
+				3F289A6B164E4B70000DAABE /* 夏月小厨_4.jpg */,
+				3F289A6C164E4B70000DAABE /* 夏月小厨_5.jpg */,
+				3F289A5C164E4B34000DAABE /* 夏朵小厨_1.jpg */,
+				3F289A5D164E4B34000DAABE /* 夏朵小厨_2.jpg */,
+				3F289A5E164E4B34000DAABE /* 夏朵小厨_3.jpg */,
+				3F289A5F164E4B35000DAABE /* 夏朵小厨_4.jpg */,
+				3F289A60164E4B35000DAABE /* 夏朵小厨_5.jpg */,
+				3F289A61164E4B36000DAABE /* 夏朵小厨_6.jpg */,
+				3F289A58164E4AEE000DAABE /* 卧云茶叙_1.jpg */,
+				3F289A59164E4AEE000DAABE /* 卧云茶叙_2.jpg */,
+				3F289A54164E4A83000DAABE /* 谭氏私房菜_1.jpg */,
+				3F289A55164E4A83000DAABE /* 谭氏私房菜_2.jpg */,
+				3F289A46164E4A58000DAABE /* 菽心阁_1.jpg */,
+				3F289A47164E4A58000DAABE /* 菽心阁_2.jpg */,
+				3F289A48164E4A58000DAABE /* 菽心阁_3.jpg */,
+				3F289A49164E4A59000DAABE /* 菽心阁_4.jpg */,
+				3F289A4A164E4A59000DAABE /* 菽心阁_5.jpg */,
+				3F289A4B164E4A59000DAABE /* 菽心阁_6.jpg */,
+				3F289A4C164E4A59000DAABE /* 菽心阁_7.jpg */,
+				3F289A2C164E49A7000DAABE /* 权金城(杨浦总店)_1.jpg */,
+				3F289A2D164E49A7000DAABE /* 权金城(杨浦总店)_2.jpg */,
+				3F289A2E164E49A7000DAABE /* 权金城(杨浦总店)_3.jpg */,
+				3F289A2F164E49A7000DAABE /* 权金城(杨浦总店)_4.jpg */,
+				3F289A30164E49A8000DAABE /* 权金城(杨浦总店)_5.jpg */,
+				3F289A36164E4A08000DAABE /* 染山_1.jpg */,
+				3F289A37164E4A08000DAABE /* 染山_2.jpg */,
+				3F289A38164E4A08000DAABE /* 染山_3.jpg */,
+				3F289A39164E4A08000DAABE /* 染山_4.jpg */,
+				3F289A3A164E4A09000DAABE /* 染山_5.jpg */,
+				3F289A3B164E4A09000DAABE /* 染山_6.jpg */,
+				3F289A3C164E4A09000DAABE /* 染山_7.jpg */,
+				3F289A3D164E4A09000DAABE /* 染山_8.jpg */,
+				3F289A24164E482F000DAABE /* 迈玛瑞_1.jpg */,
+				3F289A25164E482F000DAABE /* 迈玛瑞_2.jpg */,
+				3F289A26164E4830000DAABE /* 迈玛瑞_3.jpg */,
+				3F289A27164E4830000DAABE /* 迈玛瑞_4.jpg */,
+				3F289A16164E473D000DAABE /* 锦江大厨_1.jpg */,
+				3F289A17164E473D000DAABE /* 锦江大厨_2.jpg */,
+				3F289A18164E473D000DAABE /* 锦江大厨_3.jpg */,
+				3F289A19164E473D000DAABE /* 锦江大厨_4.jpg */,
+				3F289A0E164E46F7000DAABE /* 尖东茶楼_1.jpg */,
+				3F289A0F164E46F7000DAABE /* 尖东茶楼_2.jpg */,
+				3F289A10164E46F8000DAABE /* 尖东茶楼_3.jpg */,
+				3F289A11164E46F8000DAABE /* 尖东茶楼_4.jpg */,
+				3F2899FC164E4401000DAABE /* 川杭人家_1.jpg */,
+				3F2899FD164E4402000DAABE /* 川杭人家_2.jpg */,
+				3F2899FE164E4402000DAABE /* 川杭人家_3.jpg */,
+				3F2899FF164E4402000DAABE /* 川杭人家_4.jpg */,
+				3F289A06164E46AF000DAABE /* 虹林阁_1.jpg */,
+				3F289A07164E46AF000DAABE /* 虹林阁_2.jpg */,
+				3F289A08164E46AF000DAABE /* 虹林阁_3.jpg */,
+				3F289A09164E46B0000DAABE /* 虹林阁_4.jpg */,
+				3F289A04164E4482000DAABE /* 宫の寿司_1.jpg */,
+				3F2899F6164E43C5000DAABE /* 沈家花园(控江店)_1.jpg */,
+				3F2899F7164E43C5000DAABE /* 沈家花园(控江店)_2.jpg */,
+				3F2899F8164E43C5000DAABE /* 沈家花园(控江店)_3.jpg */,
 				3FC4AD10164B819A00E73F8C /* T骨牛排.jpg */,
 				3FC4AD11164B819A00E73F8C /* XO酱爆元宝虾.jpg */,
 				3FC4AD12164B819A00E73F8C /* 爱心翡翠.jpg */,
@@ -1387,9 +1615,85 @@
 				3FC4AE35164B819A00E73F8C /* 蟹钳.jpg in Resources */,
 				3FC4AE36164B819A00E73F8C /* 郁金香海鲜局饭.jpg in Resources */,
 				3FC4AE37164B819A00E73F8C /* 糟熘鱼片.jpg in Resources */,
-				3FC4AE39164B81EE00E73F8C /* QueueFree.plist in Resources */,
 				9BF9B0EE164B9E3300877C2A /* restaurant_icon.png in Resources */,
 				9BF9B0EF164B9E3300877C2A /* restaurant_icon@2x.png in Resources */,
+				3F2899F1164E4312000DAABE /* Salabim意式餐厅(赤峰路店)_1.jpg in Resources */,
+				3F2899F2164E4312000DAABE /* Salabim意式餐厅(赤峰路店)_2.jpg in Resources */,
+				3F2899F3164E4312000DAABE /* Salabim意式餐厅(赤峰路店)_3.jpg in Resources */,
+				3F2899F4164E4312000DAABE /* Salabim意式餐厅(赤峰路店)_4.jpg in Resources */,
+				3F2899F9164E43C5000DAABE /* 沈家花园(控江店)_1.jpg in Resources */,
+				3F2899FA164E43C5000DAABE /* 沈家花园(控江店)_2.jpg in Resources */,
+				3F2899FB164E43C5000DAABE /* 沈家花园(控江店)_3.jpg in Resources */,
+				3F289A00164E4402000DAABE /* 川杭人家_1.jpg in Resources */,
+				3F289A01164E4402000DAABE /* 川杭人家_2.jpg in Resources */,
+				3F289A02164E4402000DAABE /* 川杭人家_3.jpg in Resources */,
+				3F289A03164E4402000DAABE /* 川杭人家_4.jpg in Resources */,
+				3F289A05164E4482000DAABE /* 宫の寿司_1.jpg in Resources */,
+				3F289A0A164E46B0000DAABE /* 虹林阁_1.jpg in Resources */,
+				3F289A0B164E46B0000DAABE /* 虹林阁_2.jpg in Resources */,
+				3F289A0C164E46B0000DAABE /* 虹林阁_3.jpg in Resources */,
+				3F289A0D164E46B0000DAABE /* 虹林阁_4.jpg in Resources */,
+				3F289A12164E46F8000DAABE /* 尖东茶楼_1.jpg in Resources */,
+				3F289A13164E46F8000DAABE /* 尖东茶楼_2.jpg in Resources */,
+				3F289A14164E46F8000DAABE /* 尖东茶楼_3.jpg in Resources */,
+				3F289A15164E46F8000DAABE /* 尖东茶楼_4.jpg in Resources */,
+				3F289A1A164E473E000DAABE /* 锦江大厨_1.jpg in Resources */,
+				3F289A1B164E473E000DAABE /* 锦江大厨_2.jpg in Resources */,
+				3F289A1C164E473E000DAABE /* 锦江大厨_3.jpg in Resources */,
+				3F289A1D164E473E000DAABE /* 锦江大厨_4.jpg in Resources */,
+				3F289A21164E4772000DAABE /* 聚点时尚烧烤主题餐厅(彰武路店)_1.jpg in Resources */,
+				3F289A22164E4772000DAABE /* 聚点时尚烧烤主题餐厅(彰武路店)_2.jpg in Resources */,
+				3F289A23164E4772000DAABE /* 聚点时尚烧烤主题餐厅(彰武路店)_3.jpg in Resources */,
+				3F289A28164E4830000DAABE /* 迈玛瑞_1.jpg in Resources */,
+				3F289A29164E4830000DAABE /* 迈玛瑞_2.jpg in Resources */,
+				3F289A2A164E4830000DAABE /* 迈玛瑞_3.jpg in Resources */,
+				3F289A2B164E4830000DAABE /* 迈玛瑞_4.jpg in Resources */,
+				3F289A31164E49A8000DAABE /* 权金城(杨浦总店)_1.jpg in Resources */,
+				3F289A32164E49A8000DAABE /* 权金城(杨浦总店)_2.jpg in Resources */,
+				3F289A33164E49A8000DAABE /* 权金城(杨浦总店)_3.jpg in Resources */,
+				3F289A34164E49A8000DAABE /* 权金城(杨浦总店)_4.jpg in Resources */,
+				3F289A35164E49A8000DAABE /* 权金城(杨浦总店)_5.jpg in Resources */,
+				3F289A3E164E4A09000DAABE /* 染山_1.jpg in Resources */,
+				3F289A3F164E4A09000DAABE /* 染山_2.jpg in Resources */,
+				3F289A40164E4A09000DAABE /* 染山_3.jpg in Resources */,
+				3F289A41164E4A09000DAABE /* 染山_4.jpg in Resources */,
+				3F289A42164E4A09000DAABE /* 染山_5.jpg in Resources */,
+				3F289A43164E4A09000DAABE /* 染山_6.jpg in Resources */,
+				3F289A44164E4A09000DAABE /* 染山_7.jpg in Resources */,
+				3F289A45164E4A09000DAABE /* 染山_8.jpg in Resources */,
+				3F289A4D164E4A5A000DAABE /* 菽心阁_1.jpg in Resources */,
+				3F289A4E164E4A5A000DAABE /* 菽心阁_2.jpg in Resources */,
+				3F289A4F164E4A5A000DAABE /* 菽心阁_3.jpg in Resources */,
+				3F289A50164E4A5A000DAABE /* 菽心阁_4.jpg in Resources */,
+				3F289A51164E4A5A000DAABE /* 菽心阁_5.jpg in Resources */,
+				3F289A52164E4A5A000DAABE /* 菽心阁_6.jpg in Resources */,
+				3F289A53164E4A5A000DAABE /* 菽心阁_7.jpg in Resources */,
+				3F289A56164E4A84000DAABE /* 谭氏私房菜_1.jpg in Resources */,
+				3F289A57164E4A84000DAABE /* 谭氏私房菜_2.jpg in Resources */,
+				3F289A5A164E4AEE000DAABE /* 卧云茶叙_1.jpg in Resources */,
+				3F289A5B164E4AEE000DAABE /* 卧云茶叙_2.jpg in Resources */,
+				3F289A62164E4B36000DAABE /* 夏朵小厨_1.jpg in Resources */,
+				3F289A63164E4B36000DAABE /* 夏朵小厨_2.jpg in Resources */,
+				3F289A64164E4B36000DAABE /* 夏朵小厨_3.jpg in Resources */,
+				3F289A65164E4B36000DAABE /* 夏朵小厨_4.jpg in Resources */,
+				3F289A66164E4B36000DAABE /* 夏朵小厨_5.jpg in Resources */,
+				3F289A67164E4B36000DAABE /* 夏朵小厨_6.jpg in Resources */,
+				3F289A6D164E4B71000DAABE /* 夏月小厨_1.jpg in Resources */,
+				3F289A6E164E4B71000DAABE /* 夏月小厨_2.jpg in Resources */,
+				3F289A6F164E4B71000DAABE /* 夏月小厨_3.jpg in Resources */,
+				3F289A70164E4B71000DAABE /* 夏月小厨_4.jpg in Resources */,
+				3F289A71164E4B71000DAABE /* 夏月小厨_5.jpg in Resources */,
+				3F289A76164E4BBE000DAABE /* 新南华(四平店)_1.jpg in Resources */,
+				3F289A77164E4BBE000DAABE /* 新南华(四平店)_2.jpg in Resources */,
+				3F289A78164E4BBE000DAABE /* 新南华(四平店)_3.jpg in Resources */,
+				3F289A79164E4BBE000DAABE /* 新南华(四平店)_4.jpg in Resources */,
+				3F289A80164E4BEC000DAABE /* 新雨花大酒店_1.jpg in Resources */,
+				3F289A81164E4BEC000DAABE /* 新雨花大酒店_2.JPG in Resources */,
+				3F289A82164E4BEC000DAABE /* 新雨花大酒店_3.JPG in Resources */,
+				3F289A83164E4BEC000DAABE /* 新雨花大酒店_4.JPG in Resources */,
+				3F289A84164E4BEC000DAABE /* 新雨花大酒店_5.jpg in Resources */,
+				3F289A85164E4BEC000DAABE /* 新雨花大酒店_6.jpg in Resources */,
+				3F289A8B164E4DD9000DAABE /* QueueFree.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
