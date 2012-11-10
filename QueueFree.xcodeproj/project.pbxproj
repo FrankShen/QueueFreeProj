@@ -84,6 +84,7 @@
 		3F289A84164E4BEC000DAABE /* 新雨花大酒店_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A7E164E4BEB000DAABE /* 新雨花大酒店_5.jpg */; };
 		3F289A85164E4BEC000DAABE /* 新雨花大酒店_6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A7F164E4BEB000DAABE /* 新雨花大酒店_6.jpg */; };
 		3F289A8B164E4DD9000DAABE /* QueueFree.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F289A8A164E4DD9000DAABE /* QueueFree.plist */; };
+		3F289A96164E5967000DAABE /* QFGlobalSearchBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F289A95164E5967000DAABE /* QFGlobalSearchBrain.m */; };
 		3F8628BA163D63B0001DCA11 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F8628B9163D63B0001DCA11 /* CoreData.framework */; };
 		3FA605111648314100BF98AF /* Restaurant+Plist.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA605101648314100BF98AF /* Restaurant+Plist.m */; };
 		3FA605191648D0F800BF98AF /* Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA605181648D0F800BF98AF /* Restaurant.m */; };
@@ -446,6 +447,8 @@
 		3F289A7E164E4BEB000DAABE /* 新雨花大酒店_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "新雨花大酒店_5.jpg"; sourceTree = "<group>"; };
 		3F289A7F164E4BEB000DAABE /* 新雨花大酒店_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "新雨花大酒店_6.jpg"; sourceTree = "<group>"; };
 		3F289A8A164E4DD9000DAABE /* QueueFree.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = QueueFree.plist; sourceTree = "<group>"; };
+		3F289A94164E5967000DAABE /* QFGlobalSearchBrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFGlobalSearchBrain.h; sourceTree = "<group>"; };
+		3F289A95164E5967000DAABE /* QFGlobalSearchBrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFGlobalSearchBrain.m; sourceTree = "<group>"; };
 		3F8628B9163D63B0001DCA11 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		3FA6050F1648314000BF98AF /* Restaurant+Plist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Restaurant+Plist.h"; path = "CoreData/Restaurant+Plist.h"; sourceTree = "<group>"; };
 		3FA605101648314100BF98AF /* Restaurant+Plist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Restaurant+Plist.m"; path = "CoreData/Restaurant+Plist.m"; sourceTree = "<group>"; };
@@ -799,6 +802,8 @@
 				3FA605221648D0FE00BF98AF /* Dish.m */,
 				3FA6050F1648314000BF98AF /* Restaurant+Plist.h */,
 				3FA605101648314100BF98AF /* Restaurant+Plist.m */,
+				3F289A94164E5967000DAABE /* QFGlobalSearchBrain.h */,
+				3F289A95164E5967000DAABE /* QFGlobalSearchBrain.m */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -1743,6 +1748,7 @@
 				9B368636164A2DC700ED0054 /* RestaurantViewController.m in Sources */,
 				4DA2BC8A164A8B2D00345F08 /* NSTableCell.m in Sources */,
 				4DA2BCA4164AC22400345F08 /* NSTableViewController.m in Sources */,
+				3F289A96164E5967000DAABE /* QFGlobalSearchBrain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

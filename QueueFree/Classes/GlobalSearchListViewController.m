@@ -7,12 +7,15 @@
 //
 
 #import "GlobalSearchListViewController.h"
+#import "QFGlobalSearchBrain.h"
 
 @interface GlobalSearchListViewController ()
 @property (nonatomic) BOOL isList;
+@property (nonatomic, strong) QFGlobalSearchBrain *searchBrain;
 @end
 
 @implementation GlobalSearchListViewController
+@synthesize searchBrain;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,6 +32,25 @@
 	// Do any additional setup after loading the view.
     self.isList = YES;
     self.viewChangeButton.title = @"地图";
+    
+    // the Test for QFGlobalSearchBrain by Cui Hao
+    
+    searchBrain = [[QFGlobalSearchBrain alloc] init];
+    
+    NSArray *resultList = [searchBrain theResultArrayForKeyWord:@"路"];
+    for (NSDictionary *rest in resultList) {
+        NSLog(@"NAME:%@", [rest valueForKey:@"名称"]);
+    }
+
+    NSArray *resultList2 = [searchBrain theResultArrayForKeyWord:@"馋"];
+    for (NSDictionary *rest in resultList2) {
+        NSLog(@"NAME:%@", [rest valueForKey:@"名称"]);
+    }
+    
+    // the end of the Test
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
