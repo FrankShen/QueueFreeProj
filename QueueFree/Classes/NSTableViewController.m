@@ -120,7 +120,7 @@ double rad(double d)
         NSString *imagePath = [imageNumber isEqualToString:@"0"]?
         [[NSBundle mainBundle] pathForResource:[[dicTmp objectForKey:@"菜品信息"] objectAtIndex:0] ofType:@"jpg"] :
         [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"%@_1", [dicTmp objectForKey:@"名称"]] ofType:@"jpg"];
-        NSLog(@"ImagePath:%@", imagePath);
+        //NSLog(@"ImagePath:%@", imagePath);
         UIImage *dish = [UIImage imageWithContentsOfFile:imagePath];
         
         cell.shopImageView.image = dish;
