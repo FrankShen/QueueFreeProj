@@ -116,10 +116,14 @@ double rad(double d)
         cell.queuePeopleNumberLabel.text = [NSString stringWithFormat:@"%d",queueNum];
         cell.distanceToUserLocationLabel.text = [NSString stringWithFormat:@"%d",[self dictanceFromTheUserLocationWithDictionaryData:dicTmp]];
         
+        NSString *imageNumber = [dicTmp objectForKey:@"图片数量"];
+        NSString *imagePath = [imageNumber isEqualToString:@"0"]?
+        [[NSBundle mainBundle] pathForResource:[[dicTmp objectForKey:@"菜品信息"] objectAtIndex:0] ofType:@"jpg"] :
+        [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"%@_1", [dicTmp objectForKey:@"名称"]] ofType:@"jpg"];
+        NSLog(@"ImagePath:%@", imagePath);
+        UIImage *dish = [UIImage imageWithContentsOfFile:imagePath];
         
-        //NSArray * dishes = [dicTmp objectForKey:@"菜品信息"];
-        //UIImage *dish = [UIImage imageNamed:@"T骨牛排.jpg"];//[[NSBundle mainBundle] pathForResource:[dishes objectAtIndex:0] ofType:@"jpg"]];
-        //cell.imageView.image = dish;
+        cell.shopImageView.image = dish;
         
         return cell;
     }
