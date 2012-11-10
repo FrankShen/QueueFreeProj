@@ -1786,7 +1786,7 @@ Cg
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="KOI-Le-J5P">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="KOI-Le-J5P">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <connections>
@@ -1935,6 +1935,62 @@ Cg
         <image name="tab_bar_star_selected.png" width="100" height="49"/>
         <image name="tab_bar_star_unselected.png" width="100" height="49"/>
     </resources>
+    <classes>
+        <class className="AdminViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AdminViewController.h"/>
+        </class>
+        <class className="CustomTabBarView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomTabBarView.h"/>
+            <relationships>
+                <relationship kind="outlet" name="homeButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="qsnsButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="starButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="GlobalSearchListViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GlobalSearchListViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="searchButtonPressed:"/>
+                <relationship kind="action" name="viewChangeButtonPressed:"/>
+                <relationship kind="outlet" name="keyword" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="listView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="mapView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="viewChangeButton" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="NearSearchListViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NearSearchListViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="mapButtonPressed:"/>
+                <relationship kind="action" name="viewChangeButtonPressed:"/>
+                <relationship kind="outlet" name="viewChangeButton" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="QFNavigationBar" superclassName="UINavigationBar">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/QFNavigationBar.h"/>
+        </class>
+        <class className="QFViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/QFViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="qsnsEatPressed:"/>
+                <relationship kind="outlet" name="CustomTabBar" candidateClass="UIView"/>
+                <relationship kind="outlet" name="StarTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="TabBar" candidateClass="CustomTabBarView"/>
+            </relationships>
+        </class>
+        <class className="RestaurantViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RestaurantViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="addressLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="phoneLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="shopImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="shopNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="starLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="timeLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

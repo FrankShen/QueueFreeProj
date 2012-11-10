@@ -10,9 +10,19 @@
 
 @interface RestaurantViewController ()<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>
 @property (nonatomic, weak) UIView *infoView;
+@property (nonatomic) int shopPhotoNum;
+@property (nonatomic) int currentShopImageIdx;
 @end
 
 @implementation RestaurantViewController
+
+- (NSMutableArray *)shopImage
+{
+    if (!_shopImage){
+        _shopImage = [[NSMutableArray alloc] init];
+    }
+    return _shopImage;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -46,6 +56,30 @@
     self.navigationItem.title = self.shopName;
 }
 
+- (void)playAnimation
+{
+    if (self.currentShopImageIdx == self.shopPhotoNum){
+        self.currentShopImageIdx = 0;
+    }
+    self.shopImageView.image = [self.shopImage objectAtIndex:self.currentShopImageIdx];
+    [UIView animateWithDuration:1.0 animations:^{
+        self.shopImageView.alpha = 1.0f;
+    }completion:^(BOOL isFinished){
+        [UIView animateWithDuration:1.0 delay:3.0 options:UIViewAnimationCurveEaseInOut animations:^{
+            self.shopImageView.alpha = 0.0f;
+        }completion:^(BOOL isFinished){
+            ++self.currentShopImageIdx;
+            [self playAnimation];
+        }];
+    }];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    self.shopImageView.alpha = 0.0f;
+    [self playAnimation];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -59,6 +93,7 @@
     [self setStarLabel:nil];
     [self setShopNameLabel:nil];
     [self setScrollView:nil];
+    [self setShopImageView:nil];
     [super viewDidUnload];
 }
 
@@ -90,13 +125,28 @@
         return;
     }
     NSDictionary *finalDic = [rootData objectAtIndex:idx];
-    NSLog(@"%@",finalDic);
     self.shopName = name;
+    self.shopPhotoNum = [[finalDic objectForKey:@"图片数量"] intValue];
     self.workTime = [finalDic objectForKey:@"营业时间"];
     self.shopAddress = [finalDic objectForKey:@"地址"];
     self.shopStar = [finalDic objectForKey:@"餐厅特色"];
     self.shopPhone = [finalDic objectForKey:@"电话"];
     self.dishInfo = [finalDic objectForKey:@"菜品信息"];
+    
+    if (self.shopPhotoNum == 0){
+        int maxNum = 4;
+        if (self.dishInfo.count < maxNum){
+            maxNum = self.dishInfo.count;
+        }
+        self.shopPhotoNum = maxNum;
+        for (int idx = 0; idx < maxNum; ++idx){
+            [self.shopImage addObject:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"%@", [self.dishInfo objectAtIndex:idx]] ofType:@"jpg"]]];
+        }
+    } else {
+        for (int idx = 0; idx < self.shopPhotoNum; ++idx){
+            [self.shopImage addObject:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"%@_%d", self.shopName, idx+1] ofType:@"jpg"]]];
+        }
+    }
     //self.shopImage
 }
 
