@@ -7,9 +7,9 @@
 //
 
 #import "RestaurantViewController.h"
-
+#import <QuartzCore/QuartzCore.h>
 @interface RestaurantViewController ()<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>
-@property (nonatomic, weak) UIView *infoView;
+@property (nonatomic, strong) UIView *infoView;
 @property (nonatomic) int shopPhotoNum;
 @property (nonatomic) int currentShopImageIdx;
 @end
@@ -71,17 +71,19 @@
     if (self.currentShopImageIdx == self.shopPhotoNum){
         self.currentShopImageIdx = 0;
     }
-    self.shopImageView.image = [self.shopImage objectAtIndex:self.currentShopImageIdx];
-    [UIView animateWithDuration:1.0 animations:^{
-        self.shopImageView.alpha = 1.0f;
-    }completion:^(BOOL isFinished){
-        [UIView animateWithDuration:1.0 delay:3.0 options:UIViewAnimationCurveEaseInOut animations:^{
-            self.shopImageView.alpha = 0.0f;
+    if (self.infoView != nil){
+        self.shopImageView.image = [self.shopImage objectAtIndex:self.currentShopImageIdx];
+        [UIView animateWithDuration:1.0 animations:^{
+            self.shopImageView.alpha = 1.0f;
         }completion:^(BOOL isFinished){
-            ++self.currentShopImageIdx;
-            [self playAnimation];
+            [UIView animateWithDuration:1.0 delay:3.0 options:UIViewAnimationCurveEaseInOut animations:^{
+                self.shopImageView.alpha = 0.0f;
+            }completion:^(BOOL isFinished){
+                ++self.currentShopImageIdx;
+                [self playAnimation];
+            }];
         }];
-    }];
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -96,7 +98,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillDisappear:(BOOL)animated{
+    [self.view.layer removeAllAnimations];
+    [self setInfoView:nil];
+}
+
 - (void)viewDidUnload {
+
     [self setTimeLabel:nil];
     [self setPhoneLabel:nil];
     [self setAddressLabel:nil];

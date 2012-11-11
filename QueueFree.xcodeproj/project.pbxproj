@@ -248,6 +248,7 @@
 		4DA2BCA4164AC22400345F08 /* NSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA2BCA3164AC22400345F08 /* NSTableViewController.m */; };
 		9B2E2D4F16502B51002DFC1A /* DishTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B2E2D4E16502B51002DFC1A /* DishTableViewCell.xib */; };
 		9B2E2D5316502CB0002DFC1A /* DishTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B2E2D5216502CB0002DFC1A /* DishTableViewCell.m */; };
+		9B2E2D5516503850002DFC1A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B2E2D5416503850002DFC1A /* QuartzCore.framework */; };
 		9B36861016496AF000ED0054 /* SHUFE.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 9B36860F16496AF000ED0054 /* SHUFE.gpx */; };
 		9B368630164A2B8300ED0054 /* AdminViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B36862F164A2B8300ED0054 /* AdminViewController.m */; };
 		9B368633164A2DA700ED0054 /* RestaurantView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B368632164A2DA700ED0054 /* RestaurantView.xib */; };
@@ -622,6 +623,7 @@
 		9B2E2D4E16502B51002DFC1A /* DishTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DishTableViewCell.xib; sourceTree = "<group>"; };
 		9B2E2D5116502CB0002DFC1A /* DishTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DishTableViewCell.h; sourceTree = "<group>"; };
 		9B2E2D5216502CB0002DFC1A /* DishTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DishTableViewCell.m; sourceTree = "<group>"; };
+		9B2E2D5416503850002DFC1A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		9B36860F16496AF000ED0054 /* SHUFE.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = SHUFE.gpx; path = ../SHUFE.gpx; sourceTree = "<group>"; };
 		9B36862E164A2B8300ED0054 /* AdminViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminViewController.h; sourceTree = "<group>"; };
 		9B36862F164A2B8300ED0054 /* AdminViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminViewController.m; sourceTree = "<group>"; };
@@ -779,6 +781,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B2E2D5516503850002DFC1A /* QuartzCore.framework in Frameworks */,
 				9B7148E716494AD800721CD4 /* MapKit.framework in Frameworks */,
 				9B7148E516494AD400721CD4 /* CoreLocation.framework in Frameworks */,
 				9B77FBF01649160100C503E2 /* libz.dylib in Frameworks */,
@@ -1179,6 +1182,7 @@
 		9BFB1C3E1637EE110053200A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9B2E2D5416503850002DFC1A /* QuartzCore.framework */,
 				9B77FBEF1649160100C503E2 /* libz.dylib */,
 				9B7148E616494AD800721CD4 /* MapKit.framework */,
 				9B7148E416494AD400721CD4 /* CoreLocation.framework */,
