@@ -24,6 +24,15 @@
     return _shopImage;
 }
 
+- (NSMutableArray *)dishImage
+{
+    if (!_dishImage){
+        _dishImage = [[NSMutableArray alloc] init];
+    }
+    return _dishImage;
+}
+
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -54,6 +63,7 @@
         self.starLabel.text = [self.starLabel.text stringByAppendingFormat:@"%@ ", [self.shopStar objectAtIndex:idx]];
     }
     self.navigationItem.title = self.shopName;
+    [self.dishTableView registerNib:[UINib nibWithNibName:@"DishTableViewCell" bundle:nil] forCellReuseIdentifier:@"DishTableViewCell"];
 }
 
 - (void)playAnimation
@@ -94,6 +104,7 @@
     [self setShopNameLabel:nil];
     [self setScrollView:nil];
     [self setShopImageView:nil];
+    [self setDishTableView:nil];
     [super viewDidUnload];
 }
 
@@ -101,12 +112,30 @@
 #pragma mark delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    if (self.dishInfo.count % 2){
+        return self.dishInfo.count / 2 + 1;
+    } else {
+        return self.dishInfo.count / 2;
+    }
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [[UITableViewCell alloc] init];
+    DishTableViewCell *cell = [self.dishTableView dequeueReusableCellWithIdentifier:@"DishTableViewCell"];
+    cell.dish1Image.image = [self.dishImage objectAtIndex:indexPath.row*2];
+    cell.dish1Lable.text = [self.dishInfo objectAtIndex:indexPath.row*2];
+    
+    cell.dish2Image.alpha = 1.0f;
+    cell.dish2Border.alpha = 1.0f;
+    
+    if ([[self.dishInfo objectAtIndex:indexPath.row*2] isEqual:[self.dishInfo lastObject]]) {
+        cell.dish2Image.alpha = 0.0f;
+        cell.dish2Border.alpha = 0.0f;
+        cell.dish2Label.text = @"";
+    } else {
+        cell.dish2Image.image = [self.dishImage objectAtIndex:indexPath.row*2+1];
+        cell.dish2Label.text = [self.dishInfo objectAtIndex:indexPath.row*2+1];
+    }
     return cell;
 }
 
@@ -146,6 +175,10 @@
         for (int idx = 0; idx < self.shopPhotoNum; ++idx){
             [self.shopImage addObject:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"%@_%d", self.shopName, idx+1] ofType:@"jpg"]]];
         }
+    }
+    
+    for (int idx = 0; idx < self.dishInfo.count; ++idx){
+        [self.dishImage addObject:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"%@", [self.dishInfo objectAtIndex:idx]] ofType:@"jpg"]]];
     }
     //self.shopImage
 }

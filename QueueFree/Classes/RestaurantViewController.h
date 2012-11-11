@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "DishTableViewCell.h"
 @interface RestaurantViewController : UIViewController
 
 //
@@ -15,7 +15,7 @@
 @property (nonatomic, strong) NSString *shopAddress;//商家地址
 @property (nonatomic, strong) NSString *shopPhone;//商家电话
 
-@property (nonatomic, strong) NSArray *dishImage;//菜图片
+@property (nonatomic, strong) NSMutableArray *dishImage;//菜图片
 @property (nonatomic, strong) NSArray *workTime;//时间
 @property (nonatomic, strong) NSMutableArray *shopImage;//商家图片
 
@@ -30,6 +30,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *addressLabel;
 @property (weak, nonatomic) IBOutlet UILabel *starLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *shopImageView;
+@property (weak, nonatomic) IBOutlet UITableView *dishTableView;
 
 // rootViewController
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;

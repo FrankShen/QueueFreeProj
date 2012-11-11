@@ -246,6 +246,8 @@
 		4DA2BC8E164A926100345F08 /* location_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DA2BC8D164A926100345F08 /* location_button@2x.png */; };
 		4DA2BC90164A92BC00345F08 /* location_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DA2BC8F164A92BC00345F08 /* location_button.png */; };
 		4DA2BCA4164AC22400345F08 /* NSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA2BCA3164AC22400345F08 /* NSTableViewController.m */; };
+		9B2E2D4F16502B51002DFC1A /* DishTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B2E2D4E16502B51002DFC1A /* DishTableViewCell.xib */; };
+		9B2E2D5316502CB0002DFC1A /* DishTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B2E2D5216502CB0002DFC1A /* DishTableViewCell.m */; };
 		9B36861016496AF000ED0054 /* SHUFE.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 9B36860F16496AF000ED0054 /* SHUFE.gpx */; };
 		9B368630164A2B8300ED0054 /* AdminViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B36862F164A2B8300ED0054 /* AdminViewController.m */; };
 		9B368633164A2DA700ED0054 /* RestaurantView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B368632164A2DA700ED0054 /* RestaurantView.xib */; };
@@ -617,6 +619,9 @@
 		4DA2BC8F164A92BC00345F08 /* location_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location_button.png; sourceTree = "<group>"; };
 		4DA2BCA2164AC22300345F08 /* NSTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSTableViewController.h; sourceTree = "<group>"; };
 		4DA2BCA3164AC22400345F08 /* NSTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSTableViewController.m; sourceTree = "<group>"; };
+		9B2E2D4E16502B51002DFC1A /* DishTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DishTableViewCell.xib; sourceTree = "<group>"; };
+		9B2E2D5116502CB0002DFC1A /* DishTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DishTableViewCell.h; sourceTree = "<group>"; };
+		9B2E2D5216502CB0002DFC1A /* DishTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DishTableViewCell.m; sourceTree = "<group>"; };
 		9B36860F16496AF000ED0054 /* SHUFE.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = SHUFE.gpx; path = ../SHUFE.gpx; sourceTree = "<group>"; };
 		9B36862E164A2B8300ED0054 /* AdminViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminViewController.h; sourceTree = "<group>"; };
 		9B36862F164A2B8300ED0054 /* AdminViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminViewController.m; sourceTree = "<group>"; };
@@ -1316,6 +1321,8 @@
 				9BFB1C5B1637EE110053200A /* QFViewController.m */,
 				9BF5DEAC16484196008B189A /* StarTableViewCell.h */,
 				9BF5DEAD16484196008B189A /* StarTableViewCell.m */,
+				9B2E2D5116502CB0002DFC1A /* DishTableViewCell.h */,
+				9B2E2D5216502CB0002DFC1A /* DishTableViewCell.m */,
 				9B368634164A2DC700ED0054 /* RestaurantViewController.h */,
 				9B368635164A2DC700ED0054 /* RestaurantViewController.m */,
 			);
@@ -1330,6 +1337,7 @@
 				9BFB1CB31638191A0053200A /* QFHomeView.xib */,
 				9BFB1CB41638191A0053200A /* QFQsnsView.xib */,
 				9BF5DED8164841DA008B189A /* QFStarView.xib */,
+				9B2E2D4E16502B51002DFC1A /* DishTableViewCell.xib */,
 			);
 			name = nib;
 			sourceTree = "<group>";
@@ -1699,6 +1707,7 @@
 				3F289A84164E4BEC000DAABE /* 新雨花大酒店_5.jpg in Resources */,
 				3F289A85164E4BEC000DAABE /* 新雨花大酒店_6.jpg in Resources */,
 				3F289A8B164E4DD9000DAABE /* QueueFree.plist in Resources */,
+				9B2E2D4F16502B51002DFC1A /* DishTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1749,6 +1758,7 @@
 				4DA2BC8A164A8B2D00345F08 /* NSTableCell.m in Sources */,
 				4DA2BCA4164AC22400345F08 /* NSTableViewController.m in Sources */,
 				3F289A96164E5967000DAABE /* QFGlobalSearchBrain.m in Sources */,
+				9B2E2D5316502CB0002DFC1A /* DishTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
