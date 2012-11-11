@@ -22,7 +22,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Yv-Yv-8QL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-137" y="639"/>
+            <point key="canvasLocation" x="-117" y="656"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="xg4-6c-7Ux">
@@ -114,6 +114,7 @@
                         <segue destination="ysY-JQ-zTl" kind="push" identifier="QSNSCollect" id="Cya-Fa-Rgb"/>
                         <segue destination="aq3-sd-hfW" kind="push" identifier="QSNSFind" id="7Ed-As-PnY"/>
                         <segue destination="XDy-4e-0ZO" kind="push" identifier="StarToRestaurant" id="hnU-gS-Rhb"/>
+                        <segue destination="86l-Xr-rLF" kind="push" identifier="UserFavour" id="awc-4X-PAW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ry-Dv-ZnA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -565,6 +566,84 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6g4-fk-1dP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2391" y="844"/>
+        </scene>
+        <!--User Favour View Controller - 用户收藏-->
+        <scene sceneID="iPv-g4-78n">
+            <objects>
+                <viewController id="86l-Xr-rLF" customClass="UserFavourViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7fX-2l-xf5">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="88" sectionHeaderHeight="22" sectionFooterHeight="22" id="PsO-vY-Aph">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.91000000000000003" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UserFavourCell" rowHeight="88" id="bMd-Ty-X6L" customClass="UserFavourCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="88"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="87"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="home_background.png" id="SQP-XM-h68">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="87"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" id="rxp-x9-Kn7">
+                                                    <rect key="frame" x="10" y="8" width="100" height="72"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="商家名称" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="iRY-Vv-yWe">
+                                                    <rect key="frame" x="118" y="13" width="182" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <size key="shadowOffset" width="0.0" height="1"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="地址地址地址地址地址地址地址地址地址地址地址" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" id="tl8-PG-td7">
+                                                    <rect key="frame" x="118" y="42" width="182" height="38"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <size key="shadowOffset" width="0.0" height="1"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="star_dish_image_boarder.png" id="O8x-qW-v0g">
+                                                    <rect key="frame" x="10" y="8" width="100" height="72"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <outlet property="shopAddress" destination="tl8-PG-td7" id="GPc-6D-UaY"/>
+                                            <outlet property="shopImage" destination="rxp-x9-Kn7" id="bJ4-vx-aBU"/>
+                                            <outlet property="shopName" destination="iRY-Vv-yWe" id="g5r-HO-NI3"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="86l-Xr-rLF" id="00W-pI-cg8"/>
+                                    <outlet property="delegate" destination="86l-Xr-rLF" id="oNs-zs-WSq"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="用户收藏" id="54e-fH-860"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <segue destination="XDy-4e-0ZO" kind="push" identifier="FavourToRestaurant" id="gFT-9W-FYp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OL7-EX-z3S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2707" y="267"/>
         </scene>
         <!--View Controller - 上海美食志-->
         <scene sceneID="M9N-d7-DH4">
@@ -1711,21 +1790,10 @@ Cg
                                 <rect key="frame" x="0.0" y="44" width="320" height="372"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="hvN-QB-ncT">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" id="hvN-QB-ncT">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="372"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <prototypes>
-                                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="bMd-Ty-X6L">
-                                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                </view>
-                                            </tableViewCell>
-                                        </prototypes>
                                     </tableView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -1776,7 +1844,7 @@ Cg
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D3J-xF-Y0g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2359" y="39"/>
+            <point key="canvasLocation" x="2707" y="-357"/>
         </scene>
         <!--Restaurant View Controller-->
         <scene sceneID="B6Q-3T-vzR">
@@ -1803,7 +1871,7 @@ Cg
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rYW-lN-zx6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3141" y="363"/>
+            <point key="canvasLocation" x="3949" y="-593"/>
         </scene>
         <!--View Controller - 个人中心-->
         <scene sceneID="dtb-fF-3a7">
@@ -1919,7 +1987,7 @@ Cg
                     </view>
                 </tableViewCell>
             </objects>
-            <point key="canvasLocation" x="2359" y="-633"/>
+            <point key="canvasLocation" x="2707" y="-1029"/>
         </scene>
     </scenes>
     <resources>
@@ -1927,6 +1995,7 @@ Cg
         <image name="location_button.png" width="44" height="44"/>
         <image name="search_button.png" width="46" height="44"/>
         <image name="search_textfield.png" width="274" height="44"/>
+        <image name="star_dish_image_boarder.png" width="120" height="90"/>
         <image name="tab_bar_background.png" width="320" height="49"/>
         <image name="tab_bar_home_selected.png" width="100" height="49"/>
         <image name="tab_bar_home_unselected.png" width="100" height="49"/>
@@ -1935,12 +2004,89 @@ Cg
         <image name="tab_bar_star_selected.png" width="100" height="49"/>
         <image name="tab_bar_star_unselected.png" width="100" height="49"/>
     </resources>
+    <classes>
+        <class className="AdminViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AdminViewController.h"/>
+        </class>
+        <class className="CustomTabBarView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomTabBarView.h"/>
+            <relationships>
+                <relationship kind="outlet" name="homeButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="qsnsButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="starButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="GlobalSearchListViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GlobalSearchListViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="keyword" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="listView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="mapView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="viewChangeButton" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="NearSearchListViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NearSearchListViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="mapButtonPressed:"/>
+                <relationship kind="action" name="viewChangeButtonPressed:"/>
+                <relationship kind="outlet" name="viewChangeButton" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="QFNavigationBar" superclassName="UINavigationBar">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/QFNavigationBar.h"/>
+        </class>
+        <class className="QFViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/QFViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="globalSearchPressed:"/>
+                <relationship kind="action" name="homeButtonPressed:"/>
+                <relationship kind="action" name="nearSearchPressed:"/>
+                <relationship kind="action" name="qsnsButtonPressed:"/>
+                <relationship kind="action" name="qsnsCollectPressed:"/>
+                <relationship kind="action" name="qsnsEatPressed:"/>
+                <relationship kind="action" name="qsnsFindPressed:"/>
+                <relationship kind="action" name="qsnsTipPressed:"/>
+                <relationship kind="action" name="starButtonPressed:"/>
+                <relationship kind="action" name="userFavourPressed:"/>
+                <relationship kind="outlet" name="CustomTabBar" candidateClass="UIView"/>
+                <relationship kind="outlet" name="StarTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="TabBar" candidateClass="CustomTabBarView"/>
+                <relationship kind="outlet" name="setBarItem" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="userBarItem" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="RestaurantViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RestaurantViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="addressLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="dishTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="phoneLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="shopImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="shopNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="starLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="timeLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="UserFavourCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UserFavourCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="shopAddress" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="shopImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="shopName" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="UserFavourViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UserFavourViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="DrJ-JN-Ud5"/>
+        <segue reference="hnU-gS-Rhb"/>
     </inferredMetricsTieBreakers>
 </document>

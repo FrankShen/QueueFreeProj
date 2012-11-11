@@ -263,6 +263,9 @@
 		9B368646164A31AC00ED0054 /* restaurant_queue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B368640164A31AC00ED0054 /* restaurant_queue@2x.png */; };
 		9B368649164A339B00ED0054 /* restaurant_info_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B368647164A339B00ED0054 /* restaurant_info_background.png */; };
 		9B36864A164A339B00ED0054 /* restaurant_info_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B368648164A339B00ED0054 /* restaurant_info_background@2x.png */; };
+		9B4B69A516503FD8000A99DD /* UserFavourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4B69A416503FD8000A99DD /* UserFavourViewController.m */; };
+		9B4B69A91650417C000A99DD /* UserFavourCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4B69A81650417C000A99DD /* UserFavourCell.m */; };
+		9B4B69AD16504947000A99DD /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4B69AC16504947000A99DD /* MBProgressHUD.m */; };
 		9B7148DE16494A9200721CD4 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B7148DD16494A9200721CD4 /* MainStoryboard.storyboard */; };
 		9B7148DF16494AC300721CD4 /* Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7148D1164949AA00721CD4 /* Annotation.m */; };
 		9B7148E016494AC300721CD4 /* AnnotationCreate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7148D3164949AA00721CD4 /* AnnotationCreate.m */; };
@@ -640,6 +643,12 @@
 		9B368640164A31AC00ED0054 /* restaurant_queue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "restaurant_queue@2x.png"; sourceTree = "<group>"; };
 		9B368647164A339B00ED0054 /* restaurant_info_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = restaurant_info_background.png; sourceTree = "<group>"; };
 		9B368648164A339B00ED0054 /* restaurant_info_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "restaurant_info_background@2x.png"; sourceTree = "<group>"; };
+		9B4B69A316503FD8000A99DD /* UserFavourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserFavourViewController.h; sourceTree = "<group>"; };
+		9B4B69A416503FD8000A99DD /* UserFavourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserFavourViewController.m; sourceTree = "<group>"; };
+		9B4B69A71650417C000A99DD /* UserFavourCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserFavourCell.h; sourceTree = "<group>"; };
+		9B4B69A81650417C000A99DD /* UserFavourCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserFavourCell.m; sourceTree = "<group>"; };
+		9B4B69AB16504947000A99DD /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		9B4B69AC16504947000A99DD /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		9B7148D0164949AA00721CD4 /* Annotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Annotation.h; sourceTree = "<group>"; };
 		9B7148D1164949AA00721CD4 /* Annotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Annotation.m; sourceTree = "<group>"; };
 		9B7148D2164949AA00721CD4 /* AnnotationCreate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnnotationCreate.h; sourceTree = "<group>"; };
@@ -1070,6 +1079,15 @@
 			name = TableView;
 			sourceTree = "<group>";
 		};
+		9B4B69AA16504947000A99DD /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				9B4B69AB16504947000A99DD /* MBProgressHUD.h */,
+				9B4B69AC16504947000A99DD /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
 		9B7148CB1649496300721CD4 /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -1198,6 +1216,7 @@
 			isa = PBXGroup;
 			children = (
 				9B7148DD16494A9200721CD4 /* MainStoryboard.storyboard */,
+				9B4B69AA16504947000A99DD /* MBProgressHUD */,
 				9B77FBBE164915C700C503E2 /* QRDraw */,
 				9B77FBC8164915D100C503E2 /* libpng */,
 				3FB68578163D5FA3005116A2 /* CoreData */,
@@ -1323,6 +1342,10 @@
 				9BFB1C751637FC5D0053200A /* QFNavigationBar.m */,
 				9BFB1C5A1637EE110053200A /* QFViewController.h */,
 				9BFB1C5B1637EE110053200A /* QFViewController.m */,
+				9B4B69A71650417C000A99DD /* UserFavourCell.h */,
+				9B4B69A81650417C000A99DD /* UserFavourCell.m */,
+				9B4B69A316503FD8000A99DD /* UserFavourViewController.h */,
+				9B4B69A416503FD8000A99DD /* UserFavourViewController.m */,
 				9BF5DEAC16484196008B189A /* StarTableViewCell.h */,
 				9BF5DEAD16484196008B189A /* StarTableViewCell.m */,
 				9B2E2D5116502CB0002DFC1A /* DishTableViewCell.h */,
@@ -1763,6 +1786,9 @@
 				4DA2BCA4164AC22400345F08 /* NSTableViewController.m in Sources */,
 				3F289A96164E5967000DAABE /* QFGlobalSearchBrain.m in Sources */,
 				9B2E2D5316502CB0002DFC1A /* DishTableViewCell.m in Sources */,
+				9B4B69A516503FD8000A99DD /* UserFavourViewController.m in Sources */,
+				9B4B69A91650417C000A99DD /* UserFavourCell.m in Sources */,
+				9B4B69AD16504947000A99DD /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

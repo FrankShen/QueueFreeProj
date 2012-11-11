@@ -7,8 +7,9 @@
 //
 
 #import "RestaurantViewController.h"
+#import "MBProgressHUD.h"
 #import <QuartzCore/QuartzCore.h>
-@interface RestaurantViewController ()<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>
+@interface RestaurantViewController ()<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate,MBProgressHUDDelegate>
 @property (nonatomic, strong) UIView *infoView;
 @property (nonatomic) int shopPhotoNum;
 @property (nonatomic) int currentShopImageIdx;
@@ -116,6 +117,44 @@
     [super viewDidUnload];
 }
 
+- (IBAction)userFavourPressed:(id)sender
+{
+    NSMutableArray *list = [[[NSUserDefaults standardUserDefaults] objectForKey:@"UserFavour"] mutableCopy];
+    int idx;
+    for (idx = 0; idx < list.count; ++idx){
+        if ([self.shopName isEqualToString:[list objectAtIndex:idx]]){
+            break;
+        }
+    }
+    if (idx == list.count){
+        [list addObject:self.shopName];
+        [[NSUserDefaults standardUserDefaults] setObject:list forKey:@"UserFavour"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        
+        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+        
+        // Configure for text only and offset down
+        hud.mode = MBProgressHUDModeText;
+        hud.labelText = @"已添加到收藏";
+        hud.margin = 10.f;
+        hud.yOffset = 150.f;
+        hud.removeFromSuperViewOnHide = YES;
+        
+        [hud hide:YES afterDelay:1];
+    } else {
+        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+        
+        // Configure for text only and offset down
+        hud.mode = MBProgressHUDModeText;
+        hud.labelText = @"已经收藏了";
+        hud.margin = 10.f;
+        hud.yOffset = 150.f;
+        hud.removeFromSuperViewOnHide = YES;
+        
+        [hud hide:YES afterDelay:1];
+    }
+    
+}
 
 #pragma mark delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -189,6 +228,13 @@
         [self.dishImage addObject:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"%@", [self.dishInfo objectAtIndex:idx]] ofType:@"jpg"]]];
     }
     //self.shopImage
+}
+
+
+- (void)hudWasHidden:(MBProgressHUD *)hud {
+	// Remove HUD from screen when the HUD was hidded
+	[hud removeFromSuperview];
+	hud = nil;
 }
 
 @end

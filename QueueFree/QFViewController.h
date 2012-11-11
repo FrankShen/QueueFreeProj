@@ -11,6 +11,7 @@
 #import <CoreData/CoreData.h>
 
 @interface QFViewController : UIViewController<NSFetchedResultsControllerDelegate>
+
 @property (weak, nonatomic) IBOutlet CustomTabBarView *TabBar;
 @property (weak, nonatomic) UIView *QFHomeView;
 @property (weak, nonatomic) UIView *QFStarView;

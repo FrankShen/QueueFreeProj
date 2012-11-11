@@ -167,6 +167,12 @@
     
     [self.StarTableView registerNib:[UINib nibWithNibName:@"StarTableViewCell" bundle:nil] forCellReuseIdentifier:@"StarTableViewCell"];
     
+    if (![[NSUserDefaults standardUserDefaults] objectForKey:@"UserFavour"]){
+        NSArray *userFavour = [[NSArray alloc] init];
+        [[NSUserDefaults standardUserDefaults] setObject:userFavour forKey:@"UserFavour"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -217,6 +223,10 @@
 - (IBAction)nearSearchPressed:(id)sender
 {
     [self performSegueWithIdentifier:@"NearSearch" sender:self.parentViewController];
+}
+- (IBAction)userFavourPressed:(id)sender
+{
+        [self performSegueWithIdentifier:@"UserFavour" sender:self.parentViewController];
 }
 - (IBAction)qsnsEatPressed:(id)sender
 {
