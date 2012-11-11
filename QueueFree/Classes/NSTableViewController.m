@@ -130,9 +130,10 @@ double rad(double d)
 }
 
 
-- (NSIndexPath *)tableView:(UITableView *)tableView
-  willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSTableCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    [self.delegate performSegue:cell.shopNameLabel.text];
 }
 
 @end

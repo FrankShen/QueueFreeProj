@@ -9,6 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "NSMapViewController.h"
 
+@protocol NSTableViewDelegate <NSObject>
+
+- (void)performSegue:(NSString *)shopName;
+
+@end
+
 @interface NSTableViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 {
     int tableViewRowCount;
@@ -16,7 +22,7 @@
 
 @property (weak,nonatomic)IBOutlet UITableView *nsTableView;
 @property (strong,nonatomic)NSArray *dataList;
-
+@property (weak,nonatomic) id<NSTableViewDelegate> delegate;
 - (int)dictanceFromTheUserLocationWithDictionaryData:(NSDictionary *)dictionary;
 
 @end

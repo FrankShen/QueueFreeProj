@@ -10,7 +10,7 @@
 #import "Restaurant+Plist.h"
 
 
-@interface NearSearchListViewController ()
+@interface NearSearchListViewController ()<NSTableViewDelegate>
 @property (nonatomic) BOOL isList;
 @end
 
@@ -30,14 +30,15 @@
 {
     [super viewDidLoad];
     
-    nearSearchMVC = [[NSMapViewController alloc]init];
-    nearSearchTVC = [[NSTableViewController alloc]init];
+    self.nearSearchMVC = [[NSMapViewController alloc]init];
+    self.nearSearchTVC = [[NSTableViewController alloc]init];
     
-    [self.view insertSubview:nearSearchMVC.mapView atIndex:0];
+    [self.view insertSubview:self.nearSearchMVC.mapView atIndex:0];
     
     
     self.isList = NO;
     self.viewChangeButton.title = @"列表";
+    self.nearSearchTVC.delegate = self;
 }
 
 
@@ -60,7 +61,7 @@
     [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.view cache:YES];
     if(!self.isList)
     {
-        [self.view insertSubview:nearSearchTVC.view atIndex:2];
+        [self.view insertSubview:self.nearSearchTVC.view atIndex:2];
     }
     else
     {
@@ -81,27 +82,25 @@
 
 - (IBAction)mapButtonPressed:(id)sender
 {
-    [nearSearchMVC ShowRegionOfTheUserLocationPressed];
+    [self.nearSearchMVC ShowRegionOfTheUserLocationPressed];
 }
 
 #pragma mark segue
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    //segue.sourceViewController;
-    //segue.destinationViewController;
-    //sender;
-    //调用segue的方法[self performSegueWithIdentifier:<#(NSString *)#> sender:<#(id)#>];
-
-    if ([segue.identifier isEqualToString:@"GoToRestaurant"]){
-        RestaurantViewController *newViewController = segue.destinationViewController;
-        //sourceViewController是当前的vc，destinationViewController是下一个vc，sender是可传递的数据，只要将数据信息存在NSDictionary中，然后作为sender，在这个函数里抓取sender里的数据放到下一个vc里就可以了。
-        
-        
-        // .....
-        
-        
+    if ([segue.identifier isEqualToString:@"NearToRestaurant"]){
+        NSString *name = sender;
+        RestaurantViewController *newVC = segue.destinationViewController;
+        [newVC initWithShop:name];
     }
+}
+
+
+#pragma mark delegate
+- (void)performSegue:(NSString *)shopName
+{
+    [self performSegueWithIdentifier:@"NearToRestaurant" sender:shopName];
 }
 
 @end

@@ -13,12 +13,13 @@
 #import "NSTableViewController.h"
 
 @interface NearSearchListViewController : UIViewController{
-    NSMapViewController *nearSearchMVC;
-    NSTableViewController *nearSearchTVC;
+    //NSMapViewController *nearSearchMVC;
+    //NSTableViewController *nearSearchTVC;
 }
 
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *viewChangeButton;
-
+@property (strong, nonatomic) NSMapViewController *nearSearchMVC;
+@property (strong, nonatomic) NSTableViewController *nearSearchTVC;
 
 @end

@@ -15,7 +15,7 @@
 {
     CLLocationManager *locationManager;
 }
-@property(weak,nonatomic) MKMapView *mapView;
+@property(weak,nonatomic) IBOutlet MKMapView *mapView;
 
 - (void)ShowRegionOfTheUserLocationPressed;
 
