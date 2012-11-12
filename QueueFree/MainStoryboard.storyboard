@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Sjh-xa-ZLg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Sjh-xa-ZLg">
     <dependencies>
         <deployment version="1296" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -1795,6 +1795,11 @@ Cg
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <view contentMode="scaleToFill" id="z9W-L1-SKx">
+                                <rect key="frame" x="0.0" y="44" width="320" height="372"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -1808,6 +1813,8 @@ Cg
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="keyword" destination="NVH-V9-Y9s" id="9q2-lx-pj1"/>
+                        <outlet property="theFormerView" destination="z9W-L1-SKx" id="eUM-DU-Gvz"/>
+                        <outlet property="view" destination="z9W-L1-SKx" id="f8G-vl-f4c"/>
                         <outlet property="viewChangeButton" destination="azK-ZH-P6i" id="iqu-Co-x5X"/>
                         <segue destination="XDy-4e-0ZO" kind="push" id="KJF-9F-dIp"/>
                     </connections>
@@ -2157,7 +2164,10 @@ Cg
         <class className="GlobalSearchListViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GlobalSearchListViewController.h"/>
             <relationships>
+                <relationship kind="action" name="searchButtonPressed:"/>
+                <relationship kind="action" name="viewChangeButtonPressed:"/>
                 <relationship kind="outlet" name="keyword" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="theFormerView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="viewChangeButton" candidateClass="UIBarButtonItem"/>
             </relationships>
         </class>
@@ -2173,13 +2183,35 @@ Cg
         <class className="QFViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/QFViewController.h"/>
             <relationships>
+                <relationship kind="action" name="globalSearchPressed:"/>
+                <relationship kind="action" name="homeButtonPressed:"/>
+                <relationship kind="action" name="nearSearchPressed:"/>
+                <relationship kind="action" name="qsnsButtonPressed:"/>
+                <relationship kind="action" name="qsnsCollectPressed:"/>
+                <relationship kind="action" name="qsnsEatPressed:"/>
+                <relationship kind="action" name="qsnsFindPressed:"/>
+                <relationship kind="action" name="qsnsTipPressed:"/>
+                <relationship kind="action" name="starButtonPressed:"/>
+                <relationship kind="action" name="userFavourPressed:"/>
                 <relationship kind="outlet" name="CustomTabBar" candidateClass="UIView"/>
                 <relationship kind="outlet" name="StarTableView" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="TabBar" candidateClass="CustomTabBarView"/>
             </relationships>
         </class>
+        <class className="QueueListCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/QueueListCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="queueNumLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="shopNameLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
         <class className="QueueQRViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/QueueQRViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="homePressed:"/>
+                <relationship kind="outlet" name="qrCode" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="queueNum" candidateClass="UILabel"/>
+            </relationships>
         </class>
         <class className="RestaurantViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RestaurantViewController.h"/>
@@ -2195,6 +2227,9 @@ Cg
                 <relationship kind="outlet" name="timeLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="toolBar" candidateClass="UIToolbar"/>
             </relationships>
+        </class>
+        <class className="UserBookListViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UserBookListViewController.h"/>
         </class>
         <class className="UserFavourCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UserFavourCell.h"/>

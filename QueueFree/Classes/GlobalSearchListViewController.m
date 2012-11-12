@@ -66,6 +66,7 @@
 - (void)viewDidUnload {
     [self setKeyword:nil];
     [self setViewChangeButton:nil];
+    [self setTheFormerView:nil];
     [super viewDidUnload];
 }
 
