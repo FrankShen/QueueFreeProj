@@ -105,7 +105,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue.identifier isEqualToString:@"NearToRestaurant"]){
+    if ([segue.identifier isEqualToString:@"GlobalToRestaurant"]){
         NSString *name = sender;
         RestaurantViewController *newVC = segue.destinationViewController;
         [newVC initWithShop:name];
@@ -116,7 +116,7 @@
 #pragma mark delegate
 - (void)performSegue:(NSString *)shopName
 {
-    [self performSegueWithIdentifier:@"NearToRestaurant" sender:shopName];
+    [self performSegueWithIdentifier:@"GlobalToRestaurant" sender:shopName];
 }
 
 @end

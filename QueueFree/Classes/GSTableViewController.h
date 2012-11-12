@@ -10,7 +10,8 @@
 #import "GSTableCell.h"
 @protocol GSTableViewDelegate <NSObject>
 
-- (NSDictionary *)loadCellInfo:(NSDictionary *)dicInfo;
+- (void)performSegue:(NSString *)shopName;
+
 @end
 
 @interface GSTableViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>{

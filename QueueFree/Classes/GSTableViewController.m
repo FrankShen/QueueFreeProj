@@ -61,11 +61,10 @@
     }
 }
 
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //GSTableCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    //[self.delegate performSegue:cell.shopNameLabel.text];
+    GSTableCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    [self.delegate performSegue:cell.shopName.text];
 }
 
 @end
