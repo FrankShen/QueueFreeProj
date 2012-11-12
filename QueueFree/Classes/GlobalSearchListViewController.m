@@ -11,43 +11,29 @@
 
 @interface GlobalSearchListViewController ()<GSTableViewDelegate>
 @property (nonatomic) BOOL isList;
+@property (nonatomic) BOOL hasList;
 @property (nonatomic, strong) QFGlobalSearchBrain *searchBrain;
 @end
 
 @implementation GlobalSearchListViewController
 @synthesize searchBrain;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.isList = YES;
+    self.hasList = NO;
     self.viewChangeButton.title = @"地图";
     
     
     self.globalSearchMVC = [[GSMapViewController alloc]init];
     self.globalSearchTVC = [[GSTableViewController alloc]init];
     
+    self.globalSearchTVC.delegate = self;
+    
     //[self.theFormerView insertSubview:self.globalSearchMVC.mapView atIndex:0];
     //[self.theFormerView insertSubview:self.globalSearchTVC.view atIndex:0];
-    
-    
-    // the Test for QFGlobalSearchBrain by Cui Hao
-  
-    
-    // the end of the Test
-    
-    
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -84,6 +70,7 @@
         }
         
         [self.theFormerView insertSubview:self.globalSearchTVC.view atIndex:0];
+        self.hasList = YES;
     }
 }
 
@@ -93,11 +80,23 @@
     [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
     [UIView setAnimationDuration:1];
     [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.view cache:YES];
-    [self.theFormerView exchangeSubviewAtIndex:1 withSubviewAtIndex:0];
+    if(self.isList)
+    {
+        [self.theFormerView insertSubview:self.globalSearchMVC.mapView atIndex:1];
+        self.isList = !self.isList;
+    }
+    else
+    {
+        if(self.hasList)
+            [self.theFormerView exchangeSubviewAtIndex:1 withSubviewAtIndex:0];
+        else
+            [self.globalSearchMVC.mapView removeFromSuperview];
+        self.isList = !self.isList;
+    }
     [UIView setAnimationDelegate:self];
     [UIView commitAnimations];
     
-    self.isList = !self.isList;
+    //self.isList = !self.isList;
     self.viewChangeButton.title = self.isList ? @"地图" : @"列表";
 }
 
