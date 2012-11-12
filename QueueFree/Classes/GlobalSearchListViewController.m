@@ -35,7 +35,7 @@
     
     self.globalSearchMVC = [[GSMapViewController alloc]init];
     
-    [self.view insertSubview:self.globalSearchMVC.mapView atIndex:0];
+    [self.view insertSubview:self.globalSearchMVC.mapView atIndex:1];
     
     // the Test for QFGlobalSearchBrain by Cui Hao
     

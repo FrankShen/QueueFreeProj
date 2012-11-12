@@ -1767,6 +1767,7 @@ Cg
         <!--Global Search List View Controller - 搜索全城-->
         <scene sceneID="TFJ-BW-9aC">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D3J-xF-Y0g" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="3kd-sP-aTa" customClass="GlobalSearchListViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IXO-Su-MVg">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -1811,7 +1812,6 @@ Cg
                         <segue destination="XDy-4e-0ZO" kind="push" id="KJF-9F-dIp"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="D3J-xF-Y0g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2707" y="-357"/>
         </scene>
@@ -2086,11 +2086,6 @@ Cg
         <class className="RestaurantViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RestaurantViewController.h"/>
             <relationships>
-                <relationship kind="action" name="bookPressed:"/>
-                <relationship kind="action" name="continuePressed:"/>
-                <relationship kind="action" name="pickerCancelPressed:"/>
-                <relationship kind="action" name="queuePressed:"/>
-                <relationship kind="action" name="userFavourPressed:"/>
                 <relationship kind="outlet" name="addressLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="dishTableView" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="phoneLabel" candidateClass="UILabel"/>

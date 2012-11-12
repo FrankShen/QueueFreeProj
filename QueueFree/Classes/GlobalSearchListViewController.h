@@ -19,5 +19,6 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *viewChangeButton;
 @property (weak, nonatomic) GSMapViewController* globalSearchMVC;
 @property (weak, nonatomic) UIView* listView;
+@property (weak, nonatomic) UIView* mapView;
 
 @end
