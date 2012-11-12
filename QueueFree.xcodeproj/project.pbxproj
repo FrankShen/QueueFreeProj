@@ -1841,7 +1841,6 @@
 				4DBA906616514FE700CBDC5C /* GSMapViewController.m in Sources */,
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 				4DA75FA6165166CC00D33DF0 /* GSTableViewController.m in Sources */,
 =======
 				9B006DDF1651665900342546 /* QueueQRViewController.m in Sources */,
@@ -1856,11 +1855,6 @@
 				4DA75FA6165166CC00D33DF0 /* GSTableViewController.m in Sources */,
 >>>>>>> 3b31f51cf09075ee7339a00a6735c11a8d994dd2
 >>>>>>> merge
-=======
-				9B006DDF1651665900342546 /* QueueQRViewController.m in Sources */,
-				9BB5197116516D0300D9F052 /* UserBookListViewController.m in Sources */,
-				9BB5197516516DB900D9F052 /* QueueListCell.m in Sources */,
->>>>>>> fuck
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
