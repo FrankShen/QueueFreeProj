@@ -1795,6 +1795,11 @@ Cg
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <view contentMode="scaleToFill" id="S4S-wX-7Ur">
+                                <rect key="frame" x="0.0" y="44" width="320" height="372"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -1808,6 +1813,7 @@ Cg
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="keyword" destination="NVH-V9-Y9s" id="9q2-lx-pj1"/>
+                        <outlet property="theFormerView" destination="S4S-wX-7Ur" id="MbD-tG-6pm"/>
                         <outlet property="viewChangeButton" destination="azK-ZH-P6i" id="iqu-Co-x5X"/>
                         <segue destination="XDy-4e-0ZO" kind="push" id="KJF-9F-dIp"/>
                     </connections>
@@ -2051,6 +2057,7 @@ Cg
                 <relationship kind="action" name="searchButtonPressed:"/>
                 <relationship kind="action" name="viewChangeButtonPressed:"/>
                 <relationship kind="outlet" name="keyword" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="theFormerView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="viewChangeButton" candidateClass="UIBarButtonItem"/>
             </relationships>
         </class>

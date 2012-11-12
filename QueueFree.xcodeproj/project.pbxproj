@@ -246,6 +246,8 @@
 		4DA2BC8E164A926100345F08 /* location_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DA2BC8D164A926100345F08 /* location_button@2x.png */; };
 		4DA2BC90164A92BC00345F08 /* location_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DA2BC8F164A92BC00345F08 /* location_button.png */; };
 		4DA2BCA4164AC22400345F08 /* NSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA2BCA3164AC22400345F08 /* NSTableViewController.m */; };
+		4DA75FA6165166CC00D33DF0 /* GSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA75FA5165166CC00D33DF0 /* GSTableViewController.m */; };
+		4DA75FA9165167BC00D33DF0 /* GSTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DA75FA8165167BC00D33DF0 /* GSTableView.xib */; };
 		4DBA906316514F9800CBDC5C /* GSMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DBA906216514F9800CBDC5C /* GSMapView.xib */; };
 		4DBA906616514FE700CBDC5C /* GSMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DBA906516514FE700CBDC5C /* GSMapViewController.m */; };
 		9B2E2D4F16502B51002DFC1A /* DishTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B2E2D4E16502B51002DFC1A /* DishTableViewCell.xib */; };
@@ -625,6 +627,9 @@
 		4DA2BC8F164A92BC00345F08 /* location_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location_button.png; sourceTree = "<group>"; };
 		4DA2BCA2164AC22300345F08 /* NSTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSTableViewController.h; sourceTree = "<group>"; };
 		4DA2BCA3164AC22400345F08 /* NSTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSTableViewController.m; sourceTree = "<group>"; };
+		4DA75FA4165166CC00D33DF0 /* GSTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTableViewController.h; sourceTree = "<group>"; };
+		4DA75FA5165166CC00D33DF0 /* GSTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSTableViewController.m; sourceTree = "<group>"; };
+		4DA75FA8165167BC00D33DF0 /* GSTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GSTableView.xib; sourceTree = "<group>"; };
 		4DBA906216514F9800CBDC5C /* GSMapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GSMapView.xib; sourceTree = "<group>"; };
 		4DBA906416514FE700CBDC5C /* GSMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSMapViewController.h; sourceTree = "<group>"; };
 		4DBA906516514FE700CBDC5C /* GSMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSMapViewController.m; sourceTree = "<group>"; };
@@ -1087,6 +1092,9 @@
 		4DBA905E16514EF000CBDC5C /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				4DA75FA4165166CC00D33DF0 /* GSTableViewController.h */,
+				4DA75FA5165166CC00D33DF0 /* GSTableViewController.m */,
+				4DA75FA8165167BC00D33DF0 /* GSTableView.xib */,
 			);
 			name = TableView;
 			sourceTree = "<group>";
@@ -1760,6 +1768,7 @@
 				3F289A8B164E4DD9000DAABE /* QueueFree.plist in Resources */,
 				9B2E2D4F16502B51002DFC1A /* DishTableViewCell.xib in Resources */,
 				4DBA906316514F9800CBDC5C /* GSMapView.xib in Resources */,
+				4DA75FA9165167BC00D33DF0 /* GSTableView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1815,6 +1824,7 @@
 				9B4B69A91650417C000A99DD /* UserFavourCell.m in Sources */,
 				9B4B69AD16504947000A99DD /* MBProgressHUD.m in Sources */,
 				4DBA906616514FE700CBDC5C /* GSMapViewController.m in Sources */,
+				4DA75FA6165166CC00D33DF0 /* GSTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
