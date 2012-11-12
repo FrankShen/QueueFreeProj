@@ -172,6 +172,16 @@
         [[NSUserDefaults standardUserDefaults] setObject:userFavour forKey:@"UserFavour"];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
+    if (![[NSUserDefaults standardUserDefaults] objectForKey:@"QueueList"]){
+        NSArray *userFavour = [[NSArray alloc] init];
+        [[NSUserDefaults standardUserDefaults] setObject:userFavour forKey:@"QueueList"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+    if (![[NSUserDefaults standardUserDefaults] objectForKey:@"BookList"]){
+        NSArray *userFavour = [[NSArray alloc] init];
+        [[NSUserDefaults standardUserDefaults] setObject:userFavour forKey:@"BookList"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
     
 }
 

@@ -160,8 +160,8 @@
         BookQRViewController *newVC = segue.destinationViewController;
         newVC.codeStr = sender;
         newVC.navigationItem.title = self.navigationItem.title;
-        newVC.nameLabel.text = self.name.text;
-        newVC.dateLabel.text = self.date.text;
+        newVC.userStr = self.name.text;
+        newVC.dateStr = self.date.text;
         NSMutableArray *list = [[[NSUserDefaults standardUserDefaults] objectForKey:@"BookList"] mutableCopy];
         [list addObject:@{@"name":self.navigationItem.title, @"user":self.name.text, @"qrcode":sender, @"date":self.date.text}];
         [[NSUserDefaults standardUserDefaults] setObject:list forKey:@"BookList"];

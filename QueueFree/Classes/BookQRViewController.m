@@ -30,6 +30,8 @@
     Barcode *bar = [[Barcode alloc] init];
     [bar setupQRCode:self.codeStr];
     self.qrCode.image = [bar qRBarcode];
+    self.nameLabel.text = self.userStr;
+    self.dateLabel.text = self.dateStr;
 }
 
 - (void)didReceiveMemoryWarning

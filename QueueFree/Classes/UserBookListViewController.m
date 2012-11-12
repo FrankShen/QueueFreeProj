@@ -9,6 +9,7 @@
 #import "UserBookListViewController.h"
 #import "QueueListCell.h"
 #import "QueueQRViewController.h"
+#import "BookQRViewController.h"
 #import "BookListCell.h"
 @interface UserBookListViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) NSArray * queueData;
@@ -75,7 +76,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (self.isBook){
-        
+        [self performSegueWithIdentifier:@"ListToBook" sender:[self.bookData objectAtIndex:indexPath.row]];
+
     } else {
         [self performSegueWithIdentifier:@"ListToQueue" sender:[self.queueData objectAtIndex:indexPath.row]];
     }
@@ -90,6 +92,14 @@
         newVC.queueStr = [sender objectForKey:@"queue"];
         newVC.codeStr = [sender objectForKey:@"qrcode"];
     }
+    if ([segue.identifier isEqualToString:@"ListToBook"]){
+        BookQRViewController *newVC = segue.destinationViewController;
+        newVC.navigationItem.title = [sender objectForKey:@"name"];
+        newVC.userStr = [sender objectForKey:@"user"];
+        newVC.dateStr = [sender objectForKey:@"date"];
+        newVC.codeStr = [sender objectForKey:@"qrcode"];
+    }
+
 }
 
 - (IBAction)changeViewButton:(id)sender
@@ -98,12 +108,12 @@
         self.changeButton.title = @"订座订单";
         self.isBook = NO;
         [self.tableView reloadData];
-        self.navigationItem.title = @"订做订单";
+        self.navigationItem.title = @"排队订单";
     } else {
         self.changeButton.title = @"排队订单";
         self.isBook = YES;
         [self.tableView reloadData];
-        self.navigationItem.title = @"排队订单";
+        self.navigationItem.title = @"订座订单";
     }
 }
 - (void)viewDidUnload {

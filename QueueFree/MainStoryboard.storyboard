@@ -122,10 +122,10 @@
             </objects>
             <point key="canvasLocation" x="479" y="656"/>
         </scene>
-        <!--Table View Controller - 设置-->
+        <!--Setting View Controller - 设置-->
         <scene sceneID="qOe-bD-N3z">
             <objects>
-                <tableViewController id="1jk-Lv-xgT" sceneMemberID="viewController">
+                <tableViewController id="1jk-Lv-xgT" customClass="SettingViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="dGi-dF-URd">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -153,6 +153,28 @@
                                         <connections>
                                             <segue destination="9Ao-bm-HfS" kind="push" id="4V7-2p-ud7"/>
                                         </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="mio-YV-l2c">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="ECO-9u-CsH" style="IBUITableViewCellStyleDefault" id="nJf-Tr-k6m">
+                                        <rect key="frame" x="0.0" y="76" width="320" height="46"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="清空缓存" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ECO-9u-CsH">
+                                                    <rect key="frame" x="10" y="0.0" width="280" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -2297,6 +2319,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <outlet property="changeButton" destination="Id3-he-03U" id="Upz-By-Zi7"/>
                         <outlet property="tableView" destination="ZK0-hR-yjc" id="kGK-ev-AkH"/>
                         <segue destination="esN-KE-hiQ" kind="push" identifier="ListToQueue" id="eff-Tr-S8r"/>
+                        <segue destination="coV-0v-EEi" kind="push" identifier="ListToBook" id="KfG-yg-5yY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="483-Ro-Ifr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2510,6 +2533,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 <relationship kind="outlet" name="toolBar" candidateClass="UIToolbar"/>
             </relationships>
         </class>
+        <class className="SettingViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingViewController.h"/>
+        </class>
         <class className="UserBookListViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UserBookListViewController.h"/>
             <relationships>
@@ -2536,6 +2562,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="KJF-9F-dIp"/>
+        <segue reference="KfG-yg-5yY"/>
         <segue reference="eff-Tr-S8r"/>
     </inferredMetricsTieBreakers>
 </document>

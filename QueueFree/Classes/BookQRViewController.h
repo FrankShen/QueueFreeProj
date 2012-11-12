@@ -13,4 +13,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *qrCode;
 @property (strong, nonatomic) NSString *codeStr;
+@property (strong, nonatomic) NSString *userStr;
+@property (strong, nonatomic) NSString *dateStr;
 @end
