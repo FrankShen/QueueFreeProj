@@ -322,6 +322,9 @@
 		9B922F05163AA56A001692F2 /* GlobalSearchListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B922F04163AA56A001692F2 /* GlobalSearchListViewController.m */; };
 		9BB5197116516D0300D9F052 /* UserBookListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB5197016516D0300D9F052 /* UserBookListViewController.m */; };
 		9BB5197516516DB900D9F052 /* QueueListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB5197416516DB900D9F052 /* QueueListCell.m */; };
+		9BE222AF1651810200D0C2F7 /* BookListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE222AE1651810200D0C2F7 /* BookListCell.m */; };
+		9BE222B7165183C100D0C2F7 /* BookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE222B6165183C100D0C2F7 /* BookViewController.m */; };
+		9BE222BA16518DA100D0C2F7 /* BookQRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE222B916518DA100D0C2F7 /* BookQRViewController.m */; };
 		9BF5DEC3164841B2008B189A /* 0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9BF5DEB0164841B2008B189A /* 0.jpg */; };
 		9BF5DEC4164841B2008B189A /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9BF5DEB1164841B2008B189A /* 1.jpg */; };
 		9BF5DEC5164841B2008B189A /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9BF5DEB2164841B2008B189A /* 2.jpg */; };
@@ -736,6 +739,12 @@
 		9BB5197016516D0300D9F052 /* UserBookListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserBookListViewController.m; sourceTree = "<group>"; };
 		9BB5197316516DB900D9F052 /* QueueListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueueListCell.h; sourceTree = "<group>"; };
 		9BB5197416516DB900D9F052 /* QueueListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueueListCell.m; sourceTree = "<group>"; };
+		9BE222AD1651810200D0C2F7 /* BookListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookListCell.h; sourceTree = "<group>"; };
+		9BE222AE1651810200D0C2F7 /* BookListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookListCell.m; sourceTree = "<group>"; };
+		9BE222B5165183C000D0C2F7 /* BookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookViewController.h; sourceTree = "<group>"; };
+		9BE222B6165183C100D0C2F7 /* BookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookViewController.m; sourceTree = "<group>"; };
+		9BE222B816518DA100D0C2F7 /* BookQRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookQRViewController.h; sourceTree = "<group>"; };
+		9BE222B916518DA100D0C2F7 /* BookQRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookQRViewController.m; sourceTree = "<group>"; };
 		9BF5DEAC16484196008B189A /* StarTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarTableViewCell.h; sourceTree = "<group>"; };
 		9BF5DEAD16484196008B189A /* StarTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarTableViewCell.m; sourceTree = "<group>"; };
 		9BF5DEB0164841B2008B189A /* 0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.jpg; sourceTree = "<group>"; };
@@ -1371,6 +1380,12 @@
 			isa = PBXGroup;
 			children = (
 				9B7148CB1649496300721CD4 /* Search */,
+				9BE222AD1651810200D0C2F7 /* BookListCell.h */,
+				9BE222AE1651810200D0C2F7 /* BookListCell.m */,
+				9BE222B5165183C000D0C2F7 /* BookViewController.h */,
+				9BE222B6165183C100D0C2F7 /* BookViewController.m */,
+				9BE222B816518DA100D0C2F7 /* BookQRViewController.h */,
+				9BE222B916518DA100D0C2F7 /* BookQRViewController.m */,
 				9B36862E164A2B8300ED0054 /* AdminViewController.h */,
 				9B36862F164A2B8300ED0054 /* AdminViewController.m */,
 				9B77FBF11649167200C503E2 /* Barcode.h */,
@@ -1843,6 +1858,9 @@
 				9BB5197116516D0300D9F052 /* UserBookListViewController.m in Sources */,
 				9BB5197516516DB900D9F052 /* QueueListCell.m in Sources */,
 				4D44E08916517E2D003BDBDB /* GSTableViewController.m in Sources */,
+				9BE222AF1651810200D0C2F7 /* BookListCell.m in Sources */,
+				9BE222B7165183C100D0C2F7 /* BookViewController.m in Sources */,
+				9BE222BA16518DA100D0C2F7 /* BookQRViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

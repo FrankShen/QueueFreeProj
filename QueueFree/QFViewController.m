@@ -228,6 +228,12 @@
 {
         [self performSegueWithIdentifier:@"UserFavour" sender:self.parentViewController];
 }
+
+- (IBAction)userListPressed:(id)sender
+{
+    [self performSegueWithIdentifier:@"UserList" sender:self.parentViewController];
+}
+
 - (IBAction)qsnsEatPressed:(id)sender
 {
     [self performSegueWithIdentifier:@"QSNSEat" sender:nil];

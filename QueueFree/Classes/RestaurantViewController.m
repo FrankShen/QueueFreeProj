@@ -10,6 +10,7 @@
 #import "MBProgressHUD.h"
 #import <QuartzCore/QuartzCore.h>
 #import "QueueQRViewController.h"
+#import "BookViewController.h"
 @interface RestaurantViewController ()<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate,MBProgressHUDDelegate,UIPickerViewAccessibilityDelegate,UIPickerViewDataSource,UIPickerViewDelegate,UIAlertViewDelegate>
 @property (nonatomic, strong) UIView *infoView;
 @property (nonatomic) int shopPhotoNum;
@@ -199,7 +200,7 @@
 - (IBAction)continuePressed:(id)sender
 {
     if (self.isBook){
-        
+        [self performSegueWithIdentifier:@"RestaurantToBook" sender:nil];
     } else {
         [UIView animateWithDuration:0.5 animations:^{
             self.toolBar.frame = CGRectMake(0, 480, 320, 44);
@@ -374,6 +375,11 @@
         [[NSUserDefaults standardUserDefaults] synchronize];
         NSLog(@"%@",list);
         [newVC.navigationItem setHidesBackButton:YES];
+    }
+    if ([segue.identifier isEqualToString:@"RestaurantToBook"]){
+        BookViewController *newVC = segue.destinationViewController;
+        newVC.navigationItem.title = self.shopName;
+        newVC.peopleNumInt = self.peopleNum;
     }
 }
 
