@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GSTableCell.h"
 
-@interface GSTableViewController : UIViewController
+@interface GSTableViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 
+@property (weak, nonatomic)IBOutlet UITableView* gsTableView;
 @end

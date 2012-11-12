@@ -14,25 +14,41 @@
 
 @implementation GSTableViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+	[self.gsTableView registerNib:[UINib nibWithNibName:@"GSTableCell" bundle:nil] forCellReuseIdentifier:@"GSTableCell"];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+#pragma mark TableView Methods
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if(tableView == self.gsTableView)
+    {
+        return 6;
+    }
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if(tableView == self.gsTableView)
+    {
+        GSTableCell *cell = [self.gsTableView dequeueReusableCellWithIdentifier:@"GSTableCell"];
+        
+        return cell;
+    }
+}
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //GSTableCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    //[self.delegate performSegue:cell.shopNameLabel.text];
 }
 
 @end

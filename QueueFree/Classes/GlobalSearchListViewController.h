@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "RestaurantViewController.h"
 #import "GSMapViewController.h"
+#import "GSTableViewController.h"
 #import "QFGlobalSearchBrain.h"
 
 
@@ -17,7 +18,8 @@
 }
 @property (weak, nonatomic) IBOutlet UITextField *keyword;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *viewChangeButton;
-@property (strong, nonatomic) IBOutlet UIView *theFormerView;
+@property (weak, nonatomic) IBOutlet UIView *theFormerView;
 @property (strong, nonatomic) GSMapViewController* globalSearchMVC;
+@property (strong, nonatomic)GSTableViewController* globalSearchTVC;
 
 @end

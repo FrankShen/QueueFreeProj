@@ -34,8 +34,11 @@
     self.viewChangeButton.title = @"地图";
     
     self.globalSearchMVC = [[GSMapViewController alloc]init];
+    self.globalSearchTVC = [[GSTableViewController alloc]init];
     
-    [self.theFormerView addSubview:self.globalSearchMVC.mapView];
+    [self.theFormerView insertSubview:self.globalSearchMVC.mapView atIndex:0];
+    //[self.theFormerView insertSubview:self.globalSearchTVC.view atIndex:0];
+    
     
     // the Test for QFGlobalSearchBrain by Cui Hao
     
@@ -81,6 +84,7 @@
 {
     if (![self.keyword isExclusiveTouch]){
         [self.keyword resignFirstResponder];
+        
     }
 }
 
