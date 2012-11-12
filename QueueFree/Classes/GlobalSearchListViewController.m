@@ -35,7 +35,7 @@
     
     self.globalSearchMVC = [[GSMapViewController alloc]init];
     
-    [self.theFormerView addSubview:self.globalSearchMVC.mapView];
+    [self.view insertSubview:self.globalSearchMVC.mapView atIndex:1];
     
     // the Test for QFGlobalSearchBrain by Cui Hao
     
@@ -66,7 +66,6 @@
 - (void)viewDidUnload {
     [self setKeyword:nil];
     [self setViewChangeButton:nil];
-    [self setTheFormerView:nil];
     [super viewDidUnload];
 }
 
@@ -90,7 +89,7 @@
     [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
     [UIView setAnimationDuration:1];
     [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.view cache:YES];
-    [self.theFormerView exchangeSubviewAtIndex:1 withSubviewAtIndex:0];
+    [self.view exchangeSubviewAtIndex:1 withSubviewAtIndex:0];
     [UIView setAnimationDelegate:self];
     [UIView commitAnimations];
     

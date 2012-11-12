@@ -24,7 +24,7 @@
         self.mapView = [[[NSBundle mainBundle] loadNibNamed:@"GSMapView" owner:self options:nil] lastObject];
         
         self.mapView.userLocation.title = @"你的位置";
-        self.mapView.showsUserLocation = NO;
+        self.mapView.showsUserLocation = YES;
         
         locationManager = [[CLLocationManager alloc]init];
         locationManager.delegate = self;
@@ -38,14 +38,34 @@
         
         CLLocationCoordinate2D theCoordinate;
         
-        theCoordinate.latitude = 31.265;
-        theCoordinate.longitude = 121.49;
+        //Wait for core data...
+        
+        _annotations = [[NSMutableArray alloc] init];
+        
+        NSArray *root = [[[UIApplication sharedApplication] delegate] performSelector:@selector(getDataArray)];
+        
+        for (NSDictionary *theRestaurant in root) {
+            
+            NSString *name = [theRestaurant valueForKey:@"名称"];
+            NSString *address = [theRestaurant valueForKey:@"地址"];
+            double longtitude = [[theRestaurant valueForKey:@"东经"] doubleValue];
+            double latitude = [[theRestaurant valueForKey:@"北纬"] doubleValue];
+            
+            Annotation *anno = [AnnotationCreate createMapPointWithcoordinateX:latitude coordinateY:longtitude Title:name Subtitle:address];
+            
+            [_annotations addObject:anno];
+        }
+        
+        theCoordinate.latitude = [[root[0] valueForKey:@"北纬"]doubleValue];
+        theCoordinate.longitude =[[root[0] valueForKey:@"东经"]doubleValue];
+        
+        
         theRegin.center = theCoordinate;
         
-        theRegin.span.latitudeDelta = 0.09f;
-        theRegin.span.longitudeDelta = 0.09f;
+        theRegin.span.latitudeDelta = 0.009f;
+        theRegin.span.longitudeDelta = 0.009f;
         
-        //[self.mapView addAnnotations:_annotations];
+        [self.mapView addAnnotations:_annotations];
         [self.mapView setRegion:theRegin];
         
         [self.mapView regionThatFits:theRegin];
@@ -54,6 +74,22 @@
     return self;
 }
 
+
+
+- (void)ShowRegionOfTheUserLocationPressed{
+    
+    MKCoordinateRegion theRegion;
+    
+    theRegion.center = self.mapView.userLocation.coordinate;
+    
+    theRegion.span.latitudeDelta = 0.009f;
+    theRegion.span.longitudeDelta = 0.009f;
+    
+    
+    [self.mapView setRegion:theRegion];
+    
+    [self.mapView regionThatFits:theRegion];
+}
 
 - (void)didReceiveMemoryWarning
 {

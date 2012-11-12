@@ -18,5 +18,7 @@
 
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 
+- (void)ShowRegionOfTheUserLocationPressed;
+
 @end
 

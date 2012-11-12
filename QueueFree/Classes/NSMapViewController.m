@@ -122,6 +122,7 @@
 
 - (void)viewDidUnload {
     [self setMapView:nil];
+    [self setMapView:nil];
     [super viewDidUnload];
     
 }
