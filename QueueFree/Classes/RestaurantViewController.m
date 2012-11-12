@@ -9,11 +9,13 @@
 #import "RestaurantViewController.h"
 #import "MBProgressHUD.h"
 #import <QuartzCore/QuartzCore.h>
+#import "QueueQRViewController.h"
 @interface RestaurantViewController ()<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate,MBProgressHUDDelegate,UIPickerViewAccessibilityDelegate,UIPickerViewDataSource,UIPickerViewDelegate,UIAlertViewDelegate>
 @property (nonatomic, strong) UIView *infoView;
 @property (nonatomic) int shopPhotoNum;
 @property (nonatomic) int currentShopImageIdx;
 @property (nonatomic) BOOL isBook;
+@property (nonatomic) int peopleNum;
 @end
 
 @implementation RestaurantViewController
@@ -207,16 +209,22 @@
         NSString *msg;
         if (row == 0){
             msg = @"人数：1人";
+            self.peopleNum = 1;
         }else if (row == 1){
             msg = @"人数：2人";
+            self.peopleNum = 2;
         }else if (row == 2){
             msg = @"人数：3人";
+            self.peopleNum = 3;
         }else if (row == 3){
             msg = @"人数：4人";
+            self.peopleNum = 4;
         }else if (row == 4){
             msg = @"人数：5人";
+            self.peopleNum = 5;
         }else if (row == 5){
             msg = @"人数：5人以上";
+            self.peopleNum = 6;
         }
         msg = [NSString stringWithFormat:@"%@\n%@", self.shopName, msg];
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"确认领号" message:msg delegate:self cancelButtonTitle:@"取消领号" otherButtonTitles:@"排队领号",nil];
@@ -337,7 +345,12 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if (buttonIndex == 1) {
-        //[self performSegueWithIdentifier:@"GetNumber" sender:self];
+        NSString *msg = @"";
+        msg = [msg stringByAppendingFormat:@"%d",self.peopleNum];
+        for (int idx = 0; idx < 5; ++idx) {
+            msg = [msg stringByAppendingFormat:@"%d",arc4random()%10];
+        }
+        [self performSegueWithIdentifier:@"RestaurantToQueue" sender:msg];
     }
     [alertView dismissWithClickedButtonIndex:buttonIndex animated:YES];
     [alertView removeFromSuperview];
@@ -345,6 +358,23 @@
     [UIView animateWithDuration:0.5 animations:^{
         self.scrollView.alpha = 1.0;
     }];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"RestaurantToQueue"]){
+        QueueQRViewController *newVC = segue.destinationViewController;
+        newVC.codeStr = sender;
+        newVC.navigationItem.title = self.shopName;
+        NSString *queueCode = [NSString stringWithFormat:@"%d", arc4random()%1000];
+        newVC.queueStr = queueCode;
+        NSMutableArray *list = [[[NSUserDefaults standardUserDefaults] objectForKey:@"QueueList"] mutableCopy];
+        [list addObject:@{@"name":self.shopName, @"queue":queueCode, @"qrcode":sender}];
+        [[NSUserDefaults standardUserDefaults] setObject:list forKey:@"QueueList"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        NSLog(@"%@",list);
+        [newVC.navigationItem setHidesBackButton:YES];
+    }
 }
 
 

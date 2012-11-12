@@ -250,6 +250,7 @@
 		4DA75FA9165167BC00D33DF0 /* GSTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DA75FA8165167BC00D33DF0 /* GSTableView.xib */; };
 		4DBA906316514F9800CBDC5C /* GSMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DBA906216514F9800CBDC5C /* GSMapView.xib */; };
 		4DBA906616514FE700CBDC5C /* GSMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DBA906516514FE700CBDC5C /* GSMapViewController.m */; };
+		9B006DDF1651665900342546 /* QueueQRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B006DDE1651665900342546 /* QueueQRViewController.m */; };
 		9B2E2D4F16502B51002DFC1A /* DishTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B2E2D4E16502B51002DFC1A /* DishTableViewCell.xib */; };
 		9B2E2D5316502CB0002DFC1A /* DishTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B2E2D5216502CB0002DFC1A /* DishTableViewCell.m */; };
 		9B2E2D5516503850002DFC1A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B2E2D5416503850002DFC1A /* QuartzCore.framework */; };
@@ -319,6 +320,8 @@
 		9B922F00163AA3EE001692F2 /* search_textfield.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B922EFC163AA3EE001692F2 /* search_textfield.png */; };
 		9B922F01163AA3EE001692F2 /* search_textfield@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B922EFD163AA3EE001692F2 /* search_textfield@2x.png */; };
 		9B922F05163AA56A001692F2 /* GlobalSearchListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B922F04163AA56A001692F2 /* GlobalSearchListViewController.m */; };
+		9BB5197116516D0300D9F052 /* UserBookListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB5197016516D0300D9F052 /* UserBookListViewController.m */; };
+		9BB5197516516DB900D9F052 /* QueueListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB5197416516DB900D9F052 /* QueueListCell.m */; };
 		9BF5DEC3164841B2008B189A /* 0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9BF5DEB0164841B2008B189A /* 0.jpg */; };
 		9BF5DEC4164841B2008B189A /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9BF5DEB1164841B2008B189A /* 1.jpg */; };
 		9BF5DEC5164841B2008B189A /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9BF5DEB2164841B2008B189A /* 2.jpg */; };
@@ -633,6 +636,8 @@
 		4DBA906216514F9800CBDC5C /* GSMapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GSMapView.xib; sourceTree = "<group>"; };
 		4DBA906416514FE700CBDC5C /* GSMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSMapViewController.h; sourceTree = "<group>"; };
 		4DBA906516514FE700CBDC5C /* GSMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSMapViewController.m; sourceTree = "<group>"; };
+		9B006DDD1651665900342546 /* QueueQRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueueQRViewController.h; sourceTree = "<group>"; };
+		9B006DDE1651665900342546 /* QueueQRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueueQRViewController.m; sourceTree = "<group>"; };
 		9B2E2D4E16502B51002DFC1A /* DishTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DishTableViewCell.xib; sourceTree = "<group>"; };
 		9B2E2D5116502CB0002DFC1A /* DishTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DishTableViewCell.h; sourceTree = "<group>"; };
 		9B2E2D5216502CB0002DFC1A /* DishTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DishTableViewCell.m; sourceTree = "<group>"; };
@@ -727,6 +732,10 @@
 		9B922EFD163AA3EE001692F2 /* search_textfield@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search_textfield@2x.png"; sourceTree = "<group>"; };
 		9B922F03163AA56A001692F2 /* GlobalSearchListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalSearchListViewController.h; sourceTree = "<group>"; };
 		9B922F04163AA56A001692F2 /* GlobalSearchListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalSearchListViewController.m; sourceTree = "<group>"; };
+		9BB5196F16516D0300D9F052 /* UserBookListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserBookListViewController.h; sourceTree = "<group>"; };
+		9BB5197016516D0300D9F052 /* UserBookListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserBookListViewController.m; sourceTree = "<group>"; };
+		9BB5197316516DB900D9F052 /* QueueListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueueListCell.h; sourceTree = "<group>"; };
+		9BB5197416516DB900D9F052 /* QueueListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueueListCell.m; sourceTree = "<group>"; };
 		9BF5DEAC16484196008B189A /* StarTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarTableViewCell.h; sourceTree = "<group>"; };
 		9BF5DEAD16484196008B189A /* StarTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarTableViewCell.m; sourceTree = "<group>"; };
 		9BF5DEB0164841B2008B189A /* 0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.jpg; sourceTree = "<group>"; };
@@ -1366,6 +1375,12 @@
 				9B36862F164A2B8300ED0054 /* AdminViewController.m */,
 				9B77FBF11649167200C503E2 /* Barcode.h */,
 				9B77FBF21649167200C503E2 /* Barcode.mm */,
+				9BB5197316516DB900D9F052 /* QueueListCell.h */,
+				9BB5197416516DB900D9F052 /* QueueListCell.m */,
+				9B006DDD1651665900342546 /* QueueQRViewController.h */,
+				9B006DDE1651665900342546 /* QueueQRViewController.m */,
+				9BB5196F16516D0300D9F052 /* UserBookListViewController.h */,
+				9BB5197016516D0300D9F052 /* UserBookListViewController.m */,
 				9BFB1C82163805F20053200A /* CustomTabBarView.h */,
 				9BFB1C83163805F20053200A /* CustomTabBarView.m */,
 				9BFB1C4E1637EE110053200A /* QFAppDelegate.h */,
@@ -1824,7 +1839,13 @@
 				9B4B69A91650417C000A99DD /* UserFavourCell.m in Sources */,
 				9B4B69AD16504947000A99DD /* MBProgressHUD.m in Sources */,
 				4DBA906616514FE700CBDC5C /* GSMapViewController.m in Sources */,
+<<<<<<< HEAD
 				4DA75FA6165166CC00D33DF0 /* GSTableViewController.m in Sources */,
+=======
+				9B006DDF1651665900342546 /* QueueQRViewController.m in Sources */,
+				9BB5197116516D0300D9F052 /* UserBookListViewController.m in Sources */,
+				9BB5197516516DB900D9F052 /* QueueListCell.m in Sources */,
+>>>>>>> merge
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
