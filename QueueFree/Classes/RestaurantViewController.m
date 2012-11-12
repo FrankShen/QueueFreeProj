@@ -9,10 +9,11 @@
 #import "RestaurantViewController.h"
 #import "MBProgressHUD.h"
 #import <QuartzCore/QuartzCore.h>
-@interface RestaurantViewController ()<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate,MBProgressHUDDelegate>
+@interface RestaurantViewController ()<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate,MBProgressHUDDelegate,UIPickerViewAccessibilityDelegate,UIPickerViewDataSource,UIPickerViewDelegate,UIAlertViewDelegate>
 @property (nonatomic, strong) UIView *infoView;
 @property (nonatomic) int shopPhotoNum;
 @property (nonatomic) int currentShopImageIdx;
+@property (nonatomic) BOOL isBook;
 @end
 
 @implementation RestaurantViewController
@@ -65,6 +66,9 @@
     }
     self.navigationItem.title = self.shopName;
     [self.dishTableView registerNib:[UINib nibWithNibName:@"DishTableViewCell" bundle:nil] forCellReuseIdentifier:@"DishTableViewCell"];
+    
+    self.toolBar.frame = CGRectMake(0, 480, 320, 44);
+    self.pickerView.frame = CGRectMake(0, 480, 320, 216);
 }
 
 - (void)playAnimation
@@ -114,6 +118,8 @@
     [self setScrollView:nil];
     [self setShopImageView:nil];
     [self setDishTableView:nil];
+    [self setToolBar:nil];
+    [self setPickerView:nil];
     [super viewDidUnload];
 }
 
@@ -154,6 +160,70 @@
         [hud hide:YES afterDelay:1];
     }
     
+}
+
+- (IBAction)bookPressed:(id)sender
+{
+    self.isBook = YES;
+    [self.scrollView setScrollEnabled:NO];
+    [UIView animateWithDuration:0.5 animations:^{
+        self.scrollView.alpha = 0.5;
+        self.toolBar.frame = CGRectMake(0, 156, 320, 44);
+        self.pickerView.frame = CGRectMake(0, 200, 320, 216);
+    }];
+}
+
+- (IBAction)queuePressed:(id)sender
+{
+    self.isBook = NO;
+    [self.scrollView setScrollEnabled:NO];
+    [UIView animateWithDuration:0.5 animations:^{
+        self.scrollView.alpha = 0.5;
+        self.toolBar.frame = CGRectMake(0, 156, 320, 44);
+        self.pickerView.frame = CGRectMake(0, 200, 320, 216);
+    }];
+}
+
+- (IBAction)pickerCancelPressed:(id)sender
+{
+    [self.scrollView setScrollEnabled:YES];
+    [UIView animateWithDuration:0.5 animations:^{
+        self.scrollView.alpha = 1.0;
+        self.toolBar.frame = CGRectMake(0, 480, 320, 44);
+        self.pickerView.frame = CGRectMake(0, 480, 320, 216);
+    }];
+}
+
+- (IBAction)continuePressed:(id)sender
+{
+    if (self.isBook){
+        
+    } else {
+        [UIView animateWithDuration:0.5 animations:^{
+            self.toolBar.frame = CGRectMake(0, 480, 320, 44);
+            self.pickerView.frame = CGRectMake(0, 480, 320, 216);
+        }];
+        int row = [self.pickerView selectedRowInComponent:0];
+        NSString *msg;
+        if (row == 0){
+            msg = @"人数：1人";
+        }else if (row == 1){
+            msg = @"人数：2人";
+        }else if (row == 2){
+            msg = @"人数：3人";
+        }else if (row == 3){
+            msg = @"人数：4人";
+        }else if (row == 4){
+            msg = @"人数：5人";
+        }else if (row == 5){
+            msg = @"人数：5人以上";
+        }
+        msg = [NSString stringWithFormat:@"%@\n%@", self.shopName, msg];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"确认领号" message:msg delegate:self cancelButtonTitle:@"取消领号" otherButtonTitles:@"排队领号",nil];
+        [self.view addSubview:alert];
+        [alert show];
+
+    }
 }
 
 #pragma mark delegate
@@ -236,5 +306,47 @@
 	[hud removeFromSuperview];
 	hud = nil;
 }
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1;
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    return 6;
+}
+
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    if (row == 0){
+        return @"1人";
+    }else if (row == 1){
+        return @"2人";
+    }else if (row == 2){
+        return @"3人";
+    }else if (row == 3){
+        return @"4人";
+    }else if (row == 4){
+        return @"5人";
+    }else if (row == 5){
+        return @"5人以上";
+    }
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1) {
+        //[self performSegueWithIdentifier:@"GetNumber" sender:self];
+    }
+    [alertView dismissWithClickedButtonIndex:buttonIndex animated:YES];
+    [alertView removeFromSuperview];
+    [self.scrollView setScrollEnabled:YES];
+    [UIView animateWithDuration:0.5 animations:^{
+        self.scrollView.alpha = 1.0;
+    }];
+}
+
+
 
 @end

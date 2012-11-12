@@ -31,6 +31,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *starLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *shopImageView;
 @property (weak, nonatomic) IBOutlet UITableView *dishTableView;
+@property (weak, nonatomic) IBOutlet UIToolbar *toolBar;
+@property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
+
 
 // rootViewController
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
