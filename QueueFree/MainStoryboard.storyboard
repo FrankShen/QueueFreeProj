@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Sjh-xa-ZLg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Sjh-xa-ZLg">
     <dependencies>
         <deployment version="1296" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -115,7 +115,6 @@
                         <segue destination="aq3-sd-hfW" kind="push" identifier="QSNSFind" id="7Ed-As-PnY"/>
                         <segue destination="XDy-4e-0ZO" kind="push" identifier="StarToRestaurant" id="hnU-gS-Rhb"/>
                         <segue destination="86l-Xr-rLF" kind="push" identifier="UserFavour" id="awc-4X-PAW"/>
-                        <segue destination="mcT-Zz-SJF" kind="push" identifier="UserList" id="5Xp-Pj-sgA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ry-Dv-ZnA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1768,6 +1767,7 @@ Cg
         <!--Global Search List View Controller - 搜索全城-->
         <scene sceneID="TFJ-BW-9aC">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D3J-xF-Y0g" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="3kd-sP-aTa" customClass="GlobalSearchListViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IXO-Su-MVg">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -1818,7 +1818,6 @@ Cg
                         <segue destination="XDy-4e-0ZO" kind="push" id="KJF-9F-dIp"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="D3J-xF-Y0g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2707" y="-357"/>
         </scene>
@@ -1873,61 +1872,23 @@ Cg
                         <outlet property="pickerView" destination="NBd-v1-QlN" id="uHk-hR-XKo"/>
                         <outlet property="scrollView" destination="KOI-Le-J5P" id="Gh5-bh-trP"/>
                         <outlet property="toolBar" destination="P8Q-AH-QFS" id="XdE-j7-nYx"/>
-                        <segue destination="esN-KE-hiQ" kind="push" identifier="RestaurantToQueue" id="WFY-EM-4qx"/>
+                        <segue destination="esN-KE-hiQ" kind="push" identifier="RestaurantToBook" id="WFY-EM-4qx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rYW-lN-zx6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3358" y="-558"/>
         </scene>
-        <!--QueueQR View Controller-->
+        <!--View Controller-->
         <scene sceneID="nCF-Hw-jMr">
             <objects>
-                <viewController id="esN-KE-hiQ" customClass="QueueQRViewController" sceneMemberID="viewController">
+                <viewController id="esN-KE-hiQ" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zgv-Pf-hGz">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="home_background.png" id="Ges-QD-bcG">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="z5n-rY-EKF">
-                                <rect key="frame" x="60" y="107" width="200" height="200"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="请按系统预约结果到店就餐，过号15分钟内可优先进入，15分钟后将需重新排队。" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Cfq-yL-Fan">
-                                <rect key="frame" x="51" y="336" width="219" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <size key="shadowOffset" width="0.0" height="1"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TUN-QO-BW2">
-                                <rect key="frame" x="100" y="31" width="121" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <size key="shadowOffset" width="0.0" height="2"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="sWV-sJ-qLr">
-                        <barButtonItem key="rightBarButtonItem" title="主页" id="kuB-3z-XwO">
-                            <connections>
-                                <action selector="homePressed:" destination="esN-KE-hiQ" id="cTH-vE-J94"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="qrCode" destination="z5n-rY-EKF" id="upg-91-12Q"/>
-                        <outlet property="queueNum" destination="TUN-QO-BW2" id="oFf-yd-9QG"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="sWV-sJ-qLr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JJr-sH-LWd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1960,77 +1921,7 @@ Cg
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UrS-LC-wBx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1280" y="-1290"/>
-        </scene>
-        <!--User Book List View Controller - 排队订单-->
-        <scene sceneID="n1x-C4-XrT">
-            <objects>
-                <viewController id="mcT-Zz-SJF" customClass="UserBookListViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="tbO-8r-SJh">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ZK0-hR-yjc">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="0.91000000000000003" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="QueueListCell" rowHeight="44" id="6Qv-io-Jgc" customClass="QueueListCell">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="VP3-zF-aIZ">
-                                                    <rect key="frame" x="0.0" y="66" width="320" height="49"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="home_background.png" id="1ip-cW-iCv">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="商家名称" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4Cw-9d-ivz">
-                                                    <rect key="frame" x="20" y="11" width="170" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="888" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="g8Q-Ff-YXm">
-                                                    <rect key="frame" x="198" y="11" width="102" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <connections>
-                                            <outlet property="queueNumLabel" destination="g8Q-Ff-YXm" id="KBI-tm-pqj"/>
-                                            <outlet property="shopNameLabel" destination="4Cw-9d-ivz" id="oiO-ld-ZO5"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="mcT-Zz-SJF" id="oBI-Ap-uG7"/>
-                                    <outlet property="delegate" destination="mcT-Zz-SJF" id="ZFw-AX-aQu"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="排队订单" id="JvR-Ng-OWa">
-                        <barButtonItem key="rightBarButtonItem" title="订座订单" id="Id3-he-03U"/>
-                    </navigationItem>
-                    <connections>
-                        <segue destination="esN-KE-hiQ" kind="push" identifier="ListToQueue" id="eff-Tr-S8r"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="483-Ro-Ifr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1772" y="-1045"/>
+            <point key="canvasLocation" x="1908" y="-1226"/>
         </scene>
         <!--Near Search List View Controller - 搜索附近-->
         <scene sceneID="gTx-Ue-6Ax">
@@ -2163,6 +2054,7 @@ Cg
         <class className="GlobalSearchListViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GlobalSearchListViewController.h"/>
             <relationships>
+                <relationship kind="action" name="searchButtonPressed:"/>
                 <relationship kind="action" name="viewChangeButtonPressed:"/>
                 <relationship kind="outlet" name="keyword" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="theFormerView" candidateClass="UIView"/>
@@ -2172,6 +2064,8 @@ Cg
         <class className="NearSearchListViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NearSearchListViewController.h"/>
             <relationships>
+                <relationship kind="action" name="mapButtonPressed:"/>
+                <relationship kind="action" name="viewChangeButtonPressed:"/>
                 <relationship kind="outlet" name="viewChangeButton" candidateClass="UIBarButtonItem"/>
             </relationships>
         </class>
@@ -2181,34 +2075,24 @@ Cg
         <class className="QFViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/QFViewController.h"/>
             <relationships>
+                <relationship kind="action" name="globalSearchPressed:"/>
+                <relationship kind="action" name="homeButtonPressed:"/>
+                <relationship kind="action" name="nearSearchPressed:"/>
+                <relationship kind="action" name="qsnsButtonPressed:"/>
+                <relationship kind="action" name="qsnsCollectPressed:"/>
+                <relationship kind="action" name="qsnsEatPressed:"/>
+                <relationship kind="action" name="qsnsFindPressed:"/>
+                <relationship kind="action" name="qsnsTipPressed:"/>
+                <relationship kind="action" name="starButtonPressed:"/>
+                <relationship kind="action" name="userFavourPressed:"/>
                 <relationship kind="outlet" name="CustomTabBar" candidateClass="UIView"/>
                 <relationship kind="outlet" name="StarTableView" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="TabBar" candidateClass="CustomTabBarView"/>
             </relationships>
         </class>
-        <class className="QueueListCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/QueueListCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="queueNumLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="shopNameLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="QueueQRViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/QueueQRViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="homePressed:"/>
-                <relationship kind="outlet" name="qrCode" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="queueNum" candidateClass="UILabel"/>
-            </relationships>
-        </class>
         <class className="RestaurantViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RestaurantViewController.h"/>
             <relationships>
-                <relationship kind="action" name="bookPressed:"/>
-                <relationship kind="action" name="continuePressed:"/>
-                <relationship kind="action" name="pickerCancelPressed:"/>
-                <relationship kind="action" name="queuePressed:"/>
-                <relationship kind="action" name="userFavourPressed:"/>
                 <relationship kind="outlet" name="addressLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="dishTableView" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="phoneLabel" candidateClass="UILabel"/>
@@ -2220,9 +2104,6 @@ Cg
                 <relationship kind="outlet" name="timeLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="toolBar" candidateClass="UIToolbar"/>
             </relationships>
-        </class>
-        <class className="UserBookListViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UserBookListViewController.h"/>
         </class>
         <class className="UserFavourCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UserFavourCell.h"/>
@@ -2243,6 +2124,5 @@ Cg
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="KJF-9F-dIp"/>
-        <segue reference="WFY-EM-4qx"/>
     </inferredMetricsTieBreakers>
 </document>
