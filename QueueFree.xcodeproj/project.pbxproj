@@ -328,6 +328,10 @@
 		9BE222C316519D3100D0C2F7 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE222C216519D3100D0C2F7 /* SettingViewController.m */; };
 		9BE222C41651A16B00D0C2F7 /* GSTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BE222BD1651967400D0C2F7 /* GSTableCell.xib */; };
 		9BE222C51651A26800D0C2F7 /* GSTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE222BC1651967400D0C2F7 /* GSTableCell.m */; };
+		9BE222C71651A80800D0C2F7 /* usercenter.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BE222C61651A80800D0C2F7 /* usercenter.png */; };
+		9BE222CA1651A92600D0C2F7 /* UserCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE222C91651A92600D0C2F7 /* UserCenterViewController.m */; };
+		9BE222CC1651AAFD00D0C2F7 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE222CB1651AAFD00D0C2F7 /* MessageUI.framework */; };
+		9BE222CE1651B23200D0C2F7 /* intro.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BE222CD1651B23200D0C2F7 /* intro.png */; };
 		9BF5DEC3164841B2008B189A /* 0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9BF5DEB0164841B2008B189A /* 0.jpg */; };
 		9BF5DEC4164841B2008B189A /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9BF5DEB1164841B2008B189A /* 1.jpg */; };
 		9BF5DEC5164841B2008B189A /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9BF5DEB2164841B2008B189A /* 2.jpg */; };
@@ -753,6 +757,11 @@
 		9BE222BD1651967400D0C2F7 /* GSTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GSTableCell.xib; sourceTree = "<group>"; };
 		9BE222C116519D3100D0C2F7 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		9BE222C216519D3100D0C2F7 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		9BE222C61651A80800D0C2F7 /* usercenter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = usercenter.png; sourceTree = "<group>"; };
+		9BE222C81651A92600D0C2F7 /* UserCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCenterViewController.h; sourceTree = "<group>"; };
+		9BE222C91651A92600D0C2F7 /* UserCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCenterViewController.m; sourceTree = "<group>"; };
+		9BE222CB1651AAFD00D0C2F7 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		9BE222CD1651B23200D0C2F7 /* intro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intro.png; sourceTree = "<group>"; };
 		9BF5DEAC16484196008B189A /* StarTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarTableViewCell.h; sourceTree = "<group>"; };
 		9BF5DEAD16484196008B189A /* StarTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarTableViewCell.m; sourceTree = "<group>"; };
 		9BF5DEB0164841B2008B189A /* 0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.jpg; sourceTree = "<group>"; };
@@ -826,6 +835,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BE222CC1651AAFD00D0C2F7 /* MessageUI.framework in Frameworks */,
 				9B2E2D5516503850002DFC1A /* QuartzCore.framework in Frameworks */,
 				9B7148E716494AD800721CD4 /* MapKit.framework in Frameworks */,
 				9B7148E516494AD400721CD4 /* CoreLocation.framework in Frameworks */,
@@ -1244,6 +1254,7 @@
 		9BFB1C301637EE110053200A = {
 			isa = PBXGroup;
 			children = (
+				9BE222CB1651AAFD00D0C2F7 /* MessageUI.framework */,
 				9BFB1C451637EE110053200A /* QueueFree */,
 				9BFB1C3E1637EE110053200A /* Frameworks */,
 				9BFB1C3C1637EE110053200A /* Products */,
@@ -1308,6 +1319,8 @@
 			isa = PBXGroup;
 			children = (
 				3FC4AD0E164B816B00E73F8C /* Pictures */,
+				9BE222CD1651B23200D0C2F7 /* intro.png */,
+				9BE222C61651A80800D0C2F7 /* usercenter.png */,
 				4DA2BC8F164A92BC00345F08 /* location_button.png */,
 				4DA2BC8D164A926100345F08 /* location_button@2x.png */,
 				9BF9B0EC164B9E3300877C2A /* restaurant_icon.png */,
@@ -1391,6 +1404,8 @@
 			isa = PBXGroup;
 			children = (
 				9B7148CB1649496300721CD4 /* Search */,
+				9BE222C81651A92600D0C2F7 /* UserCenterViewController.h */,
+				9BE222C91651A92600D0C2F7 /* UserCenterViewController.m */,
 				9BE222AD1651810200D0C2F7 /* BookListCell.h */,
 				9BE222AE1651810200D0C2F7 /* BookListCell.m */,
 				9BE222B5165183C000D0C2F7 /* BookViewController.h */,
@@ -1813,6 +1828,8 @@
 				4DBA906316514F9800CBDC5C /* GSMapView.xib in Resources */,
 				4D44E08816517E2D003BDBDB /* GSTableView.xib in Resources */,
 				9BE222C41651A16B00D0C2F7 /* GSTableCell.xib in Resources */,
+				9BE222C71651A80800D0C2F7 /* usercenter.png in Resources */,
+				9BE222CE1651B23200D0C2F7 /* intro.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1877,6 +1894,7 @@
 				9BE222B7165183C100D0C2F7 /* BookViewController.m in Sources */,
 				9BE222BA16518DA100D0C2F7 /* BookQRViewController.m in Sources */,
 				9BE222C316519D3100D0C2F7 /* SettingViewController.m in Sources */,
+				9BE222CA1651A92600D0C2F7 /* UserCenterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

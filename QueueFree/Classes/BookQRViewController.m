@@ -8,7 +8,8 @@
 
 #import "BookQRViewController.h"
 #import "Barcode.h"
-@interface BookQRViewController ()
+#import <MessageUI/MessageUI.h>
+@interface BookQRViewController ()<MFMailComposeViewControllerDelegate>
 
 @end
 
@@ -49,5 +50,38 @@
 - (IBAction)homePrssed:(id)sender
 {
     [self.navigationController popToRootViewControllerAnimated:YES];
+}
+- (IBAction)shareButtonPressed:(id)sender
+{
+    MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+    mc.mailComposeDelegate = self;
+    if ([MFMailComposeViewController canSendMail]) {
+        NSData *data = UIImagePNGRepresentation(self.qrCode.image);
+        [mc addAttachmentData:data mimeType:@"image/png" fileName:@"QRCode"];
+        [self presentModalViewController:mc animated:YES];
+    }
+}
+
+- (void)mailComposeController:(MFMailComposeViewController*)controller
+          didFinishWithResult:(MFMailComposeResult)result
+                        error:(NSError*)error {
+    switch (result)
+    {
+        case MFMailComposeResultCancelled:
+            NSLog(@"Mail send canceled...");
+            break;
+        case MFMailComposeResultSaved:
+            NSLog(@"Mail saved...");
+            break;
+        case MFMailComposeResultSent:
+            NSLog(@"Mail sent...");
+            break;
+        case MFMailComposeResultFailed:
+            NSLog(@"Mail send errored: %@...", [error localizedDescription]);
+            break;
+        default:
+            break;
+    }
+    [self dismissModalViewControllerAnimated:YES];
 }
 @end

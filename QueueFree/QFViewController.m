@@ -182,7 +182,7 @@
         [[NSUserDefaults standardUserDefaults] setObject:userFavour forKey:@"BookList"];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
-    
+    self.scrollView.contentSize = CGSizeMake(900, 200);
 }
 
 - (void)didReceiveMemoryWarning
@@ -194,6 +194,7 @@
 - (void)viewDidUnload {
     [self setCustomTabBar:nil];
     [self setTabBar:nil];
+    [self setScrollView:nil];
     [super viewDidUnload];
 }
 
