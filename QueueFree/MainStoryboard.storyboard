@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Sjh-xa-ZLg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Sjh-xa-ZLg">
     <dependencies>
         <deployment version="1296" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -1784,6 +1784,9 @@ Cg
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="searchButtonPressed:" destination="3kd-sP-aTa" eventType="touchUpInside" id="Ph9-TM-p7k"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="search_textfield.png" id="DqK-XA-8y5">
                                 <rect key="frame" x="0.0" y="0.0" width="274" height="44"/>
@@ -1814,7 +1817,6 @@ Cg
                     <connections>
                         <outlet property="keyword" destination="NVH-V9-Y9s" id="9q2-lx-pj1"/>
                         <outlet property="theFormerView" destination="z9W-L1-SKx" id="eUM-DU-Gvz"/>
-                        <outlet property="view" destination="z9W-L1-SKx" id="f8G-vl-f4c"/>
                         <outlet property="viewChangeButton" destination="azK-ZH-P6i" id="iqu-Co-x5X"/>
                         <segue destination="XDy-4e-0ZO" kind="push" id="KJF-9F-dIp"/>
                     </connections>
@@ -1956,7 +1958,7 @@ Cg
                             </date>
                             <locale key="locale" localeIdentifier="zh_CN"/>
                             <timeZone key="timeZone" name="America/Los_Angeles">
-                                <mutableData key="data">
+                                <data key="data">
 VFppZgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAC5AAAABAAAABCepkign7sVkKCGKqChmveQ
 y4kaoNIj9HDSYSYQ1v50INiArZDa/tGg28CQENzes6DdqayQ3r6VoN+JjpDgnneg4WlwkOJ+WaDjSVKQ
 5F47oOUpNJDmR1gg5xJREOgnOiDo8jMQ6gccIOrSFRDr5v4g7LH3EO3G4CDukdkQ76/8oPBxuxDxj96g
@@ -1974,7 +1976,7 @@ f5gqkAABAAECAwEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
-</mutableData>
+</data>
                             </timeZone>
                         </datePicker>
                         <sections>
@@ -2438,6 +2440,8 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <class className="GlobalSearchListViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GlobalSearchListViewController.h"/>
             <relationships>
+                <relationship kind="action" name="searchButtonPressed:"/>
+                <relationship kind="action" name="viewChangeButtonPressed:"/>
                 <relationship kind="outlet" name="keyword" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="theFormerView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="viewChangeButton" candidateClass="UIBarButtonItem"/>
@@ -2446,6 +2450,8 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <class className="NearSearchListViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NearSearchListViewController.h"/>
             <relationships>
+                <relationship kind="action" name="mapButtonPressed:"/>
+                <relationship kind="action" name="viewChangeButtonPressed:"/>
                 <relationship kind="outlet" name="viewChangeButton" candidateClass="UIBarButtonItem"/>
             </relationships>
         </class>
@@ -2477,6 +2483,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <class className="RestaurantViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RestaurantViewController.h"/>
             <relationships>
+                <relationship kind="action" name="queuePressed:"/>
                 <relationship kind="outlet" name="addressLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="dishTableView" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="phoneLabel" candidateClass="UILabel"/>
@@ -2514,7 +2521,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="gFT-9W-FYp"/>
+        <segue reference="KJF-9F-dIp"/>
         <segue reference="WFY-EM-4qx"/>
     </inferredMetricsTieBreakers>
 </document>
