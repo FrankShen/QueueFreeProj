@@ -15,11 +15,13 @@
 
 @interface GlobalSearchListViewController : UIViewController{
     
+    
 }
 @property (weak, nonatomic) IBOutlet UITextField *keyword;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *viewChangeButton;
 @property (weak, nonatomic) IBOutlet UIView *theFormerView;
 @property (strong, nonatomic) GSMapViewController* globalSearchMVC;
-@property (strong, nonatomic)GSTableViewController* globalSearchTVC;
+@property (strong, nonatomic) GSTableViewController* globalSearchTVC;
+
 
 @end

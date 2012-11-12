@@ -9,7 +9,7 @@
 #import "GlobalSearchListViewController.h"
 
 
-@interface GlobalSearchListViewController ()
+@interface GlobalSearchListViewController ()<GSTableViewDelegate>
 @property (nonatomic) BOOL isList;
 @property (nonatomic, strong) QFGlobalSearchBrain *searchBrain;
 @end
@@ -33,26 +33,16 @@
     self.isList = YES;
     self.viewChangeButton.title = @"地图";
     
+    
     self.globalSearchMVC = [[GSMapViewController alloc]init];
     self.globalSearchTVC = [[GSTableViewController alloc]init];
     
     //[self.theFormerView insertSubview:self.globalSearchMVC.mapView atIndex:0];
-    [self.theFormerView insertSubview:self.globalSearchTVC.view atIndex:0];
+    //[self.theFormerView insertSubview:self.globalSearchTVC.view atIndex:0];
     
     
     // the Test for QFGlobalSearchBrain by Cui Hao
-    
-    searchBrain = [[QFGlobalSearchBrain alloc] init];
-    
-    NSArray *resultList = [searchBrain theResultArrayForKeyWord:@"路"];
-    for (NSDictionary *rest in resultList) {
-        NSLog(@"NAME:%@", [rest valueForKey:@"名称"]);
-    }
-
-    NSArray *resultList2 = [searchBrain theResultArrayForKeyWord:@"馋"];
-    for (NSDictionary *rest in resultList2) {
-        NSLog(@"NAME:%@", [rest valueForKey:@"名称"]);
-    }
+  
     
     // the end of the Test
     
@@ -85,6 +75,15 @@
     if (![self.keyword isExclusiveTouch]){
         [self.keyword resignFirstResponder];
         
+        searchBrain = [[QFGlobalSearchBrain alloc] init];
+        
+        NSArray* resultList = [searchBrain theResultArrayForKeyWord:self.keyword.text];
+        for (NSDictionary *rest in resultList) {
+            NSLog(@"%@",[rest valueForKey:@"名称"]);
+            self.globalSearchTVC.resultArray = [NSArray arrayWithObject:rest];
+        }
+        
+        [self.theFormerView insertSubview:self.globalSearchTVC.view atIndex:0];
     }
 }
 
@@ -100,6 +99,24 @@
     
     self.isList = !self.isList;
     self.viewChangeButton.title = self.isList ? @"地图" : @"列表";
+}
+
+#pragma mark segue
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"NearToRestaurant"]){
+        NSString *name = sender;
+        RestaurantViewController *newVC = segue.destinationViewController;
+        [newVC initWithShop:name];
+    }
+}
+
+
+#pragma mark delegate
+- (void)performSegue:(NSString *)shopName
+{
+    [self performSegueWithIdentifier:@"NearToRestaurant" sender:shopName];
 }
 
 @end

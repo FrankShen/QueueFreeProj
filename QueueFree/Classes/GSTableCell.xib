@@ -3,12 +3,12 @@
 	<data>
 		<int key="IBDocument.SystemTarget">1536</int>
 		<string key="IBDocument.SystemVersion">12C60</string>
-		<string key="IBDocument.InterfaceBuilderVersion">2844</string>
+		<string key="IBDocument.InterfaceBuilderVersion">2840</string>
 		<string key="IBDocument.AppKitVersion">1187.34</string>
 		<string key="IBDocument.HIToolboxVersion">625.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-			<string key="NS.object.0">1930</string>
+			<string key="NS.object.0">1926</string>
 		</object>
 		<array key="IBDocument.IntegratedClassDependencies">
 			<string>IBProxyObject</string>
@@ -85,7 +85,7 @@
 					<object class="IBUILabel" id="140548055">
 						<reference key="NSNextResponder" ref="967322081"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{87, 5}, {106, 21}}</string>
+						<string key="NSFrame">{{87, 5}, {190, 21}}</string>
 						<reference key="NSSuperview" ref="967322081"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="482163162"/>
@@ -160,7 +160,7 @@
 					<object class="IBUILabel" id="482163162">
 						<reference key="NSNextResponder" ref="967322081"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{87, 24}, {165, 12}}</string>
+						<string key="NSFrame">{{100, 24}, {165, 12}}</string>
 						<reference key="NSSuperview" ref="967322081"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="113679006"/>
@@ -377,6 +377,6 @@
 			<string key="NS.key.0">home_background.png</string>
 			<string key="NS.object.0">{320, 367}</string>
 		</object>
-		<string key="IBCocoaTouchPluginVersion">1930</string>
+		<string key="IBCocoaTouchPluginVersion">1926</string>
 	</data>
 </archive>

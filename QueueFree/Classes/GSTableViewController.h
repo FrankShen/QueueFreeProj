@@ -8,8 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import "GSTableCell.h"
+@protocol GSTableViewDelegate <NSObject>
 
-@interface GSTableViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+- (NSDictionary *)loadCellInfo:(NSDictionary *)dicInfo;
+@end
+
+@interface GSTableViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>{
+    
+}
 
 @property (weak, nonatomic)IBOutlet UITableView* gsTableView;
+
+@property (weak,nonatomic) id<GSTableViewDelegate> delegate;
+@property (strong , nonatomic) NSArray *resultArray;
 @end
