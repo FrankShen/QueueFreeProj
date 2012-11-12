@@ -44,4 +44,8 @@
     [self setQrCode:nil];
     [super viewDidUnload];
 }
+- (IBAction)homePrssed:(id)sender
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
 @end

@@ -62,7 +62,7 @@
     if (self.isBook){
         BookListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BookListCell"];
         cell.shopNameLabel.text = [[self.bookData objectAtIndex:indexPath.row] objectForKey:@"name"];
-        cell.dateLabel.text = [[self.queueData objectAtIndex:indexPath.row] objectForKey:@"date"];
+        cell.dateLabel.text = [[self.bookData objectAtIndex:indexPath.row] objectForKey:@"date"];
         return cell;
     } else {
         QueueListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"QueueListCell"];
