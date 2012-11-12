@@ -241,6 +241,8 @@
 		3FC4AE36164B819A00E73F8C /* 郁金香海鲜局饭.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FC4ADA2164B819A00E73F8C /* 郁金香海鲜局饭.jpg */; };
 		3FC4AE37164B819A00E73F8C /* 糟熘鱼片.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FC4ADA3164B819A00E73F8C /* 糟熘鱼片.jpg */; };
 		4D302AC3164B199E0095FE13 /* NSTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D302AC2164B199D0095FE13 /* NSTableCell.xib */; };
+		4D44E08816517E2D003BDBDB /* GSTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D44E08516517E2D003BDBDB /* GSTableView.xib */; };
+		4D44E08916517E2D003BDBDB /* GSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D44E08716517E2D003BDBDB /* GSTableViewController.m */; };
 		4DA2BC87164A8B1900345F08 /* NSTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DA2BC86164A8B1900345F08 /* NSTableView.xib */; };
 		4DA2BC8A164A8B2D00345F08 /* NSTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA2BC89164A8B2D00345F08 /* NSTableCell.m */; };
 		4DA2BC8E164A926100345F08 /* location_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DA2BC8D164A926100345F08 /* location_button@2x.png */; };
@@ -621,6 +623,9 @@
 		3FC4ADA3164B819A00E73F8C /* 糟熘鱼片.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "糟熘鱼片.jpg"; sourceTree = "<group>"; };
 		3FE68AE116380D170051A267 /* RestaurantInfo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RestaurantInfo.xcdatamodel; sourceTree = "<group>"; };
 		4D302AC2164B199D0095FE13 /* NSTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NSTableCell.xib; sourceTree = "<group>"; };
+		4D44E08516517E2D003BDBDB /* GSTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GSTableView.xib; sourceTree = "<group>"; };
+		4D44E08616517E2D003BDBDB /* GSTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTableViewController.h; sourceTree = "<group>"; };
+		4D44E08716517E2D003BDBDB /* GSTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSTableViewController.m; sourceTree = "<group>"; };
 		4DA2BC86164A8B1900345F08 /* NSTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NSTableView.xib; sourceTree = "<group>"; };
 		4DA2BC88164A8B2D00345F08 /* NSTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSTableCell.h; sourceTree = "<group>"; };
 		4DA2BC89164A8B2D00345F08 /* NSTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSTableCell.m; sourceTree = "<group>"; };
@@ -1096,6 +1101,9 @@
 		4DBA905E16514EF000CBDC5C /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				4D44E08516517E2D003BDBDB /* GSTableView.xib */,
+				4D44E08616517E2D003BDBDB /* GSTableViewController.h */,
+				4D44E08716517E2D003BDBDB /* GSTableViewController.m */,
 			);
 			name = TableView;
 			sourceTree = "<group>";
@@ -1775,6 +1783,7 @@
 				3F289A8B164E4DD9000DAABE /* QueueFree.plist in Resources */,
 				9B2E2D4F16502B51002DFC1A /* DishTableViewCell.xib in Resources */,
 				4DBA906316514F9800CBDC5C /* GSMapView.xib in Resources */,
+				4D44E08816517E2D003BDBDB /* GSTableView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1833,6 +1842,7 @@
 				9B006DDF1651665900342546 /* QueueQRViewController.m in Sources */,
 				9BB5197116516D0300D9F052 /* UserBookListViewController.m in Sources */,
 				9BB5197516516DB900D9F052 /* QueueListCell.m in Sources */,
+				4D44E08916517E2D003BDBDB /* GSTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

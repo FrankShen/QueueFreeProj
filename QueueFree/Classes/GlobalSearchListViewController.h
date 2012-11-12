@@ -18,6 +18,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *keyword;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *viewChangeButton;
 @property (strong, nonatomic) IBOutlet UIView *theFormerView;
-@property (weak, nonatomic) GSMapViewController* globalSearchMVC;
+@property (strong, nonatomic) GSMapViewController* globalSearchMVC;
 
 @end
