@@ -326,6 +326,8 @@
 		9BE222B7165183C100D0C2F7 /* BookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE222B6165183C100D0C2F7 /* BookViewController.m */; };
 		9BE222BA16518DA100D0C2F7 /* BookQRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE222B916518DA100D0C2F7 /* BookQRViewController.m */; };
 		9BE222C316519D3100D0C2F7 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE222C216519D3100D0C2F7 /* SettingViewController.m */; };
+		9BE222C41651A16B00D0C2F7 /* GSTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BE222BD1651967400D0C2F7 /* GSTableCell.xib */; };
+		9BE222C51651A26800D0C2F7 /* GSTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE222BC1651967400D0C2F7 /* GSTableCell.m */; };
 		9BF5DEC3164841B2008B189A /* 0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9BF5DEB0164841B2008B189A /* 0.jpg */; };
 		9BF5DEC4164841B2008B189A /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9BF5DEB1164841B2008B189A /* 1.jpg */; };
 		9BF5DEC5164841B2008B189A /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9BF5DEB2164841B2008B189A /* 2.jpg */; };
@@ -1810,6 +1812,7 @@
 				9B2E2D4F16502B51002DFC1A /* DishTableViewCell.xib in Resources */,
 				4DBA906316514F9800CBDC5C /* GSMapView.xib in Resources */,
 				4D44E08816517E2D003BDBDB /* GSTableView.xib in Resources */,
+				9BE222C41651A16B00D0C2F7 /* GSTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1820,6 +1823,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BE222C51651A26800D0C2F7 /* GSTableCell.m in Sources */,
 				9B7148DF16494AC300721CD4 /* Annotation.m in Sources */,
 				9B7148E016494AC300721CD4 /* AnnotationCreate.m in Sources */,
 				9B7148E116494AC300721CD4 /* NearSearchListViewController.m in Sources */,
