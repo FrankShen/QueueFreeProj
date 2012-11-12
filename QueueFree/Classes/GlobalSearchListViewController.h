@@ -7,11 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RestaurantViewController.h"
+#import "GSMapViewController.h"
+#import "QFGlobalSearchBrain.h"
 
-@interface GlobalSearchListViewController : UIViewController
+
+@interface GlobalSearchListViewController : UIViewController{
+    
+}
 @property (weak, nonatomic) IBOutlet UITextField *keyword;
-@property (weak, nonatomic) IBOutlet UIView *listView;
-@property (weak, nonatomic) IBOutlet UIView *mapView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *viewChangeButton;
+@property (weak, nonatomic) GSMapViewController* globalSearchMVC;
+@property (weak, nonatomic) UIView* listView;
 
 @end

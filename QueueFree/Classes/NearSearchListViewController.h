@@ -13,8 +13,6 @@
 #import "NSTableViewController.h"
 
 @interface NearSearchListViewController : UIViewController{
-    //NSMapViewController *nearSearchMVC;
-    //NSTableViewController *nearSearchTVC;
 }
 
 

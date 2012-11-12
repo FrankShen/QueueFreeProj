@@ -1,26 +1,27 @@
 //
-//  NSMapViewController.m
+//  GSMapViewController.m
 //  QueueFree
 //
-//  Created by pursue_ct on 12-11-6.
+//  Created by pursue_ct on 12-11-12.
 //  Copyright (c) 2012年 BuG.BS. All rights reserved.
 //
 
-#import "NSMapViewController.h"
+#import "GSMapViewController.h"
 
-@interface NSMapViewController ()
+@interface GSMapViewController ()
+
 @property (nonatomic, strong) NSMutableArray *annotations;
-
 @end
 
-@implementation NSMapViewController
+@implementation GSMapViewController
+
 @synthesize annotations = _annotations;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.mapView = [[[NSBundle mainBundle] loadNibNamed:@"NSMapView" owner:self options:nil] lastObject];
+        self.mapView = [[[NSBundle mainBundle] loadNibNamed:@"GSMapView" owner:self options:nil] lastObject];
         
         self.mapView.userLocation.title = @"你的位置";
         self.mapView.showsUserLocation = YES;
@@ -69,21 +70,21 @@
         
         [self.mapView regionThatFits:theRegin];
         
-        }
-        return self;
+    }
+    return self;
 }
 
 
 
 - (void)ShowRegionOfTheUserLocationPressed{
-   
+    
     MKCoordinateRegion theRegion;
     
     theRegion.center = self.mapView.userLocation.coordinate;
     
     theRegion.span.latitudeDelta = 0.009f;
     theRegion.span.longitudeDelta = 0.009f;
-
+    
     
     [self.mapView setRegion:theRegion];
     
@@ -107,7 +108,7 @@
         static NSString *defaultPinID = @"com.invasivecode.pin";
         pinView = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:defaultPinID];
         if ( pinView == nil ) pinView = [[MKPinAnnotationView alloc]
-                                          initWithAnnotation:annotation reuseIdentifier:defaultPinID];
+                                         initWithAnnotation:annotation reuseIdentifier:defaultPinID];
         pinView.pinColor = MKPinAnnotationColorRed;
         pinView.canShowCallout = YES;
         pinView.animatesDrop = YES;

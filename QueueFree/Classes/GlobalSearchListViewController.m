@@ -7,7 +7,7 @@
 //
 
 #import "GlobalSearchListViewController.h"
-#import "QFGlobalSearchBrain.h"
+
 
 @interface GlobalSearchListViewController ()
 @property (nonatomic) BOOL isList;
@@ -32,6 +32,10 @@
 	// Do any additional setup after loading the view.
     self.isList = YES;
     self.viewChangeButton.title = @"地图";
+    
+    self.globalSearchMVC = [[GSMapViewController alloc]init];
+    
+    [self.view insertSubview:self.globalSearchMVC.mapView atIndex:0];
     
     // the Test for QFGlobalSearchBrain by Cui Hao
     
@@ -61,9 +65,6 @@
 
 - (void)viewDidUnload {
     [self setKeyword:nil];
-    [self setListView:nil];
-    [self setListView:nil];
-    [self setMapView:nil];
     [self setViewChangeButton:nil];
     [super viewDidUnload];
 }

@@ -1,8 +1,8 @@
 //
-//  NSMapViewController.h
+//  GSMapViewController.h
 //  QueueFree
 //
-//  Created by pursue_ct on 12-11-6.
+//  Created by pursue_ct on 12-11-12.
 //  Copyright (c) 2012年 BuG.BS. All rights reserved.
 //
 
@@ -11,7 +11,7 @@
 #import "Annotation.h"
 #import "AnnotationCreate.h"
 
-@interface NSMapViewController : UIViewController<MKMapViewDelegate,CLLocationManagerDelegate,MKAnnotation>
+@interface GSMapViewController : UIViewController<MKMapViewDelegate,CLLocationManagerDelegate,MKAnnotation>
 {
     CLLocationManager *locationManager;
 }
@@ -20,3 +20,4 @@
 - (void)ShowRegionOfTheUserLocationPressed;
 
 @end
+

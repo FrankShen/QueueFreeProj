@@ -246,6 +246,8 @@
 		4DA2BC8E164A926100345F08 /* location_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DA2BC8D164A926100345F08 /* location_button@2x.png */; };
 		4DA2BC90164A92BC00345F08 /* location_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DA2BC8F164A92BC00345F08 /* location_button.png */; };
 		4DA2BCA4164AC22400345F08 /* NSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA2BCA3164AC22400345F08 /* NSTableViewController.m */; };
+		4DBA906316514F9800CBDC5C /* GSMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DBA906216514F9800CBDC5C /* GSMapView.xib */; };
+		4DBA906616514FE700CBDC5C /* GSMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DBA906516514FE700CBDC5C /* GSMapViewController.m */; };
 		9B2E2D4F16502B51002DFC1A /* DishTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B2E2D4E16502B51002DFC1A /* DishTableViewCell.xib */; };
 		9B2E2D5316502CB0002DFC1A /* DishTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B2E2D5216502CB0002DFC1A /* DishTableViewCell.m */; };
 		9B2E2D5516503850002DFC1A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B2E2D5416503850002DFC1A /* QuartzCore.framework */; };
@@ -623,6 +625,9 @@
 		4DA2BC8F164A92BC00345F08 /* location_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location_button.png; sourceTree = "<group>"; };
 		4DA2BCA2164AC22300345F08 /* NSTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSTableViewController.h; sourceTree = "<group>"; };
 		4DA2BCA3164AC22400345F08 /* NSTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSTableViewController.m; sourceTree = "<group>"; };
+		4DBA906216514F9800CBDC5C /* GSMapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GSMapView.xib; sourceTree = "<group>"; };
+		4DBA906416514FE700CBDC5C /* GSMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSMapViewController.h; sourceTree = "<group>"; };
+		4DBA906516514FE700CBDC5C /* GSMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSMapViewController.m; sourceTree = "<group>"; };
 		9B2E2D4E16502B51002DFC1A /* DishTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DishTableViewCell.xib; sourceTree = "<group>"; };
 		9B2E2D5116502CB0002DFC1A /* DishTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DishTableViewCell.h; sourceTree = "<group>"; };
 		9B2E2D5216502CB0002DFC1A /* DishTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DishTableViewCell.m; sourceTree = "<group>"; };
@@ -1079,6 +1084,23 @@
 			name = TableView;
 			sourceTree = "<group>";
 		};
+		4DBA905E16514EF000CBDC5C /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = TableView;
+			sourceTree = "<group>";
+		};
+		4DBA906016514EFB00CBDC5C /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				4DBA906216514F9800CBDC5C /* GSMapView.xib */,
+				4DBA906416514FE700CBDC5C /* GSMapViewController.h */,
+				4DBA906516514FE700CBDC5C /* GSMapViewController.m */,
+			);
+			name = MapView;
+			sourceTree = "<group>";
+		};
 		9B4B69AA16504947000A99DD /* MBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -1133,6 +1155,8 @@
 		9B7148CF1649498E00721CD4 /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
+				4DBA906016514EFB00CBDC5C /* MapView */,
+				4DBA905E16514EF000CBDC5C /* TableView */,
 			);
 			name = SubViews;
 			sourceTree = "<group>";
@@ -1735,6 +1759,7 @@
 				3F289A85164E4BEC000DAABE /* 新雨花大酒店_6.jpg in Resources */,
 				3F289A8B164E4DD9000DAABE /* QueueFree.plist in Resources */,
 				9B2E2D4F16502B51002DFC1A /* DishTableViewCell.xib in Resources */,
+				4DBA906316514F9800CBDC5C /* GSMapView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1789,6 +1814,7 @@
 				9B4B69A516503FD8000A99DD /* UserFavourViewController.m in Sources */,
 				9B4B69A91650417C000A99DD /* UserFavourCell.m in Sources */,
 				9B4B69AD16504947000A99DD /* MBProgressHUD.m in Sources */,
+				4DBA906616514FE700CBDC5C /* GSMapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
