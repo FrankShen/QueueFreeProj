@@ -379,7 +379,8 @@
     if ([segue.identifier isEqualToString:@"RestaurantToBook"]){
         BookViewController *newVC = segue.destinationViewController;
         newVC.navigationItem.title = self.shopName;
-        newVC.peopleNumInt = self.peopleNum;
+        int row = [self.pickerView selectedRowInComponent:0];
+        newVC.peopleNumInt = row;
     }
 }
 
