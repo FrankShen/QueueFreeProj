@@ -12,7 +12,6 @@
 #import "AnnotationCreate.h"
 @protocol NSMapViewDelegate <NSObject>
 
-//- (void)performTheSegue: (id)sender;
 - (UIButton *) createTheButtonWithPinTitle:(NSString *)title;
 
 @end

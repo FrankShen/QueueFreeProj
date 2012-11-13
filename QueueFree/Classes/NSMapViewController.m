@@ -69,8 +69,6 @@
         self.mapView.delegate = self;
     
         [self.mapView addAnnotations:_annotations];
-        //[self.mapView addAnnotation:[_annotations objectAtIndex:1]];
-        //[self.mapView addAnnotation:[_annotations objectAtIndex:2]];
         [self.mapView setRegion:theRegin];
         
         [self.mapView regionThatFits:theRegin];
@@ -110,7 +108,6 @@
     MKPinAnnotationView *pinView = nil;
     NSString* tmp = annotation.title;
     NSLog(@"%@",tmp);
-    NSArray *root = [[[UIApplication sharedApplication] delegate] performSelector:@selector(getDataArray)];
     
     if(annotation != mapView.userLocation)
     {

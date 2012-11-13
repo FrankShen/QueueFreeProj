@@ -14,8 +14,7 @@
 
 
 @interface GlobalSearchListViewController : UIViewController{
-    
-    
+    int countsOfCreateButton;
 }
 @property (weak, nonatomic) IBOutlet UITextField *keyword;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *viewChangeButton;
