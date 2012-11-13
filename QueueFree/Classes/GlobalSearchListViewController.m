@@ -65,7 +65,6 @@
         
         searchBrain = [[QFGlobalSearchBrain alloc] init];
         
-        
         NSArray* resultList = [searchBrain theResultArrayForKeyWord:self.keyword.text];
         NSMutableArray *tempArr = [[NSMutableArray alloc] init];
         for (NSDictionary *rest in resultList) {

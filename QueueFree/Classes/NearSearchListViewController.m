@@ -10,7 +10,7 @@
 #import "Restaurant+Plist.h"
 
 
-@interface NearSearchListViewController ()<NSTableViewDelegate>
+@interface NearSearchListViewController ()< NSTableViewDelegate,NSMapViewDelegate >
 @property (nonatomic) BOOL isList;
 @end
 
@@ -39,6 +39,7 @@
     self.isList = NO;
     self.viewChangeButton.title = @"列表";
     self.nearSearchTVC.delegate = self;
+    self.nearSearchMVC.delegate = self;
 }
 
 
@@ -102,5 +103,12 @@
 {
     [self performSegueWithIdentifier:@"NearToRestaurant" sender:shopName];
 }
+
+-(void)performTheSegue:(id)sender
+{
+    [self performSegueWithIdentifier:@"NearToRestaurant" sender:(NSString *)[(UIButton *)sender tag]];
+}
+
+
 
 @end

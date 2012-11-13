@@ -10,6 +10,11 @@
 #import <MapKit/MapKit.h>
 #import "Annotation.h"
 #import "AnnotationCreate.h"
+@protocol NSMapViewDelegate <NSObject>
+
+- (void)performTheSegue: (id)sender;
+
+@end
 
 @interface NSMapViewController : UIViewController<MKMapViewDelegate,CLLocationManagerDelegate,MKAnnotation>
 {
@@ -17,7 +22,7 @@
 }
 
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
-
+@property (weak,nonatomic) id<NSMapViewDelegate> delegate;
 - (void)ShowRegionOfTheUserLocationPressed;
 
 @end

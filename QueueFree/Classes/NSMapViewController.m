@@ -64,6 +64,8 @@
         theRegin.span.latitudeDelta = 0.009f;
         theRegin.span.longitudeDelta = 0.009f;
         
+        
+        self.mapView.delegate = self;
         [self.mapView addAnnotations:_annotations];
         [self.mapView setRegion:theRegin];
         
@@ -98,26 +100,37 @@
 
 
 //add pins.
+
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
 {
     
     MKPinAnnotationView *pinView = nil;
     if(annotation != mapView.userLocation)
     {
-        static NSString *defaultPinID = @"com.invasivecode.pin";
+        static NSString *defaultPinID = @"地点";
         pinView = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:defaultPinID];
         if ( pinView == nil ) pinView = [[MKPinAnnotationView alloc]
                                           initWithAnnotation:annotation reuseIdentifier:defaultPinID];
         pinView.pinColor = MKPinAnnotationColorRed;
         pinView.canShowCallout = YES;
-        pinView.animatesDrop = YES;
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+        [button setTag:annotation];
+        [button addTarget:self action:@selector(performTheSegue:) forControlEvents:UIControlEventTouchUpInside];
+        pinView.rightCalloutAccessoryView = button;
         
     }
     else {
         [mapView.userLocation setTitle:annotation.title];
         [mapView.userLocation setSubtitle:annotation.subtitle];
+        
     }
+    
     return pinView;
+}
+
+-(void)prepareForSegueStart
+{
+    
 }
 
 - (void)viewDidUnload {
