@@ -10,6 +10,7 @@
 #import <MapKit/MapKit.h>
 #import "Annotation.h"
 #import "AnnotationCreate.h"
+#import "GSTableViewController.h"
 
 @interface GSMapViewController : UIViewController<MKMapViewDelegate,CLLocationManagerDelegate,MKAnnotation>
 {
@@ -17,6 +18,7 @@
 }
 
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
+@property (strong , nonatomic) NSArray *resultArrayForMap;
 
 @end
 

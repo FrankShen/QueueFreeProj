@@ -44,8 +44,24 @@
         
         theRegin.span.latitudeDelta = 0.09f;
         theRegin.span.longitudeDelta = 0.09f;
+        _annotations = [[NSMutableArray alloc] init];
         
-        //[self.mapView addAnnotations:_annotations];
+        
+        
+        for (NSDictionary *theRestaurant in self.resultArrayForMap) {
+            
+            NSString *name = [theRestaurant valueForKey:@"名称"];
+            NSString *address = [theRestaurant valueForKey:@"地址"];
+            double longtitude = [[theRestaurant valueForKey:@"东经"] doubleValue];
+            double latitude = [[theRestaurant valueForKey:@"北纬"] doubleValue];
+            
+            Annotation *anno = [AnnotationCreate createMapPointWithcoordinateX:latitude coordinateY:longtitude Title:name Subtitle:address];
+            
+            [_annotations addObject:anno];
+        }
+
+        
+        [self.mapView addAnnotations:_annotations];
         [self.mapView setRegion:theRegin];
         
         [self.mapView regionThatFits:theRegin];

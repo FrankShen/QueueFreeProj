@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *viewChangeButton;
 @property (weak, nonatomic) IBOutlet UIView *theFormerView;
 @property (strong, nonatomic) GSMapViewController* globalSearchMVC;
+@property (strong, nonatomic) GSMapViewController* globalSearchMVCTemp;
 @property (strong, nonatomic) GSTableViewController* globalSearchTVC;
 
 

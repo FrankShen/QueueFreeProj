@@ -12,6 +12,7 @@
 @interface GlobalSearchListViewController ()<GSTableViewDelegate>
 @property (nonatomic) BOOL isList;
 @property (nonatomic) BOOL hasList;
+@property (nonatomic) BOOL hasArrayOfMap;
 @property (nonatomic, strong) QFGlobalSearchBrain *searchBrain;
 @end
 
@@ -24,11 +25,12 @@
 	// Do any additional setup after loading the view.
     self.isList = YES;
     self.hasList = NO;
+    self.hasArrayOfMap = NO;
     self.viewChangeButton.title = @"地图";
     
-    
-    self.globalSearchMVC = [[GSMapViewController alloc]init];
     self.globalSearchTVC = [[GSTableViewController alloc]init];
+    self.globalSearchMVC = [GSMapViewController alloc];
+    self.globalSearchMVCTemp = [[GSMapViewController alloc]init];
     
     self.globalSearchTVC.delegate = self;
     
@@ -63,13 +65,16 @@
         
         searchBrain = [[QFGlobalSearchBrain alloc] init];
         
+        
         NSArray* resultList = [searchBrain theResultArrayForKeyWord:self.keyword.text];
         for (NSDictionary *rest in resultList) {
             NSLog(@"%@",[rest valueForKey:@"名称"]);
             self.globalSearchTVC.resultArray = [NSArray arrayWithObject:rest];
         }
-        
+        self.globalSearchMVC.resultArrayForMap = [NSArray arrayWithArray:self.globalSearchTVC.resultArray];
+        [self.globalSearchMVC init];
         [self.theFormerView insertSubview:self.globalSearchTVC.view atIndex:0];
+        self.hasArrayOfMap = YES;
         self.hasList = YES;
     }
 }
@@ -82,7 +87,13 @@
     [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.view cache:YES];
     if(self.isList)
     {
-        [self.theFormerView insertSubview:self.globalSearchMVC.mapView atIndex:1];
+        if(self.hasArrayOfMap)
+        {
+            [self.globalSearchMVCTemp.mapView removeFromSuperview];
+            [self.theFormerView insertSubview:self.globalSearchMVC.mapView atIndex:1];
+        }
+        else
+            [self.theFormerView insertSubview:self.globalSearchMVCTemp.mapView atIndex:1];
         self.isList = !self.isList;
     }
     else
@@ -90,7 +101,10 @@
         if(self.hasList)
             [self.theFormerView exchangeSubviewAtIndex:1 withSubviewAtIndex:0];
         else
-            [self.globalSearchMVC.mapView removeFromSuperview];
+            if(self.hasArrayOfMap)
+                [self.globalSearchMVC.mapView removeFromSuperview];
+            else
+                [self.globalSearchMVCTemp.mapView removeFromSuperview];
         self.isList = !self.isList;
     }
     [UIView setAnimationDelegate:self];
