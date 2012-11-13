@@ -34,8 +34,6 @@
     
     self.globalSearchTVC.delegate = self;
     
-    [self.theFormerView insertSubview:self.globalSearchMVC.mapView atIndex:0];
-    [self.theFormerView insertSubview:self.globalSearchTVC.view atIndex:0];
 }
 
 - (void)didReceiveMemoryWarning
@@ -75,7 +73,7 @@
         self.globalSearchMVC.resultArrayForMap = [NSArray arrayWithArray:self.globalSearchTVC.resultArray];
         [self.globalSearchTVC.gsTableView reloadData];
         [self.globalSearchMVC init];
-        //[self.theFormerView insertSubview:self.globalSearchTVC.view atIndex:0];
+        [self.theFormerView insertSubview:self.globalSearchTVC.view atIndex:0];
         self.hasArrayOfMap = YES;
         self.hasList = YES;
     }
