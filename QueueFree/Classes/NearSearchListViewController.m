@@ -103,11 +103,12 @@
 {
     [self performSegueWithIdentifier:@"NearToRestaurant" sender:shopName];
 }
-
+/*
 -(void)performTheSegue:(id)sender
 {
     [self performSegueWithIdentifier:@"NearToRestaurant" sender:(NSString *)[(UIButton *)sender tag]];
 }
+*/
 
 
 

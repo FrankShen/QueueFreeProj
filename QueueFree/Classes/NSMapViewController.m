@@ -114,7 +114,7 @@
         pinView.pinColor = MKPinAnnotationColorRed;
         pinView.canShowCallout = YES;
         UIButton *button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-        [button setTag:annotation];
+        [button setTag:(int)annotation.title];
         [button addTarget:self action:@selector(performTheSegue:) forControlEvents:UIControlEventTouchUpInside];
         pinView.rightCalloutAccessoryView = button;
         
