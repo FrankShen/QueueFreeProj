@@ -13,6 +13,7 @@
 #import "NSTableViewController.h"
 
 @interface NearSearchListViewController : UIViewController{
+    int countsOfCreateButton;
 }
 
 

@@ -40,21 +40,15 @@ double rad(double d)
     
     
     NSArray *root = [[[UIApplication sharedApplication] delegate] performSelector:@selector(getDataArray)];
-    //NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfFile:filePath];
     
     NSMutableArray *tmpDataArray = [[NSMutableArray alloc] init];
-    //NSMutableArray *tmpImageArray = [[NSMutableArray alloc] init];
     for (int i=0; i<[root count]; i++) {
         NSDictionary *dictionary = root[i];
        
         [tmpDataArray addObject:dictionary];
-        
-        //NSString *imageUrl = [[NSString alloc] initWithFormat:@"%i.png", i+1];
-        //UIImage *image = [UIImage imageNamed:imageUrl];
-        //[tmpImageArray addObject:image];
+    
     }
     self.dataList = [tmpDataArray copy];
-    //self.imageList = [tmpImageArray copy];
     
 }
 
@@ -64,11 +58,6 @@ double rad(double d)
     [super viewDidUnload];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 - (int)dictanceFromTheUserLocationWithDictionaryData:(NSDictionary *)dictionary
 {

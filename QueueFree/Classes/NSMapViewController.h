@@ -12,13 +12,15 @@
 #import "AnnotationCreate.h"
 @protocol NSMapViewDelegate <NSObject>
 
-- (void)performTheSegue: (id)sender;
+//- (void)performTheSegue: (id)sender;
+- (UIButton *) createTheButtonWithPinTitle:(NSString *)title;
 
 @end
 
 @interface NSMapViewController : UIViewController<MKMapViewDelegate,CLLocationManagerDelegate,MKAnnotation>
 {
     CLLocationManager *locationManager;
+    int pinIDCount;
 }
 
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;

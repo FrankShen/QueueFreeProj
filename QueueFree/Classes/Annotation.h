@@ -19,7 +19,7 @@
 
 @property (nonatomic,readonly) CLLocationCoordinate2D coordinate;
 @property (nonatomic,retain) NSString *subtitle;
-@property (nonatomic,retain) NSString *title;
+@property (nonatomic,strong) NSString *title;
 
 -(id) initWithCoords:(CLLocationCoordinate2D) coords;
 

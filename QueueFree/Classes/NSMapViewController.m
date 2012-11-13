@@ -8,9 +8,9 @@
 
 #import "NSMapViewController.h"
 
+
 @interface NSMapViewController ()
 @property (nonatomic, strong) NSMutableArray *annotations;
-
 @end
 
 @implementation NSMapViewController
@@ -43,6 +43,7 @@
         
         NSArray *root = [[[UIApplication sharedApplication] delegate] performSelector:@selector(getDataArray)];
         
+        
         for (NSDictionary *theRestaurant in root) {
             
             NSString *name = [theRestaurant valueForKey:@"名称"];
@@ -66,7 +67,10 @@
         
         
         self.mapView.delegate = self;
+    
         [self.mapView addAnnotations:_annotations];
+        //[self.mapView addAnnotation:[_annotations objectAtIndex:1]];
+        //[self.mapView addAnnotation:[_annotations objectAtIndex:2]];
         [self.mapView setRegion:theRegin];
         
         [self.mapView regionThatFits:theRegin];
@@ -74,7 +78,6 @@
         }
         return self;
 }
-
 
 
 - (void)ShowRegionOfTheUserLocationPressed{
@@ -105,18 +108,20 @@
 {
     
     MKPinAnnotationView *pinView = nil;
+    NSString* tmp = annotation.title;
+    NSLog(@"%@",tmp);
+    NSArray *root = [[[UIApplication sharedApplication] delegate] performSelector:@selector(getDataArray)];
+    
     if(annotation != mapView.userLocation)
     {
-        static NSString *defaultPinID = @"地点";
+        NSString *defaultPinID = [NSString stringWithFormat:@"%d",pinIDCount];
         pinView = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:defaultPinID];
         if ( pinView == nil ) pinView = [[MKPinAnnotationView alloc]
                                           initWithAnnotation:annotation reuseIdentifier:defaultPinID];
         pinView.pinColor = MKPinAnnotationColorRed;
         pinView.canShowCallout = YES;
-        UIButton *button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-        [button setTag:(int)annotation.title];
-        [button addTarget:self action:@selector(performTheSegue:) forControlEvents:UIControlEventTouchUpInside];
-        pinView.rightCalloutAccessoryView = button;
+        pinView.rightCalloutAccessoryView = [self.delegate createTheButtonWithPinTitle:tmp];
+        pinIDCount++;
         
     }
     else {
@@ -126,11 +131,6 @@
     }
     
     return pinView;
-}
-
--(void)prepareForSegueStart
-{
-    
 }
 
 - (void)viewDidUnload {
