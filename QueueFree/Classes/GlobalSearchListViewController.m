@@ -9,7 +9,7 @@
 #import "GlobalSearchListViewController.h"
 
 
-@interface GlobalSearchListViewController ()<GSTableViewDelegate>
+@interface GlobalSearchListViewController ()<GSTableViewDelegate,GSMapViewDelegate>
 @property (nonatomic) BOOL isList;
 @property (nonatomic) BOOL hasList;
 @property (nonatomic) BOOL hasArrayOfMap;
@@ -33,9 +33,8 @@
     self.globalSearchMVCTemp = [[GSMapViewController alloc]init];
     
     self.globalSearchTVC.delegate = self;
+    self.globalSearchMVC.delegate = self;
     
-    [self.theFormerView insertSubview:self.globalSearchMVC.mapView atIndex:0];
-    [self.theFormerView insertSubview:self.globalSearchTVC.view atIndex:0];
 }
 
 - (void)didReceiveMemoryWarning
@@ -65,7 +64,6 @@
         
         searchBrain = [[QFGlobalSearchBrain alloc] init];
         
-        
         NSArray* resultList = [searchBrain theResultArrayForKeyWord:self.keyword.text];
         NSMutableArray *tempArr = [[NSMutableArray alloc] init];
         for (NSDictionary *rest in resultList) {
@@ -76,7 +74,7 @@
         self.globalSearchMVC.resultArrayForMap = [NSArray arrayWithArray:self.globalSearchTVC.resultArray];
         [self.globalSearchTVC.gsTableView reloadData];
         [self.globalSearchMVC init];
-        //[self.theFormerView insertSubview:self.globalSearchTVC.view atIndex:0];
+        [self.theFormerView insertSubview:self.globalSearchTVC.view atIndex:0];
         self.hasArrayOfMap = YES;
         self.hasList = YES;
     }
@@ -133,6 +131,31 @@
 - (void)performSegue:(NSString *)shopName
 {
     [self performSegueWithIdentifier:@"GlobalToRestaurant" sender:shopName];
+}
+
+-(UIButton *)createTheButtonWithPinTitle:(NSString *)title
+{
+    NSArray *root = [[[UIApplication sharedApplication] delegate] performSelector:@selector(getDataArray)];
+    for(countsOfCreateButton = 0 ; countsOfCreateButton < [root count] ; countsOfCreateButton++)
+    {
+        if(title == [[root objectAtIndex:countsOfCreateButton] valueForKey:@"名称"])
+        {
+            break;
+        }
+    }
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    [button setTag:countsOfCreateButton];
+    [button addTarget:self action:@selector(performTheSegue:) forControlEvents:UIControlEventTouchUpInside];
+    return button;
+}
+
+-(void)performTheSegue:(id)sender
+{
+    NSArray *root = [[[UIApplication sharedApplication] delegate] performSelector:@selector(getDataArray)];
+    int index = [(UIButton *)sender tag];
+    NSString* name = [[root objectAtIndex:index] valueForKey:@"名称"];
+    [self performSegueWithIdentifier:@"GlobalToRestaurant" sender:name];
+    
 }
 
 @end

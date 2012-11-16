@@ -11,14 +11,21 @@
 #import "Annotation.h"
 #import "AnnotationCreate.h"
 #import "GSTableViewController.h"
+@protocol GSMapViewDelegate <NSObject>
+
+- (UIButton *) createTheButtonWithPinTitle:(NSString *)title;
+
+@end
 
 @interface GSMapViewController : UIViewController<MKMapViewDelegate,CLLocationManagerDelegate,MKAnnotation>
 {
     CLLocationManager *locationManager;
+    int pinIDCount;
 }
 
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 @property (strong , nonatomic) NSArray *resultArrayForMap;
+@property (weak,nonatomic) id<GSMapViewDelegate> delegate;
 
 @end
 

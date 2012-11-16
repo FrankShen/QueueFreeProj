@@ -10,21 +10,11 @@
 #import "Restaurant+Plist.h"
 
 
-@interface NearSearchListViewController ()<NSTableViewDelegate>
+@interface NearSearchListViewController ()< NSTableViewDelegate,NSMapViewDelegate >
 @property (nonatomic) BOOL isList;
 @end
 
 @implementation NearSearchListViewController
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
@@ -35,10 +25,13 @@
     
     [self.view insertSubview:self.nearSearchMVC.mapView atIndex:0];
     
+    countsOfCreateButton = 0;
+    
     
     self.isList = NO;
     self.viewChangeButton.title = @"列表";
     self.nearSearchTVC.delegate = self;
+    self.nearSearchMVC.delegate = self;
 }
 
 
@@ -101,6 +94,31 @@
 - (void)performSegue:(NSString *)shopName
 {
     [self performSegueWithIdentifier:@"NearToRestaurant" sender:shopName];
+}
+
+-(UIButton *)createTheButtonWithPinTitle:(NSString *)title
+{
+    NSArray *root = [[[UIApplication sharedApplication] delegate] performSelector:@selector(getDataArray)];
+    for(countsOfCreateButton = 0 ; countsOfCreateButton < [root count] ; countsOfCreateButton++)
+    {
+        if(title == [[root objectAtIndex:countsOfCreateButton] valueForKey:@"名称"])
+        {
+            break;
+        }
+    }
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    [button setTag:countsOfCreateButton];
+    [button addTarget:self action:@selector(performTheSegue:) forControlEvents:UIControlEventTouchUpInside];
+    return button;
+}
+
+-(void)performTheSegue:(id)sender
+{
+    NSArray *root = [[[UIApplication sharedApplication] delegate] performSelector:@selector(getDataArray)];
+    int index = [(UIButton *)sender tag];
+    NSString* name = [[root objectAtIndex:index] valueForKey:@"名称"];
+    [self performSegueWithIdentifier:@"NearToRestaurant" sender:name];
+    
 }
 
 @end

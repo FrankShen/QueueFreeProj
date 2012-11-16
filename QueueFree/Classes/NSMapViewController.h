@@ -10,14 +10,20 @@
 #import <MapKit/MapKit.h>
 #import "Annotation.h"
 #import "AnnotationCreate.h"
+@protocol NSMapViewDelegate <NSObject>
+
+- (UIButton *) createTheButtonWithPinTitle:(NSString *)title;
+
+@end
 
 @interface NSMapViewController : UIViewController<MKMapViewDelegate,CLLocationManagerDelegate,MKAnnotation>
 {
     CLLocationManager *locationManager;
+    int pinIDCount;
 }
 
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
-
+@property (weak,nonatomic) id<NSMapViewDelegate> delegate;
 - (void)ShowRegionOfTheUserLocationPressed;
 
 @end
