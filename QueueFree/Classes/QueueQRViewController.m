@@ -10,6 +10,8 @@
 #import "Barcode.h"
 #import <MessageUI/MessageUI.h>
 @interface QueueQRViewController ()<MFMailComposeViewControllerDelegate>
+@property (weak, nonatomic) IBOutlet UILabel *tempLabel;
+@property (weak, nonatomic) IBOutlet UIButton *refreshButton;
 @end
 
 @implementation QueueQRViewController
@@ -31,6 +33,7 @@
     [bar setupQRCode:self.codeStr];
     self.qrCode.image = [bar qRBarcode];
     self.queueNum.text = self.queueStr;
+    self.waitNum.text = [NSString stringWithFormat:@"%d", arc4random() % 21];
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,6 +45,9 @@
 - (void)viewDidUnload {
     [self setQrCode:nil];
     [self setQueueNum:nil];
+    [self setWaitNum:nil];
+    [self setRefreshButton:nil];
+    [self setTempLabel:nil];
     [super viewDidUnload];
 }
 - (IBAction)homePressed:(id)sender
@@ -82,5 +88,18 @@
     [self dismissModalViewControllerAnimated:YES];
 }
 
+- (IBAction)refreshPressed:(id)sender
+{
+    int num;
+    num = [self.waitNum.text intValue];
+    num--;
+    if (num < 0){
+        self.waitNum.text = @"";
+        self.tempLabel.text = @"已过号";
+        self.refreshButton.hidden = YES;
+    } else {
+        self.waitNum.text = [NSString stringWithFormat:@"%d", num];
+    }
+}
 
 @end

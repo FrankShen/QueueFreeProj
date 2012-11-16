@@ -13,4 +13,5 @@
 @property (strong, nonatomic) NSString *codeStr;
 @property (weak, nonatomic) IBOutlet UILabel *queueNum;
 @property (strong, nonatomic) NSString *queueStr;
+@property (weak, nonatomic) IBOutlet UILabel *waitNum;
 @end

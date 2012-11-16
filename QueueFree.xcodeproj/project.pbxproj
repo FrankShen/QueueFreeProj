@@ -332,6 +332,9 @@
 		9BE222CA1651A92600D0C2F7 /* UserCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE222C91651A92600D0C2F7 /* UserCenterViewController.m */; };
 		9BE222CC1651AAFD00D0C2F7 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE222CB1651AAFD00D0C2F7 /* MessageUI.framework */; };
 		9BE222CE1651B23200D0C2F7 /* intro.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BE222CD1651B23200D0C2F7 /* intro.png */; };
+		9BE222D7165236CD00D0C2F7 /* NSMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B7148D6164949F900721CD4 /* NSMapView.xib */; };
+		9BE222DB1652383300D0C2F7 /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BE222D91652383300D0C2F7 /* refresh.png */; };
+		9BE222DC1652383300D0C2F7 /* refresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BE222DA1652383300D0C2F7 /* refresh@2x.png */; };
 		9BF5DEC3164841B2008B189A /* 0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9BF5DEB0164841B2008B189A /* 0.jpg */; };
 		9BF5DEC4164841B2008B189A /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9BF5DEB1164841B2008B189A /* 1.jpg */; };
 		9BF5DEC5164841B2008B189A /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9BF5DEB2164841B2008B189A /* 2.jpg */; };
@@ -762,6 +765,8 @@
 		9BE222C91651A92600D0C2F7 /* UserCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCenterViewController.m; sourceTree = "<group>"; };
 		9BE222CB1651AAFD00D0C2F7 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		9BE222CD1651B23200D0C2F7 /* intro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intro.png; sourceTree = "<group>"; };
+		9BE222D91652383300D0C2F7 /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh.png; sourceTree = "<group>"; };
+		9BE222DA1652383300D0C2F7 /* refresh@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refresh@2x.png"; sourceTree = "<group>"; };
 		9BF5DEAC16484196008B189A /* StarTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarTableViewCell.h; sourceTree = "<group>"; };
 		9BF5DEAD16484196008B189A /* StarTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarTableViewCell.m; sourceTree = "<group>"; };
 		9BF5DEB0164841B2008B189A /* 0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.jpg; sourceTree = "<group>"; };
@@ -1319,6 +1324,8 @@
 			isa = PBXGroup;
 			children = (
 				3FC4AD0E164B816B00E73F8C /* Pictures */,
+				9BE222D91652383300D0C2F7 /* refresh.png */,
+				9BE222DA1652383300D0C2F7 /* refresh@2x.png */,
 				9BE222CD1651B23200D0C2F7 /* intro.png */,
 				9BE222C61651A80800D0C2F7 /* usercenter.png */,
 				4DA2BC8F164A92BC00345F08 /* location_button.png */,
@@ -1830,6 +1837,9 @@
 				9BE222C41651A16B00D0C2F7 /* GSTableCell.xib in Resources */,
 				9BE222C71651A80800D0C2F7 /* usercenter.png in Resources */,
 				9BE222CE1651B23200D0C2F7 /* intro.png in Resources */,
+				9BE222D7165236CD00D0C2F7 /* NSMapView.xib in Resources */,
+				9BE222DB1652383300D0C2F7 /* refresh.png in Resources */,
+				9BE222DC1652383300D0C2F7 /* refresh@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1968,7 +1978,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QueueFree/QueueFree-Prefix.pch";
 				INFOPLIST_FILE = "QueueFree/QueueFree-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1980,7 +1990,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QueueFree/QueueFree-Prefix.pch";
 				INFOPLIST_FILE = "QueueFree/QueueFree-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
