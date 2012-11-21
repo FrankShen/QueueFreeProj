@@ -2647,6 +2647,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <class className="QueueListCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/QueueListCell.h"/>
             <relationships>
+                <relationship kind="outlet" name="deskLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="queueNumLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="shopNameLabel" candidateClass="UILabel"/>
             </relationships>
@@ -2682,6 +2683,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <class className="UserBookListViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UserBookListViewController.h"/>
             <relationships>
+                <relationship kind="action" name="changeViewButton:"/>
                 <relationship kind="outlet" name="changeButton" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
             </relationships>
@@ -2709,6 +2711,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
     <inferredMetricsTieBreakers>
         <segue reference="KfG-yg-5yY"/>
         <segue reference="eff-Tr-S8r"/>
-        <segue reference="KJF-9F-dIp"/>
+        <segue reference="gFT-9W-FYp"/>
     </inferredMetricsTieBreakers>
 </document>

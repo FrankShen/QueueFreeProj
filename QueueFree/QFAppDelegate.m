@@ -15,7 +15,14 @@
     // Override point for customization after application launch.
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"QueueFree" ofType:@"plist"];
     
-    self.Database = [[NSArray alloc] initWithContentsOfFile:filePath];
+    self.Database = [[NSMutableArray alloc] initWithContentsOfFile:filePath];
+    for (int idx = 0; idx < self.Database.count; ++idx){
+        NSMutableDictionary *tempDic = [[self.Database objectAtIndex:idx] mutableCopy];
+        [tempDic setObject:[NSString stringWithFormat:@"%d",arc4random()%21] forKey:@"people0"];
+        [tempDic setObject:[NSString stringWithFormat:@"%d",arc4random()%21] forKey:@"people1"];
+        [tempDic setObject:[NSString stringWithFormat:@"%d",arc4random()%21] forKey:@"people2"];
+        [self.Database replaceObjectAtIndex:idx withObject:tempDic];
+    }
     return YES;
 }
 							

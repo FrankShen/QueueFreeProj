@@ -34,6 +34,11 @@
     }
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 70;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if(tableView == self.gsTableView)
@@ -41,10 +46,10 @@
         GSTableCell *cell = [self.gsTableView dequeueReusableCellWithIdentifier:@"GSTableCell"];
         NSDictionary *dicTmp = [self.resultArray objectAtIndex:indexPath.row ];
         
-        
         cell.shopName.text = [dicTmp objectForKey:@"名称"];
-        int queueNum = arc4random() % 21;
-        cell.queueNumberPeople.text = [NSString stringWithFormat:@"%d",queueNum];
+        cell.queueNumberPeople0.text = [dicTmp objectForKey:@"people0"];
+        cell.queueNumberPeople1.text = [dicTmp objectForKey:@"people1"];
+        cell.queueNumberPeople2.text = [dicTmp objectForKey:@"people2"];
         
         NSString *imageNumber = [dicTmp objectForKey:@"图片数量"];
         NSString *imagePath = [imageNumber isEqualToString:@"0"]?

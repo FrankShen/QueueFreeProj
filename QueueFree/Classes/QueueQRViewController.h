@@ -13,5 +13,7 @@
 @property (strong, nonatomic) NSString *codeStr;
 @property (weak, nonatomic) IBOutlet UILabel *queueNum;
 @property (strong, nonatomic) NSString *queueStr;
+@property (nonatomic) int peopleNum;
 @property (weak, nonatomic) IBOutlet UILabel *waitNum;
+@property (nonatomic) int index;
 @end

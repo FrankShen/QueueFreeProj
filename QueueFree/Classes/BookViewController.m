@@ -33,16 +33,10 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     if (self.peopleNumInt == 0){
-        self.peopleNum.text = @"1人";
+        self.peopleNum.text = @"1~2人";
     }else if (self.peopleNumInt == 1){
-        self.peopleNum.text = @"2人";
+        self.peopleNum.text = @"3~5人";
     }else if (self.peopleNumInt == 2){
-        self.peopleNum.text = @"3人";
-    }else if (self.peopleNumInt == 3){
-        self.peopleNum.text = @"4人";
-    }else if (self.peopleNumInt == 4){
-        self.peopleNum.text = @"5人";
-    }else if (self.peopleNumInt == 5){
         self.peopleNum.text = @"5人以上";
     }
     [self.picker addTarget:self action:@selector(dateChanged:)

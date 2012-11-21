@@ -34,6 +34,9 @@
 @property (weak, nonatomic) IBOutlet UIToolbar *toolBar;
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
 
+@property (nonatomic) int people0;
+@property (nonatomic) int people1;
+@property (nonatomic) int people2;
 
 // rootViewController
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;

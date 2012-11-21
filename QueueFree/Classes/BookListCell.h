@@ -11,5 +11,5 @@
 @interface BookListCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *shopNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
-
+@property (nonatomic) int index;
 @end

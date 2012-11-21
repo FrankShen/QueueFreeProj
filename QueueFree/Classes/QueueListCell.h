@@ -12,4 +12,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *shopNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *queueNumLabel;
 @property (strong, nonatomic) NSString *qrCode;
+@property (nonatomic) int index;
 @end

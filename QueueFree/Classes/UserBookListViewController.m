@@ -30,6 +30,11 @@
     return self;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self.tableView reloadData];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -68,7 +73,12 @@
     } else {
         QueueListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"QueueListCell"];
         cell.shopNameLabel.text = [[self.queueData objectAtIndex:indexPath.row] objectForKey:@"name"];
-        cell.queueNumLabel.text = [[self.queueData objectAtIndex:indexPath.row] objectForKey:@"queue"];
+        if ([[[self.queueData objectAtIndex:indexPath.row] objectForKey:@"peopleNum"] isEqualToString:@"已过号"]){
+            cell.queueNumLabel.text = @"已过号";
+        } else {
+            cell.queueNumLabel.text = [NSString stringWithFormat:@"%@桌",[[self.queueData objectAtIndex:indexPath.row] objectForKey:@"peopleNum"]];
+        }
+        cell.index = indexPath.row;
         return cell;
     }
 }
@@ -91,6 +101,8 @@
         newVC.navigationItem.title = [sender objectForKey:@"name"];
         newVC.queueStr = [sender objectForKey:@"queue"];
         newVC.codeStr = [sender objectForKey:@"qrcode"];
+        newVC.peopleNum = [[sender objectForKey:@"peopleNum"] intValue];
+        newVC.index = [[sender objectForKey:@"index"] intValue];
     }
     if ([segue.identifier isEqualToString:@"ListToBook"]){
         BookQRViewController *newVC = segue.destinationViewController;

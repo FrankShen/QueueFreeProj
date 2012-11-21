@@ -209,23 +209,14 @@
         int row = [self.pickerView selectedRowInComponent:0];
         NSString *msg;
         if (row == 0){
-            msg = @"人数：1人";
+            msg = @"人数：1~2人";
             self.peopleNum = 1;
         }else if (row == 1){
-            msg = @"人数：2人";
+            msg = @"人数：3~5人";
             self.peopleNum = 2;
         }else if (row == 2){
-            msg = @"人数：3人";
-            self.peopleNum = 3;
-        }else if (row == 3){
-            msg = @"人数：4人";
-            self.peopleNum = 4;
-        }else if (row == 4){
-            msg = @"人数：5人";
-            self.peopleNum = 5;
-        }else if (row == 5){
             msg = @"人数：5人以上";
-            self.peopleNum = 6;
+            self.peopleNum = 3;
         }
         msg = [NSString stringWithFormat:@"%@\n%@", self.shopName, msg];
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"确认领号" message:msg delegate:self cancelButtonTitle:@"取消领号" otherButtonTitles:@"排队领号",nil];
@@ -306,6 +297,9 @@
     for (int idx = 0; idx < self.dishInfo.count; ++idx){
         [self.dishImage addObject:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"%@", [self.dishInfo objectAtIndex:idx]] ofType:@"jpg"]]];
     }
+    self.people0 = [[finalDic objectForKey:@"people0"] intValue];
+    self.people1 = [[finalDic objectForKey:@"people1"] intValue];
+    self.people2 = [[finalDic objectForKey:@"people2"] intValue];
     //self.shopImage
 }
 
@@ -323,22 +317,16 @@
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
-    return 6;
+    return 3;
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
     if (row == 0){
-        return @"1人";
+        return @"1~2人";
     }else if (row == 1){
-        return @"2人";
+        return @"3~5人";
     }else if (row == 2){
-        return @"3人";
-    }else if (row == 3){
-        return @"4人";
-    }else if (row == 4){
-        return @"5人";
-    }else if (row == 5){
         return @"5人以上";
     }
 }
@@ -370,7 +358,17 @@
         NSString *queueCode = [NSString stringWithFormat:@"%d", arc4random()%1000];
         newVC.queueStr = queueCode;
         NSMutableArray *list = [[[NSUserDefaults standardUserDefaults] objectForKey:@"QueueList"] mutableCopy];
-        [list addObject:@{@"name":self.shopName, @"queue":queueCode, @"qrcode":sender}];
+
+        if (self.peopleNum == 1){
+            newVC.peopleNum = self.people0;
+        } else if (self.peopleNum == 2) {
+            newVC.peopleNum = self.people1;
+        } else if (self.peopleNum == 3) {
+            newVC.peopleNum = self.people2;
+        }
+        [list addObject:@{@"name":self.shopName, @"queue":queueCode, @"qrcode":sender, @"peopleNum":[NSString stringWithFormat:@"%d", newVC.peopleNum], @"inex":[NSString stringWithFormat:@"%d", list.count]}];
+        newVC.index = list.count-1;
+        NSLog(@"%@",list);
         [[NSUserDefaults standardUserDefaults] setObject:list forKey:@"QueueList"];
         [[NSUserDefaults standardUserDefaults] synchronize];
         NSLog(@"%@",list);

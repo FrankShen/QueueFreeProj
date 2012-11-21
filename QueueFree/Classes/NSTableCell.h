@@ -12,9 +12,10 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *shopImageView;
 @property (weak, nonatomic) IBOutlet UILabel *shopNameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *queuePeopleNumberLabel;
 @property (weak, nonatomic) IBOutlet UILabel *distanceToUserLocationLabel;
-
+@property (strong, nonatomic) IBOutlet UILabel *queueNumberPeople0;
+@property (strong, nonatomic) IBOutlet UILabel *queueNumberPeople1;
+@property (strong, nonatomic) IBOutlet UILabel *queueNumberPeople2;
 
 
 @end

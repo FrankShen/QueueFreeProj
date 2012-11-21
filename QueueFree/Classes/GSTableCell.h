@@ -12,6 +12,8 @@
 
 @property (strong, nonatomic) IBOutlet UIImageView *shopImageView;
 @property (strong, nonatomic) IBOutlet UILabel *shopName;
-@property (strong, nonatomic) IBOutlet UILabel *queueNumberPeople;
+@property (strong, nonatomic) IBOutlet UILabel *queueNumberPeople0;
+@property (strong, nonatomic) IBOutlet UILabel *queueNumberPeople1;
+@property (strong, nonatomic) IBOutlet UILabel *queueNumberPeople2;
 @property (strong, nonatomic) IBOutlet UILabel *shopAddress;
 @end

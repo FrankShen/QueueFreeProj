@@ -12,6 +12,8 @@
 @interface QueueQRViewController ()<MFMailComposeViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *tempLabel;
 @property (weak, nonatomic) IBOutlet UIButton *refreshButton;
+@property (strong, nonatomic) NSMutableArray *bookData;
+@property (strong, nonatomic) NSMutableDictionary *finalData;
 @end
 
 @implementation QueueQRViewController
@@ -33,7 +35,15 @@
     [bar setupQRCode:self.codeStr];
     self.qrCode.image = [bar qRBarcode];
     self.queueNum.text = self.queueStr;
-    self.waitNum.text = [NSString stringWithFormat:@"%d", arc4random() % 21];
+    self.waitNum.text = [NSString stringWithFormat:@"%d", self.peopleNum];
+    self.bookData = [[[NSUserDefaults standardUserDefaults] objectForKey:@"QueueList"] mutableCopy];
+    self.finalData = [[self.bookData objectAtIndex:self.index] mutableCopy];
+    self.waitNum.text = [self.finalData objectForKey:@"peopleNum"];
+    if ([[self.finalData objectForKey:@"peopleNum"] isEqualToString:@"已过号"]){
+        self.waitNum.text = @"";
+        self.tempLabel.text = @"已过号";
+        self.refreshButton.hidden = YES;
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -93,13 +103,20 @@
     int num;
     num = [self.waitNum.text intValue];
     num--;
-    if (num < 0){
+    if ((num < 0) || [[self.finalData objectForKey:@"peopleNum"] isEqualToString:@"已过号"]){
         self.waitNum.text = @"";
         self.tempLabel.text = @"已过号";
         self.refreshButton.hidden = YES;
     } else {
         self.waitNum.text = [NSString stringWithFormat:@"%d", num];
     }
+    [self.finalData setObject:self.waitNum.text forKey:@"peopleNum"];
+    if (num < 0){
+        [self.finalData setObject:@"已过号" forKey:@"peopleNum"];
+    }
+    [self.bookData replaceObjectAtIndex:self.index withObject:self.finalData];
+    [[NSUserDefaults standardUserDefaults] setObject:self.bookData forKey:@"QueueList"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 @end

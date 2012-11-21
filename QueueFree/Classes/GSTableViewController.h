@@ -22,4 +22,5 @@
 
 @property (weak,nonatomic) id<GSTableViewDelegate> delegate;
 @property (strong , nonatomic) NSArray *resultArray;
+
 @end

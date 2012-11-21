@@ -85,6 +85,12 @@ double rad(double d)
 }
 
 #pragma mark TableView Methods
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 70;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if(tableView == self.nsTableView)
     {
@@ -101,8 +107,9 @@ double rad(double d)
         
         
         cell.shopNameLabel.text = [dicTmp objectForKey:@"名称"];
-        int queueNum = arc4random() % 21;
-        cell.queuePeopleNumberLabel.text = [NSString stringWithFormat:@"%d",queueNum];
+        cell.queueNumberPeople0.text = [dicTmp objectForKey:@"people0"];
+        cell.queueNumberPeople1.text = [dicTmp objectForKey:@"people1"];
+        cell.queueNumberPeople2.text = [dicTmp objectForKey:@"people2"];
         cell.distanceToUserLocationLabel.text = [NSString stringWithFormat:@"%d",[self dictanceFromTheUserLocationWithDictionaryData:dicTmp]];
         
         NSString *imageNumber = [dicTmp objectForKey:@"图片数量"];
