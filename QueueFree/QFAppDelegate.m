@@ -84,7 +84,6 @@
         [self.socket readDataWithTimeout:-1 tag:SIGNAL_1];
     } else if ([signal isEqualToString:@"2"]){
         [self.socket writeData:data withTimeout:-1 tag:SIGNAL_2];
-        
     } else if ([signal isEqualToString:@"3"]){
         [self.socket writeData:data withTimeout:-1 tag:SIGNAL_3];
         [self.socket readDataWithTimeout:-1 tag:SIGNAL_3];

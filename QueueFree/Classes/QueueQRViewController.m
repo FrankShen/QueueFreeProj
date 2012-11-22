@@ -54,6 +54,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    ((QFAppDelegate *)[[UIApplication sharedApplication] delegate]).DataDelegate = self;
+}
+
 - (void)viewDidUnload {
     [self setQrCode:nil];
     [self setQueueNum:nil];

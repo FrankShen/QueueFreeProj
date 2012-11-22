@@ -100,6 +100,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    ((QFAppDelegate *)[[UIApplication sharedApplication] delegate]).DataDelegate = self;
     self.shopImageView.alpha = 0.0f;
     [self playAnimation];
 }
@@ -338,8 +339,14 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if (buttonIndex == 1) {
-        self.qrCode = @"";
-        for (int idx = 0; idx < 6; ++idx){
+        if (self.peopleNum == 1){
+            self.qrCode = @"1";
+        } else if (self.peopleNum == 2) {
+            self.qrCode = @"2";
+        } else if (self.peopleNum == 3) {
+            self.qrCode = @"3";
+        }
+        for (int idx = 0; idx < 5; ++idx){
             self.qrCode = [self.qrCode stringByAppendingFormat:@"%d",arc4random()%10];
         }
         if ([self.shopName isEqualToString:@"沈家花园(控江店)"]) {
@@ -404,6 +411,8 @@
     } else if (self.peopleNum == 3) {
         people = self.people2;
     }
+    self.qrCode = [self.qrCode substringToIndex:3];
+    self.qrCode = [self.qrCode stringByAppendingString:sender];
     [self performSegueWithIdentifier:@"RestaurantToQueue" sender:@{@"queueCode":sender, @"peopleNum":[NSNumber numberWithInt:people]}];
 }
 

@@ -49,6 +49,11 @@
     [super viewDidUnload];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    ((QFAppDelegate *)[[UIApplication sharedApplication] delegate]).DataDelegate = self;
+}
+
 - (IBAction)viewChangeButtonPressed:(id)sender
 {
     [UIView beginAnimations:nil context:nil];
