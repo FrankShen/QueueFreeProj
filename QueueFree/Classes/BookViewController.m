@@ -169,7 +169,7 @@
         [[NSUserDefaults standardUserDefaults] synchronize];
         NSLog(@"%@",list);
         [newVC.navigationItem setHidesBackButton:YES];
-        if ([self.navigationItem.title isEqualToString:@"沈家花园(控江路)"]){
+        if ([self.navigationItem.title isEqualToString:@"Salabim意式餐厅(赤峰路店)"]){
             NSString *msg = [NSString stringWithFormat:@"2;%@;%@;",newVC.codeStr,self.name.text];
             [[[UIApplication sharedApplication] delegate] performSelector:@selector(sendData:) withObject:@{@"signal":@"2", @"data":[msg dataUsingEncoding:NSUTF8StringEncoding]}];
         }

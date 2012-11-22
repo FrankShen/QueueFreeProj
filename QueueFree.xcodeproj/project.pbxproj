@@ -251,6 +251,7 @@
 		4DBA906316514F9800CBDC5C /* GSMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DBA906216514F9800CBDC5C /* GSMapView.xib */; };
 		4DBA906616514FE700CBDC5C /* GSMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DBA906516514FE700CBDC5C /* GSMapViewController.m */; };
 		9B006DDF1651665900342546 /* QueueQRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B006DDE1651665900342546 /* QueueQRViewController.m */; };
+		9B2036B9165E36EE0076928F /* qsns.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B2036B8165E36EE0076928F /* qsns.png */; };
 		9B2E2D4F16502B51002DFC1A /* DishTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B2E2D4E16502B51002DFC1A /* DishTableViewCell.xib */; };
 		9B2E2D5316502CB0002DFC1A /* DishTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B2E2D5216502CB0002DFC1A /* DishTableViewCell.m */; };
 		9B2E2D5516503850002DFC1A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B2E2D5416503850002DFC1A /* QuartzCore.framework */; };
@@ -654,6 +655,7 @@
 		4DBA906516514FE700CBDC5C /* GSMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSMapViewController.m; sourceTree = "<group>"; };
 		9B006DDD1651665900342546 /* QueueQRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueueQRViewController.h; sourceTree = "<group>"; };
 		9B006DDE1651665900342546 /* QueueQRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueueQRViewController.m; sourceTree = "<group>"; };
+		9B2036B8165E36EE0076928F /* qsns.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qsns.png; sourceTree = "<group>"; };
 		9B2E2D4E16502B51002DFC1A /* DishTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DishTableViewCell.xib; sourceTree = "<group>"; };
 		9B2E2D5116502CB0002DFC1A /* DishTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DishTableViewCell.h; sourceTree = "<group>"; };
 		9B2E2D5216502CB0002DFC1A /* DishTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DishTableViewCell.m; sourceTree = "<group>"; };
@@ -1344,6 +1346,7 @@
 		9BFB1C661637FB160053200A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9B2036B8165E36EE0076928F /* qsns.png */,
 				3FC4AD0E164B816B00E73F8C /* Pictures */,
 				9BE222D91652383300D0C2F7 /* refresh.png */,
 				9BE222DA1652383300D0C2F7 /* refresh@2x.png */,
@@ -1861,6 +1864,7 @@
 				9BE222D7165236CD00D0C2F7 /* NSMapView.xib in Resources */,
 				9BE222DB1652383300D0C2F7 /* refresh.png in Resources */,
 				9BE222DC1652383300D0C2F7 /* refresh@2x.png in Resources */,
+				9B2036B9165E36EE0076928F /* qsns.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

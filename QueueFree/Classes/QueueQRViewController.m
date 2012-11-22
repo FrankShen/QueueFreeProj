@@ -124,7 +124,7 @@
     [self.bookData replaceObjectAtIndex:self.index withObject:self.finalData];
     [[NSUserDefaults standardUserDefaults] setObject:self.bookData forKey:@"QueueList"];
     [[NSUserDefaults standardUserDefaults] synchronize];
-    if ([self.navigationItem.title isEqualToString:@"沈家花园(控江店)"]){
+    if ([self.navigationItem.title isEqualToString:@"Salabim意式餐厅(赤峰路店)"]){
         [[[UIApplication sharedApplication] delegate] performSelector:@selector(sendData:) withObject:@{@"data":[[NSString stringWithFormat:@"3;%@;",self.queueNum.text] dataUsingEncoding:NSUTF8StringEncoding], @"signal":@"3"}];
     }
 }
@@ -132,7 +132,7 @@
 - (void)reloadDataOK:(id)sender
 {
     self.waitNum.text = sender;
-    if ([sender isEqualToString:@"0"]){
+    if ([sender isEqualToString:@"-1"]){
         self.waitNum.text = @"";
         self.tempLabel.text = @"已过号";
         self.refreshButton.hidden = YES;
@@ -141,6 +141,8 @@
         [[NSUserDefaults standardUserDefaults] setObject:self.bookData forKey:@"QueueList"];
         [[NSUserDefaults standardUserDefaults] synchronize];
     } else {
+        self.refreshButton.hidden = NO;
+        self.tempLabel.text = @"在您之前还有   桌";
         [self.finalData setObject:sender forKey:@"peopleNum"];
         [self.bookData replaceObjectAtIndex:self.index withObject:self.finalData];
         [[NSUserDefaults standardUserDefaults] setObject:self.bookData forKey:@"QueueList"];

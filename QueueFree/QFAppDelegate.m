@@ -77,6 +77,8 @@
 
 - (void) sendData:(NSDictionary *)sender
 {
+    [self.socket connectToHost:self.ipaddress onPort:self.portAddress error:nil];
+    NSLog(@"%d",self.socket.isConnected);
     NSData *data = [sender objectForKey:@"data"];
     NSString *signal = [sender objectForKey:@"signal"];
     if ([signal isEqualToString:@"1"]){
@@ -98,6 +100,7 @@
 - (void)socket:(GCDAsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag
 {
     NSString *msg = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSLog(@"%@",msg);
     if (tag == SIGNAL_1) {
         [self.DataDelegate reloadDataOK:msg];
     } else if (tag == SIGNAL_3) {
@@ -110,13 +113,13 @@
         range = [msg2 rangeOfString:@";"];
         NSString *people1 = [msg2 substringToIndex:range.location];
         NSString *people2 = [msg2 substringFromIndex:range.location+1];
-        people2 = [people2 substringToIndex:people2.length-2];
+        people2 = [people2 substringToIndex:people2.length-1];
         
-        NSMutableDictionary *dic = [[self.Database objectAtIndex:11] mutableCopy];
+        NSMutableDictionary *dic = [[self.Database objectAtIndex:10] mutableCopy];
         [dic setObject:people0 forKey:@"people0"];
         [dic setObject:people1 forKey:@"people1"];
         [dic setObject:people2 forKey:@"people2"];
-        [self.Database replaceObjectAtIndex:11 withObject:dic];
+        [self.Database replaceObjectAtIndex:10 withObject:dic];
         [self.DataDelegate reloadDataOK:nil];
     }
 }

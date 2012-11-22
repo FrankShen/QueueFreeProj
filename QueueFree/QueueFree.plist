@@ -837,53 +837,6 @@
 	</dict>
 	<dict>
 		<key>东经</key>
-		<string>121.5186</string>
-		<key>停车信息</key>
-		<string>10</string>
-		<key>公交信息</key>
-		<array>
-			<string>70</string>
-			<string>843</string>
-			<string>6</string>
-			<string>871</string>
-			<string>14</string>
-			<string>554</string>
-			<string>713</string>
-		</array>
-		<key>其他信息</key>
-		<string></string>
-		<key>北纬</key>
-		<string>31.2755</string>
-		<key>名称</key>
-		<string>迈玛瑞</string>
-		<key>图片数量</key>
-		<string>4</string>
-		<key>地址</key>
-		<string>杨浦区江浦路1526号(近控江路)</string>
-		<key>电话</key>
-		<string>021-65632516</string>
-		<key>菜品信息</key>
-		<array>
-			<string>红烧肉</string>
-			<string>酱鸭舌</string>
-			<string>菌菇羹</string>
-			<string>龙虾</string>
-			<string>秘制小甲鱼</string>
-			<string>牛排</string>
-		</array>
-		<key>营业时间</key>
-		<array>
-			<string>8:00</string>
-			<string>20:00</string>
-		</array>
-		<key>餐厅特色</key>
-		<array>
-			<string>可以刷卡</string>
-			<string>免费停车</string>
-		</array>
-	</dict>
-	<dict>
-		<key>东经</key>
 		<string>121.5036</string>
 		<key>停车信息</key>
 		<string>10</string>

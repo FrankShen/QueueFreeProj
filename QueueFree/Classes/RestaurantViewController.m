@@ -349,8 +349,8 @@
         for (int idx = 0; idx < 5; ++idx){
             self.qrCode = [self.qrCode stringByAppendingFormat:@"%d",arc4random()%10];
         }
-        if ([self.shopName isEqualToString:@"沈家花园(控江店)"]) {
-            [[[UIApplication sharedApplication] delegate] performSelector:@selector(sendData:) withObject:@{@"signal":@"4", @"data":[[NSString stringWithFormat:@"1;%@;",self.qrCode] dataUsingEncoding:NSUTF8StringEncoding]}];
+        if ([self.shopName isEqualToString:@"Salabim意式餐厅(赤峰路店)"]) {
+            [[[UIApplication sharedApplication] delegate] performSelector:@selector(sendData:) withObject:@{@"signal":@"1", @"data":[[NSString stringWithFormat:@"1;%@;",self.qrCode] dataUsingEncoding:NSUTF8StringEncoding]}];
         } else {
             NSString *queueCode;
             int people;
@@ -411,8 +411,7 @@
     } else if (self.peopleNum == 3) {
         people = self.people2;
     }
-    self.qrCode = [self.qrCode substringToIndex:3];
-    self.qrCode = [self.qrCode stringByAppendingString:sender];
+    self.qrCode = [sender substringFromIndex:1];
     [self performSegueWithIdentifier:@"RestaurantToQueue" sender:@{@"queueCode":sender, @"peopleNum":[NSNumber numberWithInt:people]}];
 }
 
