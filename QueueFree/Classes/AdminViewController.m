@@ -35,4 +35,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewDidUnload {
+    [self setIpLabel:nil];
+    [self setPortLabel:nil];
+    [super viewDidUnload];
+}
+- (IBAction)connectButtonPressed:(id)sender {
+    [[[UIApplication sharedApplication] delegate] performSelector:@selector(connectWithIPAndPort:) withObject:@{@"ip":self.ipLabel.text, @"port":self.portLabel.text}];
+}
 @end

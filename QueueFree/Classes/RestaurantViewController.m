@@ -11,12 +11,14 @@
 #import <QuartzCore/QuartzCore.h>
 #import "QueueQRViewController.h"
 #import "BookViewController.h"
-@interface RestaurantViewController ()<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate,MBProgressHUDDelegate,UIPickerViewAccessibilityDelegate,UIPickerViewDataSource,UIPickerViewDelegate,UIAlertViewDelegate>
+#import "QFAppDelegate.h"
+@interface RestaurantViewController ()<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate,MBProgressHUDDelegate,UIPickerViewAccessibilityDelegate,UIPickerViewDataSource,UIPickerViewDelegate,UIAlertViewDelegate,QFAppDelegate>
 @property (nonatomic, strong) UIView *infoView;
 @property (nonatomic) int shopPhotoNum;
 @property (nonatomic) int currentShopImageIdx;
 @property (nonatomic) BOOL isBook;
 @property (nonatomic) int peopleNum;
+@property (nonatomic,strong) NSString *qrCode;
 @end
 
 @implementation RestaurantViewController
@@ -72,6 +74,8 @@
     
     self.toolBar.frame = CGRectMake(0, 480, 320, 44);
     self.pickerView.frame = CGRectMake(0, 480, 320, 216);
+    
+    ((QFAppDelegate *)[[UIApplication sharedApplication] delegate]).DataDelegate = self;
 }
 
 - (void)playAnimation
@@ -334,12 +338,27 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if (buttonIndex == 1) {
-        NSString *msg = @"";
-        msg = [msg stringByAppendingFormat:@"%d",self.peopleNum];
-        for (int idx = 0; idx < 5; ++idx) {
-            msg = [msg stringByAppendingFormat:@"%d",arc4random()%10];
+        self.qrCode = @"";
+        for (int idx = 0; idx < 6; ++idx){
+            self.qrCode = [self.qrCode stringByAppendingFormat:@"%d",arc4random()%10];
         }
-        [self performSegueWithIdentifier:@"RestaurantToQueue" sender:msg];
+        if ([self.shopName isEqualToString:@"沈家花园(控江店)"]) {
+            [[[UIApplication sharedApplication] delegate] performSelector:@selector(sendData:) withObject:@{@"signal":@"4", @"data":[[NSString stringWithFormat:@"1;%@;",self.qrCode] dataUsingEncoding:NSUTF8StringEncoding]}];
+        } else {
+            NSString *queueCode;
+            int people;
+            if (self.peopleNum == 1){
+                people = self.people0;
+                queueCode = [NSString stringWithFormat:@"1%d", self.people0+1];
+            } else if (self.peopleNum == 2) {
+                people = self.people1;
+                queueCode = [NSString stringWithFormat:@"2%d", self.people1+1];
+            } else if (self.peopleNum == 3) {
+                people = self.people2;
+                queueCode = [NSString stringWithFormat:@"3%d", self.people2+1];
+            }
+            [self performSegueWithIdentifier:@"RestaurantToQueue" sender:@{@"queueCode":queueCode, @"peopleNum":[NSNumber numberWithInt:people]}];
+        }
     }
     [alertView dismissWithClickedButtonIndex:buttonIndex animated:YES];
     [alertView removeFromSuperview];
@@ -353,20 +372,12 @@
 {
     if ([segue.identifier isEqualToString:@"RestaurantToQueue"]){
         QueueQRViewController *newVC = segue.destinationViewController;
-        newVC.codeStr = sender;
+        newVC.codeStr = self.qrCode;
         newVC.navigationItem.title = self.shopName;
-        NSString *queueCode = [NSString stringWithFormat:@"%d", arc4random()%1000];
-        newVC.queueStr = queueCode;
+        newVC.peopleNum = [[sender objectForKey:@"peopleNum"] intValue];
         NSMutableArray *list = [[[NSUserDefaults standardUserDefaults] objectForKey:@"QueueList"] mutableCopy];
-
-        if (self.peopleNum == 1){
-            newVC.peopleNum = self.people0;
-        } else if (self.peopleNum == 2) {
-            newVC.peopleNum = self.people1;
-        } else if (self.peopleNum == 3) {
-            newVC.peopleNum = self.people2;
-        }
-        [list addObject:@{@"name":self.shopName, @"queue":queueCode, @"qrcode":sender, @"peopleNum":[NSString stringWithFormat:@"%d", newVC.peopleNum], @"inex":[NSString stringWithFormat:@"%d", list.count]}];
+        newVC.queueStr = [sender objectForKey:@"queueCode"];
+        [list addObject:@{@"name":self.shopName, @"queue":newVC.queueStr, @"qrcode":self.qrCode, @"peopleNum":[NSString stringWithFormat:@"%d", newVC.peopleNum], @"index":[NSString stringWithFormat:@"%d", list.count]}];
         newVC.index = list.count-1;
         NSLog(@"%@",list);
         [[NSUserDefaults standardUserDefaults] setObject:list forKey:@"QueueList"];
@@ -380,8 +391,20 @@
         int row = [self.pickerView selectedRowInComponent:0];
         newVC.peopleNumInt = row;
     }
+
 }
 
-
+- (void)reloadDataOK:(id)sender
+{
+    int people;
+    if (self.peopleNum == 1){
+        people = self.people0;
+    } else if (self.peopleNum == 2) {
+        people = self.people1;
+    } else if (self.peopleNum == 3) {
+        people = self.people2;
+    }
+    [self performSegueWithIdentifier:@"RestaurantToQueue" sender:@{@"queueCode":sender, @"peopleNum":[NSNumber numberWithInt:people]}];
+}
 
 @end

@@ -573,6 +573,9 @@
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="connectButtonPressed:" destination="9Ao-bm-HfS" eventType="touchUpInside" id="b6x-05-bl2"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="a4b-7U-Wrf">
                                 <rect key="frame" x="38" y="135" width="245" height="261"/>
@@ -585,6 +588,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="OOH-yC-f4r"/>
+                    <connections>
+                        <outlet property="ipLabel" destination="LRX-Fx-4HC" id="m7x-oS-XE7"/>
+                        <outlet property="portLabel" destination="khm-nR-lNJ" id="gWT-tE-wAg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6g4-fk-1dP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2581,128 +2588,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="tab_bar_star_unselected.png" width="100" height="49"/>
         <image name="usercenter.png" width="640" height="832"/>
     </resources>
-    <classes>
-        <class className="AdminViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AdminViewController.h"/>
-        </class>
-        <class className="BookListCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BookListCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="shopNameLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="BookQRViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BookQRViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="qrCode" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="BookViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BookViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="date" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="name" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="peopleNum" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="phone" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="picker" candidateClass="UIDatePicker"/>
-            </relationships>
-        </class>
-        <class className="CustomTabBarView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomTabBarView.h"/>
-            <relationships>
-                <relationship kind="outlet" name="homeButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="qsnsButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="starButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="GlobalSearchListViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GlobalSearchListViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="keyword" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="theFormerView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="viewChangeButton" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-        <class className="NearSearchListViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NearSearchListViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="viewChangeButton" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-        <class className="QFNavigationBar" superclassName="UINavigationBar">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/QFNavigationBar.h"/>
-        </class>
-        <class className="QFViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/QFViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="CustomTabBar" candidateClass="UIView"/>
-                <relationship kind="outlet" name="StarTableView" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="TabBar" candidateClass="CustomTabBarView"/>
-                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
-            </relationships>
-        </class>
-        <class className="QueueListCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/QueueListCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="deskLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="queueNumLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="shopNameLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="QueueQRViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/QueueQRViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="qrCode" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="queueNum" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="refreshButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="tempLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="waitNum" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="RestaurantViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RestaurantViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="addressLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="dishTableView" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="phoneLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="pickerView" candidateClass="UIPickerView"/>
-                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="shopImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="shopNameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="starLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="timeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="toolBar" candidateClass="UIToolbar"/>
-            </relationships>
-        </class>
-        <class className="SettingViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingViewController.h"/>
-        </class>
-        <class className="UserBookListViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UserBookListViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="changeViewButton:"/>
-                <relationship kind="outlet" name="changeButton" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="UserCenterViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UserCenterViewController.h"/>
-        </class>
-        <class className="UserFavourCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UserFavourCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="shopAddress" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="shopImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="shopName" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="UserFavourViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UserFavourViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

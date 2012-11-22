@@ -9,7 +9,8 @@
 #import "QueueQRViewController.h"
 #import "Barcode.h"
 #import <MessageUI/MessageUI.h>
-@interface QueueQRViewController ()<MFMailComposeViewControllerDelegate>
+#import "QFAppDelegate.h"
+@interface QueueQRViewController ()<MFMailComposeViewControllerDelegate,QFAppDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *tempLabel;
 @property (weak, nonatomic) IBOutlet UIButton *refreshButton;
 @property (strong, nonatomic) NSMutableArray *bookData;
@@ -44,6 +45,7 @@
         self.tempLabel.text = @"已过号";
         self.refreshButton.hidden = YES;
     }
+    ((QFAppDelegate *)[[UIApplication sharedApplication] delegate]).DataDelegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -117,6 +119,29 @@
     [self.bookData replaceObjectAtIndex:self.index withObject:self.finalData];
     [[NSUserDefaults standardUserDefaults] setObject:self.bookData forKey:@"QueueList"];
     [[NSUserDefaults standardUserDefaults] synchronize];
+    if ([self.navigationItem.title isEqualToString:@"沈家花园(控江店)"]){
+        [[[UIApplication sharedApplication] delegate] performSelector:@selector(sendData:) withObject:@{@"data":[[NSString stringWithFormat:@"3;%@;",self.queueNum.text] dataUsingEncoding:NSUTF8StringEncoding], @"signal":@"3"}];
+    }
 }
+
+- (void)reloadDataOK:(id)sender
+{
+    self.waitNum.text = sender;
+    if ([sender isEqualToString:@"0"]){
+        self.waitNum.text = @"";
+        self.tempLabel.text = @"已过号";
+        self.refreshButton.hidden = YES;
+        [self.finalData setObject:@"已过号" forKey:@"peopleNum"];
+        [self.bookData replaceObjectAtIndex:self.index withObject:self.finalData];
+        [[NSUserDefaults standardUserDefaults] setObject:self.bookData forKey:@"QueueList"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    } else {
+        [self.finalData setObject:sender forKey:@"peopleNum"];
+        [self.bookData replaceObjectAtIndex:self.index withObject:self.finalData];
+        [[NSUserDefaults standardUserDefaults] setObject:self.bookData forKey:@"QueueList"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+}
+
 
 @end

@@ -8,9 +8,9 @@
 
 #import "NearSearchListViewController.h"
 #import "Restaurant+Plist.h"
+#import "QFAppDelegate.h"
 
-
-@interface NearSearchListViewController ()< NSTableViewDelegate,NSMapViewDelegate >
+@interface NearSearchListViewController ()< NSTableViewDelegate,NSMapViewDelegate,QFAppDelegate>
 @property (nonatomic) BOOL isList;
 @end
 
@@ -32,6 +32,9 @@
     self.viewChangeButton.title = @"列表";
     self.nearSearchTVC.delegate = self;
     self.nearSearchMVC.delegate = self;
+    
+    ((QFAppDelegate *)[[UIApplication sharedApplication] delegate]).DataDelegate = self;
+    [[[UIApplication sharedApplication] delegate] performSelector:@selector(sendData:) withObject:@{@"signal":@"4", @"data":[@"4;" dataUsingEncoding:NSUTF8StringEncoding]}];
 }
 
 
@@ -119,6 +122,11 @@
     NSString* name = [[root objectAtIndex:index] valueForKey:@"名称"];
     [self performSegueWithIdentifier:@"NearToRestaurant" sender:name];
     
+}
+
+- (void)reloadDataOK:(id)sender
+{
+    [self.nearSearchTVC.nsTableView reloadData];
 }
 
 @end

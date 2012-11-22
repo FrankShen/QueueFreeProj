@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface AdminViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *ipLabel;
+@property (weak, nonatomic) IBOutlet UITextField *portLabel;
 
 @end

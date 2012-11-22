@@ -7,9 +7,10 @@
 //
 
 #import "GlobalSearchListViewController.h"
+#import "QFAppDelegate.h"
 
 
-@interface GlobalSearchListViewController ()<GSTableViewDelegate,GSMapViewDelegate>
+@interface GlobalSearchListViewController ()<GSTableViewDelegate,GSMapViewDelegate,QFAppDelegate>
 @property (nonatomic) BOOL isList;
 @property (nonatomic) BOOL hasList;
 @property (nonatomic) BOOL hasArrayOfMap;
@@ -34,6 +35,9 @@
     
     self.globalSearchTVC.delegate = self;
     self.globalSearchMVC.delegate = self;
+    
+    ((QFAppDelegate *)[[UIApplication sharedApplication] delegate]).DataDelegate = self;
+    [[[UIApplication sharedApplication] delegate] performSelector:@selector(sendData:) withObject:@{@"signal":@"4", @"data":[@"4;" dataUsingEncoding:NSUTF8StringEncoding]}];
     
 }
 
@@ -156,6 +160,11 @@
     NSString* name = [[root objectAtIndex:index] valueForKey:@"名称"];
     [self performSegueWithIdentifier:@"GlobalToRestaurant" sender:name];
     
+}
+
+- (void)reloadDataOK:(id)sender
+{
+    [self.globalSearchTVC.gsTableView reloadData];
 }
 
 @end

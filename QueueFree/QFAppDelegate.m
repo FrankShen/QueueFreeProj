@@ -23,6 +23,13 @@
         [tempDic setObject:[NSString stringWithFormat:@"%d",arc4random()%21] forKey:@"people2"];
         [self.Database replaceObjectAtIndex:idx withObject:tempDic];
     }
+    
+    self.socket = [[GCDAsyncSocket alloc] initWithDelegate:self delegateQueue:dispatch_get_main_queue()];
+    
+    NSString *msg = @"1;2;3";
+
+    
+    
     return YES;
 }
 							
@@ -56,6 +63,63 @@
 - (NSArray *)getDataArray
 {
     return self.Database;
+}
+
+- (void) connectWithIPAndPort:(NSDictionary *)sender
+{
+    self.ipaddress = [sender objectForKey:@"ip"];
+    self.portAddress = [[sender objectForKey:@"port"] intValue];
+    
+    NSError *err = nil;
+    [self.socket connectToHost:self.ipaddress onPort:self.portAddress error:&err];
+    
+}
+
+- (void) sendData:(NSDictionary *)sender
+{
+    NSData *data = [sender objectForKey:@"data"];
+    NSString *signal = [sender objectForKey:@"signal"];
+    if ([signal isEqualToString:@"1"]){
+        [self.socket writeData:data withTimeout:-1 tag:SIGNAL_1];
+        [self.socket readDataWithTimeout:-1 tag:SIGNAL_1];
+    } else if ([signal isEqualToString:@"2"]){
+        [self.socket writeData:data withTimeout:-1 tag:SIGNAL_2];
+        
+    } else if ([signal isEqualToString:@"3"]){
+        [self.socket writeData:data withTimeout:-1 tag:SIGNAL_3];
+        [self.socket readDataWithTimeout:-1 tag:SIGNAL_3];
+    } else if ([signal isEqualToString:@"4"]){
+        [self.socket writeData:data withTimeout:-1 tag:SIGNAL_4];
+        [self.socket readDataWithTimeout:-1 tag:SIGNAL_4];
+    }
+}
+
+#pragma mark Delegate
+
+- (void)socket:(GCDAsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag
+{
+    NSString *msg = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    if (tag == SIGNAL_1) {
+        [self.DataDelegate reloadDataOK:msg];
+    } else if (tag == SIGNAL_3) {
+        [self.DataDelegate reloadDataOK:msg];
+    } else if (tag == SIGNAL_4) {
+        NSRange range;
+        range = [msg rangeOfString:@";"];
+        NSString *people0 = [msg substringToIndex:range.location];
+        NSString *msg2 = [msg substringFromIndex:range.location+1];
+        range = [msg2 rangeOfString:@";"];
+        NSString *people1 = [msg2 substringToIndex:range.location];
+        NSString *people2 = [msg2 substringFromIndex:range.location+1];
+        people2 = [people2 substringToIndex:people2.length-2];
+        
+        NSMutableDictionary *dic = [[self.Database objectAtIndex:11] mutableCopy];
+        [dic setObject:people0 forKey:@"people0"];
+        [dic setObject:people1 forKey:@"people1"];
+        [dic setObject:people2 forKey:@"people2"];
+        [self.Database replaceObjectAtIndex:11 withObject:dic];
+        [self.DataDelegate reloadDataOK:nil];
+    }
 }
 
 @end
